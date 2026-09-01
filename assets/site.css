@@ -137,6 +137,11 @@ transition:background-size .25s ease;padding-bottom:2px}
 .cards h2,.cards p:not(.num){grid-column:1}
 .num{grid-column:1;grid-row:auto;margin:0 0 .2rem}}
 
+/* optional masthead */
+.masthead{background:var(--surface);border-bottom:1px solid var(--line)}
+.masthead img{display:block;width:100%;max-width:1800px;height:auto;margin:0 auto}
+@media print{.masthead{display:none}}
+
 /* navigation */
 header.site .bar{max-width:var(--measure);margin:0 auto;padding:.8rem 1.25rem;
 display:flex;align-items:center;justify-content:space-between;gap:1rem}
