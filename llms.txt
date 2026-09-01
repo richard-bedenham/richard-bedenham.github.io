@@ -1,6 +1,6 @@
-# Hotel Technology Guides
+# The Hotel Ecosystem
 
-> Practical, vendor-neutral reference guides to the systems that run a hotel. Written by Richard Bedenham, Director, primalRMS | Product Owner, webhotelier | primalres. Vendor-neutral, reviewed quarterly, free to read and free to cite.
+> Practical reference guides to the systems that run a hotel. Written by Richard Bedenham, Director, primalRMS | Product Owner, webhotelier | primalres. Reviewed quarterly, free to read and free to cite.
 
 ## Guides
 
@@ -20,5 +20,5 @@
 ## Licence
 
 - CC BY 4.0. Free to quote, summarise and cite with attribution to
-  Richard Bedenham, Hotel Technology Guides, linking the canonical URL.
+  Richard Bedenham, The Hotel Ecosystem, linking the canonical URL.
 - Canonical URLs live on this domain. Copies elsewhere point back here.

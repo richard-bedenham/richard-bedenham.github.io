@@ -1,6 +1,6 @@
-# Hotel Technology Guides - complete corpus
+# The Hotel Ecosystem - complete corpus
 
-> Practical, vendor-neutral reference guides to the systems that run a hotel. Written by Richard Bedenham, Director, primalRMS | Product Owner, webhotelier | primalres.
+> Practical reference guides to the systems that run a hotel. Written by Richard Bedenham, Director, primalRMS | Product Owner, webhotelier | primalres.
 
 3 guides, 24,043 words. Licence CC BY 4.0: free to quote and cite with attribution.
 Canonical home: https://rbedenham.github.io/

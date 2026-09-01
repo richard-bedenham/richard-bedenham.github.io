@@ -137,8 +137,42 @@ transition:background-size .25s ease;padding-bottom:2px}
 .cards h2,.cards p:not(.num){grid-column:1}
 .num{grid-column:1;grid-row:auto;margin:0 0 .2rem}}
 
+/* navigation */
+header.site .bar{max-width:var(--measure);margin:0 auto;padding:.8rem 1.25rem;
+display:flex;align-items:center;justify-content:space-between;gap:1rem}
+header.site .home{padding:0;display:inline-block}
+.topnav{display:flex;gap:1.1rem;font-family:var(--sans);font-size:.78rem;font-weight:600;
+letter-spacing:.04em}
+.topnav a{color:var(--muted);text-decoration:none;padding:.35rem 0}
+.topnav a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:.2em}
+.wrap.home ~ * .bar,body:has(.wrap.home) header.site .bar{max-width:58rem}
+.crumbs{font-family:var(--sans);font-size:.78rem;color:var(--muted);
+padding:1.4rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.crumbs a{color:var(--muted);text-decoration:none}
+.crumbs a:hover{color:var(--accent);text-decoration:underline}
+.pager{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+border-radius:14px;overflow:hidden;margin:3.5rem 0 0}
+.pager a{background:var(--paper);padding:1.15rem 1.3rem;text-decoration:none;
+display:block;transition:background .15s ease}
+.pager a:hover{background:var(--surface)}
+.pager span{display:block;font-family:var(--sans);font-size:.72rem;font-weight:700;
+letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+.pager b{color:var(--ink);font-weight:700;line-height:1.3}
+.pager .next{text-align:right}
+@media(min-width:40rem){.pager{grid-template-columns:1fr 1fr}
+.pager .next:only-child{grid-column:2}}
+.sitenav{margin:2.6rem 0 0;font-family:var(--sans)}
+.sitenav h2{font-size:.71rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
+border:0;padding:0;margin:0 0 .7rem;font-weight:700}
+.sitenav ol{margin:0;padding-left:1.3rem;font-size:.93rem;columns:1}
+.sitenav li{margin:.38rem 0;break-inside:avoid}
+.sitenav a{color:var(--body);text-decoration:none}
+.sitenav a:hover{color:var(--accent);text-decoration:underline}
+.sitenav li[aria-current] span{color:var(--muted)}
+@media(min-width:44rem){.sitenav ol{columns:2;column-gap:2rem}}
+
 @media print{
-header.site,.toc,.skip{display:none}
+header.site,.toc,.skip,.pager,.sitenav,.crumbs{display:none}
 body{background:#fff;color:#000;font-size:11pt}
 .wrap{max-width:none;padding:0}
 figure{width:auto;margin-left:0;break-inside:avoid}
