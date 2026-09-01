@@ -452,15 +452,15 @@ Schema markup removes ambiguity. It does not buy a result. Google Search has no 
 Direct booking touches almost every other part of hotel technology, which makes the boundaries important.
 
 - **[Distribution and Connectivity](../distribution-and-connectivity/)** owns how rates and availability reach each channel. If the question is how a rate gets there and stays accurate, it belongs there. If the question is what the guest sees and does once they arrive, it belongs here. Parity sits on the border.
-- **[Revenue Management](../revenue-management/)** sets the price, rules and rate structure. Direct booking sells them. A booking engine can lose the guest because the rate structure made sense on a spreadsheet but not on a screen.
-- **[Payments and Financial Technology](../payments-and-financial-technology/)** owns payment providers, card-security checks, refunds and disputed charges. This article owns the conversion consequence at the point of sale. Whether a later no-show charge stands up can depend on how the card was verified inside the booking flow.
-- **[Guest Technology and CRM](../guest-technology-and-crm/)** owns the guest record, consent and the messages sent before, during and after the stay. Direct booking creates first-party guest data; CRM determines what happens to it. Abandoned-booking recovery and repeat-guest offers sit on that boundary.
-- **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** works out which channel caused which booking and what each channel actually contributes. That is what turns net value by channel into a number rather than an argument.
+- **Revenue Management** sets the price, rules and rate structure. Direct booking sells them. A booking engine can lose the guest because the rate structure made sense on a spreadsheet but not on a screen.
+- **Payments and Financial Technology** owns payment providers, card-security checks, refunds and disputed charges. This article owns the conversion consequence at the point of sale. Whether a later no-show charge stands up can depend on how the card was verified inside the booking flow.
+- **Guest Technology and CRM** owns the guest record, consent and the messages sent before, during and after the stay. Direct booking creates first-party guest data; CRM determines what happens to it. Abandoned-booking recovery and repeat-guest offers sit on that boundary.
+- **Market Intelligence and Analytics** works out which channel caused which booking and what each channel actually contributes. That is what turns net value by channel into a number rather than an argument.
 - **[Hotel Operations and PMS](../hotel-operations-and-pms/)** owns whether the offer or package sold online can actually be delivered by the team on shift.
-- **[Data, APIs and Integration](../data-apis-and-integration/)** owns the connections that let the website, booking engine, PMS and CRM agree with each other.
-- **[AI, Automation and Agents](../ai-automation-and-agents/)** is where the machine reader stops merely indexing and starts acting. **[Emerging Hotel Technology](../emerging-hotel-technology/)** tracks where that shift is heading.
-- **[Sales, Groups and MICE](../sales-groups-and-mice/)** sits mostly outside this article because larger meetings, incentives, conferences and exhibitions remain predominantly contracted rather than bought through a consumer booking flow. The smaller end is moving online, but the economics and buying process are still different.
-- **[Hotel Technology Strategy](../hotel-technology-strategy/)** is where the hotel decides how much of this direct-booking system to build, buy or ignore.
+- **Data, APIs and Integration** owns the connections that let the website, booking engine, PMS and CRM agree with each other.
+- **AI, Automation and Agents** is where the machine reader stops merely indexing and starts acting. **Emerging Hotel Technology** tracks where that shift is heading.
+- **Sales, Groups and MICE** sits mostly outside this article because larger meetings, incentives, conferences and exhibitions remain predominantly contracted rather than bought through a consumer booking flow. The smaller end is moving online, but the economics and buying process are still different.
+- **Hotel Technology Strategy** is where the hotel decides how much of this direct-booking system to build, buy or ignore.
 
 ## Related Reading
 

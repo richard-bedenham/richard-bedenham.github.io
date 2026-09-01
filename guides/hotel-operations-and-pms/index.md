@@ -930,15 +930,15 @@ A PMS does not operate in isolation. The decisions and records described above m
 
 - **[Distribution and Connectivity](../distribution-and-connectivity/)** carries rooms, rates and availability out to booking channels. Mapping, certification and rate parity sit there. In an independent hotel the PMS will often be the authority on room inventory, but a central reservation system may legitimately be the master in a brand or group environment.
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** owns the website and booking engine. The moment a direct reservation lands in the PMS, it becomes an operational record.
-- **[Revenue Management](../revenue-management/)** decides price and, depending on the architecture, may also own restrictions or oversell limits. Occupancy, pickup, out-of-order rooms and no-shows all depend on the operational record being right.
-- **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** turns PMS output into comparison, benchmarking and forecast. Bad operational data becomes bad analysis. The occupancy denominator discussed above matters here because it changes what you benchmark.
-- **[Guest Technology and CRM](../guest-technology-and-crm/)** depends on the profile created through booking and check-in. In many hotels the master guest profile lives outside the PMS. Duplicate profiles are therefore not just an administrative nuisance; they carry a marketing cost.
-- **[Payments and Financial Technology](../payments-and-financial-technology/)** handles card authorisations and the movement of money. The bill may live in the PMS, but the payment moves through another system, and the night audit is where the two must reconcile.
-- **[Sales, Groups and MICE](../sales-groups-and-mice/)** brings rooming lists, blocks, cut-off dates and event billing into the PMS. Group blocks also sit inside the availability calculation, which is why group business and oversell problems often meet in the same argument.
-- **[Data, APIs and Integration](../data-apis-and-integration/)** is the layer underneath every connection in this article. It determines what the PMS can exchange, how quickly, under what limits, and whether you can get usable data back out.
-- **[AI, Automation and Agents](../ai-automation-and-agents/)** can only be as trustworthy as the record beneath them. AI built on bad room status, reservation or availability data simply multiplies the error faster.
-- **[Hotel Technology Strategy](../hotel-technology-strategy/)** weighs a PMS replacement against every other demand on the technology budget.
-- **[Emerging Hotel Technology](../emerging-hotel-technology/)** covers operating models and technologies that are real but not yet settled enough to treat as standard practice.
+- **Revenue Management** decides price and, depending on the architecture, may also own restrictions or oversell limits. Occupancy, pickup, out-of-order rooms and no-shows all depend on the operational record being right.
+- **Market Intelligence and Analytics** turns PMS output into comparison, benchmarking and forecast. Bad operational data becomes bad analysis. The occupancy denominator discussed above matters here because it changes what you benchmark.
+- **Guest Technology and CRM** depends on the profile created through booking and check-in. In many hotels the master guest profile lives outside the PMS. Duplicate profiles are therefore not just an administrative nuisance; they carry a marketing cost.
+- **Payments and Financial Technology** handles card authorisations and the movement of money. The bill may live in the PMS, but the payment moves through another system, and the night audit is where the two must reconcile.
+- **Sales, Groups and MICE** brings rooming lists, blocks, cut-off dates and event billing into the PMS. Group blocks also sit inside the availability calculation, which is why group business and oversell problems often meet in the same argument.
+- **Data, APIs and Integration** is the layer underneath every connection in this article. It determines what the PMS can exchange, how quickly, under what limits, and whether you can get usable data back out.
+- **AI, Automation and Agents** can only be as trustworthy as the record beneath them. AI built on bad room status, reservation or availability data simply multiplies the error faster.
+- **Hotel Technology Strategy** weighs a PMS replacement against every other demand on the technology budget.
+- **Emerging Hotel Technology** covers operating models and technologies that are real but not yet settled enough to treat as standard practice.
 
 ## Related Reading
 
