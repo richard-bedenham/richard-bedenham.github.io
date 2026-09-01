@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="theme-color" content="#fcfbf9" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#0d1316" media="(prefers-color-scheme:dark)">
+<title>Hotel PMS and Operations: A Complete Practical Guide</title>
+<meta name="description" content="What a hotel PMS is really the record for, why cloud is a starting condition rather than a strategy, and the questions that decide if it serves your hotel.">
+<link rel="canonical" href="https://rbedenham.github.io/guides/hotel-operations-and-pms/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hotel PMS and Operations: A Complete Practical Guide">
+<meta property="og:description" content="What a hotel PMS is really the record for, why cloud is a starting condition rather than a strategy, and the questions that decide if it serves your hotel.">
+<meta property="og:url" content="https://rbedenham.github.io/guides/hotel-operations-and-pms/">
+<meta property="og:image" content="https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-00-hotel-operations-pms-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="sitemap" type="application/xml" href="../../sitemap.xml">
+<link rel="alternate" type="text/markdown" href="index.md" title="Markdown source for machine readers">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://rbedenham.github.io/guides/hotel-operations-and-pms/#article","headline":"The Complete Guide to Hotel Operations and the PMS","name":"Hotel PMS and Operations: A Complete Practical Guide","description":"A practical guide to the property management system and the operation around it: what a PMS is the record for, cloud and deployment, front office and reservations, housekeeping and maintenance, rates and availability, reporting and night audit, and PMS selection and migration. Written for hoteliers, operations leaders and technology buyers who have to make the system carry the operation.","inLanguage":"en-GB","url":"https://rbedenham.github.io/guides/hotel-operations-and-pms/","mainEntityOfPage":"https://rbedenham.github.io/guides/hotel-operations-and-pms/","author":{"@type":"Person","name":"Richard Bedenham","url":"https://www.linkedin.com/in/richard-bedenham"},"publisher":{"@type":"Person","name":"Richard Bedenham","url":"https://www.linkedin.com/in/richard-bedenham"},"datePublished":"2026-08-18","dateModified":"2026-08-18","wordCount":7709,"timeRequired":"PT34M","articleSection":["The Short Version","Core PMS Concepts","Cloud and Deployment","Front Office and Reservations","Housekeeping and Maintenance","Rates, Inventory and Availability","Reporting and Night Audit","PMS Selection and Migration","Common Questions","Key Terms","How This Connects to the Wider Hotel Technology Stack","Related Reading"],"about":[{"@type":"Thing","name":"Hotel property management systems"},{"@type":"Thing","name":"Cloud PMS and deployment"},{"@type":"Thing","name":"Front office and reservations"},{"@type":"Thing","name":"Housekeeping and maintenance"},{"@type":"Thing","name":"Rates, inventory and availability"},{"@type":"Thing","name":"Reporting and night audit"},{"@type":"Thing","name":"PMS selection and migration"},{"@type":"Thing","name":"Hotel system of record"}],"keywords":"hotel PMS, property management system, cloud PMS, system of record, room status, out of order, availability calculation, night audit, PMS migration","image":["https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-00-hotel-operations-pms-cover.jpg","https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-01-room-214-hero.jpg","https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-02-system-of-record.jpg","https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-03-cloud-and-physical-hotel.jpg","https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-04-reservation-data-flow.jpg","https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-05-room-214-workflow.jpg","https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-06-availability-logic.jpg","https://rbedenham.github.io/guides/hotel-operations-and-pms/c01-07-pms-selection-and-migration.jpg"],"isAccessibleForFree":true,"license":"https://creativecommons.org/licenses/by/4.0/","creditText":"Richard Bedenham, Hotel Technology Guides","encodingFormat":["text/html","text/markdown"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guides","item":"https://rbedenham.github.io/"},{"@type":"ListItem","position":2,"name":"Hotel Operations and PMS","item":"https://rbedenham.github.io/guides/hotel-operations-and-pms/"}]},{"@type":"FAQPage","name":"Common questions about hotel operations and the PMS","mainEntity":[{"@type":"Question","name":"What does a hotel PMS actually do?","acceptedAnswer":{"@type":"Answer","text":"A PMS holds three things: what exists, what is promised and what is owed. It carries the rooms, the reservations, the guest accounts and the daily books. The guest profile sits across all three. It is the record everyone in the building has agreed to believe."}},{"@type":"Question","name":"Is a cloud PMS better than an on-premise one?","acceptedAnswer":{"@type":"Answer","text":"Cloud is the starting condition, not the strategy. Two products can both be cloud and be built very differently underneath. The useful questions are what the system connects to, who owns each important piece of information, and whether you can get your own data out."}},{"@type":"Question","name":"What happens to a cloud PMS when the internet stops?","acceptedAnswer":{"@type":"Answer","text":"Less than most people assume. Mainstream cloud platforms generally do not offer a documented way to complete a full check-in with the PMS genuinely offline. Test three things: what reception can still see, what the payment terminal can do on its own, and how the transactions are reconciled afterwards."}},{"@type":"Question","name":"What is the difference between a room and a room type?","acceptedAnswer":{"@type":"Answer","text":"The room is the physical space. The room type is the product the guest buys. Most guests reserve a Superior Sea View, not room 214. Reception decides which physical room fulfils that promise, and can change that decision right up to arrival."}},{"@type":"Question","name":"What is the difference between out of order and out of service?","acceptedAnswer":{"@type":"Answer","text":"Out of order commonly removes a room from sellable inventory. Out of service commonly describes a smaller defect, with the room often still sellable. But the labels are not the control. The behaviour is. Some platforms have no separate out-of-order status at all. Take a test room, apply each status and watch what happens to availability."}},{"@type":"Question","name":"How is hotel availability calculated?","acceptedAnswer":{"@type":"Answer","text":"Start with the physical rooms in a room type. Subtract rooms genuinely removed from inventory, reservations consuming that room type, and group blocks currently taking inventory. Then adjust for intentional overbooking. What remains is approximately what you can sell. Approximately matters, because systems make different decisions about provisional reservations and blocks."}},{"@type":"Question","name":"What is a rate plan?","acceptedAnswer":{"@type":"Answer","text":"A product, not a price. It is the price plus its conditions: cancellation policy, inclusions, eligibility and length-of-stay rules. A derived rate inherits its price from another rate. That is powerful when configured correctly, and quietly expensive for months when it is not."}},{"@type":"Question","name":"What is the night audit, and is it still necessary?","acceptedAnswer":{"@type":"Answer","text":"Traditionally it closes one business day and opens the next. It checks unfinished arrivals and departures, posts room and tax charges, balances the financial activity, rolls the business date forward and produces the reports used to run the next day. At least one established cloud PMS has removed it completely. The question is not whether the old ritual survived. It is where the control went."}},{"@type":"Question","name":"What should you test before buying a PMS?","acceptedAnswer":{"@type":"Answer","text":"Choose five things your hotel genuinely does. A half-board supplement. A group reservation with a rooming list. A long-stay guest billed weekly. Make every supplier perform them live rather than confirm they are possible. Then ask how you export all your data if you leave, and watch what happens."}}]},{"@type":"DefinedTermSet","name":"Hotel operations and PMS key terms","hasDefinedTerm":[{"@type":"DefinedTerm","name":"Property management system, or PMS","description":"The software holding rooms, reservations, guest accounts and the daily books. The hotel's operational record."},{"@type":"DefinedTerm","name":"Room type","description":"The product a guest buys. The physical room is assigned separately, often close to arrival."},{"@type":"DefinedTerm","name":"Out of order","description":"A status that commonly removes a room from sellable inventory. Test the behaviour rather than trusting the label."},{"@type":"DefinedTerm","name":"Out of service","description":"A status commonly used for a smaller defect, where the room often stays in sellable inventory."},{"@type":"DefinedTerm","name":"Business date","description":"The hotel's trading day, which does not always match the calendar date. A drink poured at one in the morning may still belong to the previous day."},{"@type":"DefinedTerm","name":"Trial balance","description":"The daily test that the accounting entries reconcile."},{"@type":"DefinedTerm","name":"Rate plan","description":"A price plus its conditions: cancellation policy, inclusions, eligibility and length-of-stay rules."},{"@type":"DefinedTerm","name":"Derived rate","description":"A rate that inherits its price from another, such as a non-refundable rate held a fixed percentage below the flexible rate."},{"@type":"DefinedTerm","name":"Restriction","description":"A control over which demand you accept rather than what you charge. Minimum and maximum length of stay, arrival and departure rules, and stop sells."},{"@type":"DefinedTerm","name":"Release, or cut-off","description":"The point at which unsold contracted rooms return from a block to general availability."},{"@type":"DefinedTerm","name":"Discrepancy report","description":"The daily comparison between what housekeeping found in a room and what the system believes about it. Read it in both directions."},{"@type":"DefinedTerm","name":"API","description":"The doorway other software uses to talk to the PMS. A partner logo tells you a door exists. It does not tell you how wide it is, what it costs, or who is already standing in it."}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#body">Skip to the guide</a>
+<header class="site">
+<a class="home" href="../../">Hotel Technology Guides</a>
+</header>
+<main class="wrap">
+<article id="body">
+<p class="kicker">Hotel technology guide</p>
+<h1>The Complete Guide to Hotel Operations and the PMS</h1>
+<p class="byline">By <a href="https://www.linkedin.com/in/richard-bedenham" rel="author">Richard Bedenham</a>
+ &middot; <time datetime="2026-08-18">18 August 2026</time>
+ &middot; 7,709 words, about 34 minutes</p>
+<figure class="cover"><img src="c01-00-hotel-operations-pms-cover.jpg" alt="A bright hotel lobby by the sea where staff greet arriving guests with tablets, with fine lines linking reception, housekeeping and the systems around them." width="1280" height="832" loading="lazy" decoding="async"><figcaption>Everything in the building is talking to everything else. The PMS is where they agree on what is true.</figcaption></figure>
+<nav class="toc" aria-label="Contents"><h2>What this guide covers</h2><ol><li><a href="#the-short-version">The Short Version</a></li><li><a href="#core-pms-concepts">Core PMS Concepts</a></li><li><a href="#cloud-and-deployment">Cloud and Deployment</a></li><li><a href="#front-office-and-reservations">Front Office and Reservations</a></li><li><a href="#housekeeping-and-maintenance">Housekeeping and Maintenance</a></li><li><a href="#rates-inventory-and-availability">Rates, Inventory and Availability</a></li><li><a href="#reporting-and-night-audit">Reporting and Night Audit</a></li><li><a href="#pms-selection-and-migration">PMS Selection and Migration</a></li><li><a href="#common-questions">Common Questions</a></li><li><a href="#key-terms">Key Terms</a></li><li><a href="#how-this-connects-to-the-wider-hotel-technology-stack">How This Connects to the Wider Hotel Technology Stack</a></li><li><a href="#related-reading">Related Reading</a></li></ol></nav>
+<p>A shower tray cracks in room 214 at half past ten.</p>
+<p>The housekeeper reports it. Maintenance says two days. By four that afternoon, a guest is standing at reception holding a confirmation for that room.</p>
+<p>It was booked twenty minutes earlier, on a channel nobody was watching.</p>
+<p>What happened in those few hours is the subject of this guide.</p>
+<p>The property management system, the PMS, is the software that runs much of the hotel. It holds your rooms, reservations, guest accounts and daily books. It is the record everyone in the building has agreed to believe.</p>
+<p>That is not the same as knowing.</p>
+<p>Yet conversations about PMS technology still have a habit of stalling on one question:</p>
+<p><em>Is it cloud-based?</em></p>
+<p>Cloud is not the strategy. It is the starting condition.</p>
+<p>Knowing that a PMS runs in a browser tells you remarkably little about whether it will serve you on a Saturday in August, with three coaches arriving, a lift out of service and reception already forming a queue.</p>
+<p>The word cloud carries less than people think. Two editions of the same product can be built differently underneath. A vendor can share one copy of its software across many customers while giving different hotels different feature sets. Another can run one version of its code in a separate environment for every hotel.</p>
+<p>Both can legitimately call themselves cloud.</p>
+<p>The questions that matter are less exciting.</p>
+<p>What does the PMS connect to?</p>
+<p>Can you get your own data out?</p>
+<p>Who owns each important piece of information?</p>
+<p>And when room 214 becomes unsellable at 10:35, does that fact reach everywhere it needs to go, or does somebody have to remember?</p>
+<figure><img src="c01-01-room-214-hero.jpg" alt="A housekeeper kneels beside the shower in a bright sea-view guest room, logging the fault on a tablet, with coloured lines carrying it out of the room." width="1280" height="832" loading="lazy" decoding="async"><figcaption>A cracked shower tray at half past ten. Whether that fact reaches distribution before four o&#x27;clock is the whole subject of this guide.</figcaption></figure>
+<h2 id="the-short-version">The Short Version</h2>
+<ul><li>A PMS holds what exists, what is promised and what is owed. The guest profile sits across all three. But it holds a reported version of reality. It stays right only for as long as people and systems keep writing the truth into it.</li><li>Cloud is the starting condition, not the strategy. Ask what the PMS connects to, what happens when the internet stops, and whether you can get your own data out.</li><li>Selling a room type is not the same as assigning a room. Somebody still has to match arrivals, groups, accessibility needs and VIPs to actual doors.</li><li>Legal guest registration and a guest marketing profile are two different activities. The legal grounds and the retention periods differ from one country to the next. Check what your own country requires rather than copying a rule across a border.</li><li>Sellable inventory is not a count of doors. Out-of-order rooms, group blocks, restrictions and overbooking limits all change it. None of them needs a new reservation to arrive.</li><li>The night audit closes the trading day and proves the books balance. Where a PMS has removed it, the question is not whether the old ritual survived. It is where the control went.</li><li>You are not buying today&#x27;s feature list. Make every supplier perform five things your hotel genuinely does. Then ask how you export all your data if you leave.</li></ul>
+<h2 id="core-pms-concepts">Core PMS Concepts</h2>
+<p>At its heart, a PMS holds three things:</p>
+<p><strong>what exists, what is promised and what is owed.</strong></p>
+<p>A fourth, the guest profile, sits across all three.</p>
+<p>What exists is your building.</p>
+<p>Room 214 has a number, a floor and a bed layout. In most hotels it also belongs to a room type, and that room type is what the guest buys. They reserve a Superior Sea View, not room 214. Reception decides which physical room fulfils that promise, and can change that decision right up to arrival.</p>
+<p>That model is common, but it is not universal.</p>
+<p>Hostels sell beds. Serviced apartments may sell named units. Connecting rooms can draw down several pieces of inventory. Some systems create several virtual room types over the same physical room. A newer model goes further and sells room attributes rather than traditional room types, allowing one physical room to fulfil several possible products.</p>
+<p>That remains a minority model in 2026, but it is real and it is developing.</p>
+<p>What is promised is the reservation.</p>
+<p>A reservation is a claim on accommodation for particular dates, at a particular price, for a given number of people and under defined conditions.</p>
+<p>It moves through a life cycle: held, confirmed, arrived, in house and departed, alongside the two familiar failures: cancelled and no-show.</p>
+<p>There are other states around it. Waitlisted, denied and walked reservations sit outside that simple sequence. Group blocks have their own statuses and can affect your availability long before an individual guest name is attached.</p>
+<p>What is owed is recorded in the folio.</p>
+<p>Room charges, taxes, breakfast, minibar and other items are posted there. Payments reduce the balance. Charges can be split, allowing a company to pay the accommodation while the guest settles the extras.</p>
+<p>The accounting language matters.</p>
+<p>The folio does not suddenly move onto a ledger when somebody checks out. It is already represented on one. While the guest is staying, the balance sits on the guest ledger. At departure it is either settled or, where an arrangement already exists, transferred to the city ledger for later payment.</p>
+<p>A guest who genuinely leaves without paying is different. That is a skipper. The unpaid balance may also end up on the city ledger, but one is an agreed billing process and the other is an incident.</p>
+<p>Keep them apart.</p>
+<p>Around all of this sits the guest profile, carrying information and preferences forward.</p>
+<p>But don&#x27;t automatically assume the PMS owns the master guest profile.</p>
+<p>In some hotels that record lives in a CRM. In others it sits in a loyalty platform or a central reservation system, with the PMS holding a copy.</p>
+<p>That distinction leads to the principle that governs everything else in this guide.</p>
+<p><strong>The PMS does not need to be the brain. It needs to be a reliable system of record.</strong></p>
+<p>Pricing can live elsewhere. Forecasting can live elsewhere. Messaging can live elsewhere, often better.</p>
+<p>What matters is deciding which system is authoritative for each important fact.</p>
+<p>I have seen that simplified to:</p>
+<p><em>When the PMS and another system disagree, the PMS wins.</em></p>
+<p>For an independent hotel built around a single PMS, that may be exactly the right rule.</p>
+<p>As a universal law, it is false.</p>
+<p>Connectivity platforms can be configured so that either the PMS or the central reservation system controls room availability. Central systems can own rooms, rates or content. Other platforms send selling limits back into the PMS.</p>
+<p>The important point is not that one architecture is correct.</p>
+<p>It is that somebody has decided.</p>
+<p><strong>The PMS is right because you chose it, not because it can see.</strong></p>
+<figure><img src="c01-02-system-of-record.jpg" alt="Hotel staff in a back office watch floating panels for rooms, dates, money and guests, with arrows running between them and the desk where the record is kept." width="1280" height="832" loading="lazy" decoding="async"><figcaption>The PMS does not know your hotel. It knows what people and systems last told it.</figcaption></figure>
+<p>It holds a reported version of reality. It stays accurate only for as long as other systems and people keep writing the right things into it.</p>
+<p>That is why discrepancy reports exist.</p>
+<p>And it is how a room can remain perfectly sellable inside the software while a plumber is standing in the shower.</p>
+<p>The real work is deciding who owns each fact and making sure reality reaches the record.</p>
+<h2 id="cloud-and-deployment">Cloud and Deployment</h2>
+<p>Deployment describes where the software runs, who updates it and who is responsible for keeping it available.</p>
+<p>You will usually hear three labels.</p>
+<p>On-premise: software running on infrastructure at the hotel.</p>
+<p>Hosted: broadly, the same kind of software moved into infrastructure somewhere else.</p>
+<p>Software as a service, SaaS: the vendor operates the software and you consume the service.</p>
+<p>Useful distinctions.</p>
+<p>But don&#x27;t ask them to tell you more than they can.</p>
+<p>SaaS does not automatically mean one shared installation serving every customer. A dedicated environment can still be SaaS. A private cloud can still be cloud. Vendors can sell shared and dedicated deployments under different editions of the same product.</p>
+<p>So rather than spending an hour debating labels, ask three questions:</p>
+<ul><li>Who operates it, and who is accountable when it stops?</li><li>How many versions or feature sets are live, and how do customers receive changes?</li><li>What can I access and control myself, and what requires the vendor?</li></ul>
+<p>The second question matters more than it sounds.</p>
+<p>A vendor may genuinely run one core installation and release updates constantly, while still controlling which customers can see which features.</p>
+<p>That is normal modern software practice.</p>
+<p>Features are tested, piloted, switched on for some customers and later rolled out more widely. Two hotels can therefore use the same underlying platform on the same afternoon and still see different capabilities.</p>
+<p>There is nothing inherently wrong with that. Staged releases are one of the ways vendors avoid breaking everybody at once.</p>
+<p>It simply changes the buying question.</p>
+<p>Don&#x27;t ask only:</p>
+<p><em>Are we all on the same version?</em></p>
+<p>Ask:</p>
+<p><em>Which functionality will I receive, when will I receive it, and who decides?</em></p>
+<p>Once hosting is settled, three areas matter enormously in hotel operations:</p>
+<p><strong>offline behaviour, local connections and data access.</strong></p>
+<figure><img src="c01-03-cloud-and-physical-hotel.jpg" alt="A guest taps a phone at a reception desk beside a card terminal and a screen, with a loop linking the hardware in the building to software running elsewhere." width="1280" height="832" loading="lazy" decoding="async"><figcaption>Your software may be in the cloud. The locks, terminals and tills are still in the building.</figcaption></figure>
+<h3 id="what-happens-when-the-internet-stops">What Happens When the Internet Stops?</h3>
+<p>At some point, it will.</p>
+<p>The uncomfortable reality is that mainstream cloud PMS platforms generally do not offer a documented way to continue the full check-in process with the PMS genuinely offline.</p>
+<p>At least one cloud vendor&#x27;s emergency procedure still involves printing registration information regularly and recording activity manually.</p>
+<p>So test the problem in three pieces:</p>
+<ol><li>What information can reception still see?</li><li>What can the payment terminal do independently?</li><li>How are the transactions and operational changes reconciled afterwards?</li></ol>
+<p>Payments add another layer.</p>
+<p>A card terminal may be able to accept transactions offline, but that does not make them safe. The commercial risk moves to the hotel. Failed captures, chargebacks and disputes can become your problem, and some transactions may never successfully reach the bank. Where that risk lands is generally set by your acquirer agreement and by the card scheme rules, not by law. Read your own agreement, because acquirers word this differently.</p>
+<p>That is not an obscure technical feature.</p>
+<p>At full occupancy on a Saturday night, it is a commercial decision.</p>
+<h3 id="what-still-lives-inside-the-building">What Still Lives Inside the Building?</h3>
+<p>Cloud PMS does not mean the hotel has become cloud-native.</p>
+<p>Door locks, key encoders, phones, tills and card terminals may still be sitting physically inside the property.</p>
+<p>The PMS therefore needs a route back into the building.</p>
+<p>Keycard systems illustrate the problem nicely. Many remain local. If the cloud PMS cannot communicate with the encoder or the lock system, reception may not be able to create the key.</p>
+<p>Some newer cloud-connected lock platforms are changing that architecture, but the wider point remains.</p>
+<p>The software may be in the cloud.</p>
+<p>The hotel isn&#x27;t.</p>
+<h3 id="can-you-get-your-data-out">Can You Get Your Data Out?</h3>
+<p><em>These rules vary by country and they move. What follows is how I read the general position, not legal advice for your hotel. Check where you actually stand before acting on any of it.</em></p>
+<p>This is one of the most important procurement questions in the entire PMS discussion.</p>
+<p>Can you extract reservations, guest accounts, profiles and other important operational information in bulk, on demand, in a format you can actually use?</p>
+<p>If you cannot, you do not have effective control over your commercial history.</p>
+<p>People often describe this as owning your data. Legally, that language is imprecise. As a general rule, European and UK law does not recognise a broad property right in data as such. There are related rights, and there are contracts, but neither is the same as ownership.</p>
+<p>What matters is access, control and contract.</p>
+<p>For EU hotels, that position changed significantly when the EU Data Act began applying on 12 September 2025. The instrument is Regulation (EU) 2023/2854, and it is worth naming, because a supplier will ask you which rule you mean.</p>
+<p>Its switching provisions affect cloud services, and a PMS platform can fall within that. In broad terms, notice can be no longer than two months. The changeover period is thirty days, followed by at least a further thirty days to retrieve data. Contract terms that obstruct switching are banned. From January 2027, switching charges are due to disappear entirely, including charges tied to extracting data. That is the shape of the switching provisions rather than the fine print. Check the current text before you rely on one of those numbers in a negotiation.</p>
+<p>For an EU hotel, data portability is increasingly an entitlement rather than merely a favour to negotiate.</p>
+<p>Do not confuse that with GDPR.</p>
+<p>The portability right in Article 20 of the GDPR, Regulation (EU) 2016/679, belongs to the individual. It does not give the hotel a general right to take every piece of commercial or operational data from one supplier to another. Obligations to return personal data also do not automatically cover things such as rate structures or historical availability. Those you get through your contract, or you do not get them at all.</p>
+<p>And at the time of writing the UK has no equivalent to the EU Data Act. UK hotels still need to deal with this contractually. Check the current position before you assume either way, because this is an active area.</p>
+<p>Then there is security.</p>
+<p>Cloud does not mean secure.</p>
+<p>Deployment architecture and security quality are different questions.</p>
+<p>Ask where the data is stored. Ask who inside the supplier can access it. Ask whether their access is logged. Ask how privileges are controlled. Ask which security responsibilities belong to the vendor and which remain with the hotel.</p>
+<p>Then ask them to put that division in writing.</p>
+<h2 id="front-office-and-reservations">Front Office and Reservations</h2>
+<p>Front office is where the promise meets the building.</p>
+<p>A reservation may arrive from an OTA, the hotel&#x27;s own booking engine, a telephone call, a central reservation system or a negotiated sales agreement.</p>
+<p>Whatever the source, the information required by the hotel&#x27;s processes has to reach the PMS correctly.</p>
+<p>Room type. Rate. Number of guests. Tax treatment. Payment method.</p>
+<p>Your own list will be longer.</p>
+<p>Write it down.</p>
+<p>Connections differ in what they send, what they require and what they leave optional. Payment information may be represented by a token, stored somewhere else or absent entirely.</p>
+<p>The dangerous errors are often the ones that do not generate an error message.</p>
+<p>Send the wrong number of guests and the booking may still arrive successfully.</p>
+<p>It can price incorrectly.</p>
+<p>Breakfast numbers can be wrong.</p>
+<p>Your average rate can be distorted.</p>
+<p>Nothing crashes.</p>
+<p>The error simply flows downstream.</p>
+<figure><img src="c01-04-reservation-data-flow.jpg" alt="Two hotel staff work through a booking calendar at a desk while reservations arrive from phones and a laptop as coloured cards curving into the screen." width="1280" height="832" loading="lazy" decoding="async"><figcaption>Every reservation arrives as data from somewhere else. One wrong field changes the price, the breakfast count and the room.</figcaption></figure>
+<p>Then comes a part of hotel operations that technology conversations often overlook: room assignment.</p>
+<p>Selling a room type is not the same as assigning a room.</p>
+<p>Somebody still has to match arrivals, connecting-room requests, accessibility requirements, VIPs, groups and operational blocks to actual doors.</p>
+<p>Assign too early and every change creates rework.</p>
+<p>Leave it too late and reception is solving the puzzle under pressure while the queue gets longer.</p>
+<p>A sensible check-in sequence might look like this:</p>
+<ol><li>Confirm the guest and booking, including rate and departure date.</li><li>Confirm the physical room is genuinely ready.</li><li>Handle the payment method correctly.</li><li>Complete whatever legal guest registration is required, then deal separately with the guest profile.</li><li>Issue keys and place the reservation in house so connected systems receive the correct status.</li></ol>
+<p>The second step is more important than it appears.</p>
+<p>In mainstream PMS platforms, housekeeping status does not necessarily decide whether a room is available for sale.</p>
+<p>A room can be marked dirty and remain bookable. Some systems warn you if you try to check somebody into it; others allow the user to continue.</p>
+<p>Only a deliberate inventory action removes the room from sale.</p>
+<p>That distinction becomes critical when maintenance enters the picture.</p>
+<h3 id="payments-need-precision">Payments Need Precision</h3>
+<p><em>Card scheme rules and payment law both sit behind this section, and they are not the same thing. What follows is how I read the general position, not legal advice for your hotel. Check with your acquirer, and with a lawyer where money turns on it.</em></p>
+<p>Card holds at check-in are frequently handled badly.</p>
+<p>The sensible principle is to authorise the amount you reasonably expect the stay to cost rather than taking a meaningless token hold.</p>
+<p>But reasonably expect matters.</p>
+<p>Visa&#x27;s guidance for hotels does not allow an estimated authorisation simply to be padded for hypothetical extras or possible damage. The amount should represent an estimate of the expected bill. If the stay grows, the authorisation can be increased. Once the final amount is known, the unused hold should be released promptly. Note what that is. It is a card scheme rule, not a law. The schemes impose it through your acquirer. That changes who enforces it, not whether you have to follow it.</p>
+<p>In Europe there is another layer.</p>
+<p>Under PSD2, Directive (EU) 2015/2366, funds can only be blocked where the cardholder has agreed to the precise amount. The estimate therefore needs to be shown and agreed. Card scheme guidance expects that authorisation framework to be established at booking rather than improvised at the desk. That part is a scheme rule rather than law. If the hotel intends to charge the card later without the guest present, the guest generally needs to have authenticated when giving that permission. The detailed rules on strong customer authentication sit in Delegated Regulation (EU) 2018/389. A card simply sitting on file without that verification is not covered by the exemption hotels sometimes assume. Check how your own payment provider applies it, because implementations differ.</p>
+<p>This is why payment design should begin during booking, not at reception.</p>
+<p>Know the timing as well.</p>
+<p>Hotel authorisations can remain open for different periods depending on network and processor. Some card networks allow up to thirty days; others allow seven. Some processors apply their own timetable. These are scheme and processor rules rather than law, and they are not published in one place. Ask your acquirer for the figures that apply to you, in writing.</p>
+<p>And remember what an excessive hold means to the guest.</p>
+<p>On a credit card, it reduces available credit.</p>
+<p>On a debit card, you are holding their actual money.</p>
+<h3 id="registration-is-not-the-same-as-marketing">Registration Is Not the Same as Marketing</h3>
+<p><em>These rules vary by country and they move. What follows is how I read the general position, not legal advice for your hotel. Check what your own country requires before acting on any of it.</em></p>
+<p>Legal guest registration and creation of a guest marketing profile are two different activities.</p>
+<p>They can have different legal grounds, different information requirements and different retention periods.</p>
+<p>Those rules also vary between countries.</p>
+<p>European countries do not impose identical guest-registration requirements, and the retention periods differ as well. In some countries the police registration form applies only to guests from outside the European Economic Area. In others it applies to everybody. Retention commonly runs from a few months to a few years. I am not putting a number against a country here. Those numbers are set nationally and they change. One global PMS configuration cannot satisfy several countries at once by collecting everything from everybody. Find out what your own country requires rather than carrying a rule across a border.</p>
+<p>Some countries go further than a name and a document number. At least one European country now requires accommodation providers to record specified payment-card details and to keep them for a period of years. Rules of that kind are national, they are recent, and they arrive with little warning. If you trade in more than one country, check each one separately.</p>
+<p>That creates a real collision between national reporting obligations and the card industry&#x27;s wider discipline of minimising stored card information. The two sit in different systems. One is law where you trade. The other is a set of card scheme rules reaching you through your acquirer. Neither excuses you from the other, and only local advice will tell you how to hold both at once.</p>
+<p>If you operate anywhere with a rule like that, treat it as a compliance problem, not an extra spreadsheet. Get local advice on what you must record, how it should be protected, and how long you may keep it.</p>
+<p>And if your PMS stores card information, interacts with authorisations or is expected to support payment activity during disruption, then the card-industry security standard matters. That standard is PCI DSS. It is not a law. It is a rule set the card schemes impose through your acquirer, and your acquirer is who asks you to evidence it.</p>
+<p>Sensitive card data held electronically before authorisation has to be protected, and those requirements have been tightened in recent years. Requirement 3 of PCI DSS is the part covering stored account data, so start there. The card security code is stricter again. The PCI Security Standards Council puts it plainly in its own published FAQ. Its answer is that it is not permitted to retain card verification codes once the purchase they were collected for has been authorised. That covers a card kept on file, and it covers repeat charges.</p>
+<p>Consent does not override that rule. The guest cannot agree you out of it, because the guest is not the party the rule answers to. Your acquirer is. If a supplier tells you otherwise, ask them to show you where the standard says so.</p>
+<p>Overbooking also eventually arrives at reception.</p>
+<p>The decision to oversell may have been made by revenue management.</p>
+<p>The guest standing at the desk belongs to operations.</p>
+<p>Agree the recovery process before you need it: who can be moved, where they will go, what the hotel will pay and who is authorised to make the decision at eleven at night.</p>
+<p>Automation belongs here too.</p>
+<p>Automate repetition: pre-arrival registration, authorisations, keys, routine billing tasks.</p>
+<p>But keep a boundary.</p>
+<p>The value of the person at the desk is not their ability to copy data between fields. It is judgement.</p>
+<p>Reading the exhausted family in front of them.</p>
+<p>Recognising when the procedure should bend.</p>
+<p>Absorbing a small cost to save a guest relationship.</p>
+<p>That is what guests remember.</p>
+<h2 id="housekeeping-and-maintenance">Housekeeping and Maintenance</h2>
+<p>The terminology here sounds simple until you compare systems.</p>
+<p>Broadly:</p>
+<ul><li>Vacant dirty: the guest has left; the room is not ready.</li><li>Vacant clean: cleaned and potentially ready, sometimes followed by an inspected status.</li><li>Out of service: commonly used for a smaller defect. In many systems the room remains part of sellable inventory.</li><li>Out of order: commonly used when the room should not be sold and is removed from available inventory.</li></ul>
+<p>Do not trust the words without testing your PMS.</p>
+<p>The exceptions are significant.</p>
+<p>Some platforms have no separate out-of-order status. Their out-of-service status removes the room from sale. Others leave out-of-service rooms available but prevent check-in. Some introduce another status such as out of inventory, changing the meaning again.</p>
+<p>The labels are not the control.</p>
+<p>The behaviour is.</p>
+<p>Take a test room, apply each status and look at what happens to availability.</p>
+<p>Ten minutes will teach you more than the terminology.</p>
+<p>The operational principle underneath is much more important:</p>
+<p><strong>housekeeping changes and maintenance failures can be commercial events.</strong></p>
+<p>If a room is no longer usable, somebody or something must make a deliberate change to the inventory.</p>
+<p>Otherwise the building and the selling system drift apart.</p>
+<p>Go back to room 214.</p>
+<figure><img src="c01-05-room-214-workflow.jpg" alt="A housekeeper with a tablet hands a fault to a maintenance technician in a hotel corridor, with lines tracking it along the corridor to a room status panel." width="1280" height="832" loading="lazy" decoding="async"><figcaption>The same fault, reported through the workflow at 10:35. Inventory drops before reception ever hears about it.</figcaption></figure>
+<p>In one version of the morning, the housekeeper writes the cracked shower tray on a paper sheet. Maintenance receives it eventually. The office blocks the room at three. Nobody checks distribution.</p>
+<p>At four, reception is apologising.</p>
+<p>In the second version, the housekeeper reports the defect through the operational workflow at 10:35. Room 214 is taken out of order for two nights. Sellable inventory for that room type decreases and the update begins moving through the connected systems.</p>
+<p>That is the morning to design for.</p>
+<p>But don&#x27;t turn it into magic.</p>
+<p>Several things can still happen:</p>
+<ul><li>Vendors rarely promise that inventory updates reach every external system instantly.</li><li>Distribution channels receive availability for a room type, not the story of room 214.</li><li>An intentional oversell setting can offset the reduction.</li><li>Some workflows can subsequently reverse an out-of-order block.</li><li>A system may refuse to block a room already assigned or occupied.</li></ul>
+<p>None of that is an argument for the paper sheet.</p>
+<p>It is an argument for testing the entire chain.</p>
+<p>Use a real room, a real date and the real connected systems. Take it out of sale and watch what happens.</p>
+<p>That is the only version of the workflow that matters.</p>
+<p>There is also a human consequence.</p>
+<p>Housekeepers who report faults into a system that acts on those reports keep reporting them.</p>
+<p>Those who report into a sheet that changes nothing eventually stop bothering.</p>
+<p>You lose one of the best early-warning networks in the hotel.</p>
+<p>That is my experience rather than a published finding, but I have never seen it work the other way.</p>
+<p>Two operational habits are worth keeping.</p>
+<p>First, run the discrepancy report daily, and look in both directions.</p>
+<p>If front office shows a room empty while housekeeping says it is occupied, you may have a stay you are not billing correctly.</p>
+<p>If front office says occupied while housekeeping says empty, you may have inventory sitting unnecessarily out of sale.</p>
+<p>Hotels tend to notice the first problem faster than the second.</p>
+<p>Second, give every out-of-order block an expected return date.</p>
+<p>Otherwise temporary lost inventory has a nasty habit of becoming permanent lost revenue.</p>
+<p>A final warning on terminology: even the language around room-status discrepancies is inconsistent. Modern PMS platforms and traditional front-office texts can use terms such as sleep and sleeper differently.</p>
+<p>When accuracy matters, describe the actual condition.</p>
+<p>And one question will matter later when you get to reporting:</p>
+<p>Does an out-of-order room disappear from the denominator used to calculate occupancy?</p>
+<p>Your PMS may say yes.</p>
+<p>The reporting standard may say something else. The standard in question is USALI, the Uniform System of Accounts for the Lodging Industry.</p>
+<h2 id="rates-inventory-and-availability">Rates, Inventory and Availability</h2>
+<p>Availability is a calculation.</p>
+<p>Understanding that calculation helps prevent obvious overbooking.</p>
+<p>It also prevents something hotels talk about much less: selling fewer rooms than they actually have.</p>
+<p>Start with the physical rooms in a room type.</p>
+<p>Subtract rooms that have genuinely been removed from inventory.</p>
+<p>Subtract reservations consuming that room type.</p>
+<p>Subtract group blocks and allotments that are currently taking inventory.</p>
+<p>Then adjust for intentional overbooking.</p>
+<p>What remains is approximately what you can sell.</p>
+<p>Approximately matters.</p>
+<p>Real systems make different decisions about provisional reservations, blocks, room status and oversell controls. Some calculate both a highest and lowest availability depending on which tentative business is included.</p>
+<p>There is not always one availability number waiting to be discovered.</p>
+<figure><img src="c01-06-availability-logic.jpg" alt="Three colleagues in a hotel meeting room read a wall display of bars, blocks and on-off controls that together decide how many rooms are sellable." width="1280" height="832" loading="lazy" decoding="async"><figcaption>Sellable rooms are not a count of doors. Blocks, restrictions and overbooking all get a vote.</figcaption></figure>
+<p>Group blocks are particularly good at creating confusion.</p>
+<p>Rooms can be held for a group and deducted from general availability, held without being deducted, or recorded merely as an enquiry.</p>
+<p>Change the status of a block and your availability can change instantly without a single new reservation arriving.</p>
+<p>Overbooking can also exist at several levels.</p>
+<p>Whole hotel.</p>
+<p>Room type.</p>
+<p>Potentially channel.</p>
+<p>And the value can work in the opposite direction: a negative adjustment can deliberately hold inventory back instead of selling more.</p>
+<p>Then come the ways hotels oversell even when the arithmetic itself looks correct.</p>
+<p>A room marked out of service that operations cannot actually use.</p>
+<p>House-use or complimentary rooms.</p>
+<p>Products that draw down multiple pieces of inventory.</p>
+<p>Room-type controls that do not reconcile cleanly with whole-hotel inventory.</p>
+<p>A channel mapping failure.</p>
+<p>An update that reached one system and not another.</p>
+<p>Most oversells can be traced to a fairly ordinary cause.</p>
+<p>The one that ruins your August will be the exception.</p>
+<p>Rates sit alongside inventory, but they are not the same thing.</p>
+<p>A rate plan is a product: price plus conditions.</p>
+<p>Cancellation policy. Inclusions. Eligibility. Length-of-stay rules.</p>
+<p>Derived or linked rates inherit their price from another rate. A non-refundable rate, for example, might always sit a defined percentage below the flexible rate.</p>
+<p>That is powerful when configured correctly.</p>
+<p>Configured incorrectly, it can quietly discount the wrong product for months.</p>
+<p>Restrictions are different again. They influence which demand you will accept rather than simply setting the price.</p>
+<p>Minimum and maximum length of stay can shape the pattern of bookings around busy dates. Arrival and departure restrictions control when stays may begin or end. A stop sell closes the relevant rate or room type.</p>
+<p>Release periods belong in the same commercial conversation but solve a different problem. A release or cut-off returns unsold contracted rooms from a block to general availability.</p>
+<p>Now connect the two ideas.</p>
+<p><strong>Availability and bookability are not the same thing.</strong></p>
+<p>A hotel can have rooms physically available and still be impossible to book because a rate, arrival day or length-of-stay restriction has closed the path.</p>
+<p>So when somebody says:</p>
+<p><em>We&#x27;re not selling.</em></p>
+<p>Do not ask only:</p>
+<p><em>How many rooms are available?</em></p>
+<p>Ask:</p>
+<p><em>What is closed?</em></p>
+<p>That leads back to system ownership.</p>
+<p>The question is not simply which system is the single source of truth.</p>
+<p>It is:</p>
+<p><strong>Which system owns which truth?</strong></p>
+<p>Two systems writing different answers into the same field for the same date will eventually corrupt each other.</p>
+<p>But one system does not need to own everything.</p>
+<p>A PMS may own physical room inventory.</p>
+<p>A revenue system may own price.</p>
+<p>A central reservation system may own selling limits.</p>
+<p>A distribution platform may impose a channel-specific ceiling.</p>
+<p>That can be deliberate architecture rather than disorder.</p>
+<p>Write it down.</p>
+<p>For rooms, rates, restrictions and channel-specific controls, name the authoritative system.</p>
+<p>Then name the people allowed to change it.</p>
+<p>A system-of-record strategy that exists only in somebody&#x27;s head is not a strategy.</p>
+<h2 id="reporting-and-night-audit">Reporting and Night Audit</h2>
+<p>The night audit is one of those hotel processes most people barely think about until it fails.</p>
+<p>Traditionally, it closes one business day and opens the next.</p>
+<p>Broadly, the process checks unfinished arrivals and departures, open bills and cashiers; posts room and tax charges; deals with reservations that neither arrived nor cancelled; balances financial activity; rolls the business date forward; and produces the reports used to run the next day.</p>
+<p>The order varies, and some steps are configurable.</p>
+<p>No-show handling, for example, may be automated in one PMS and handled differently in another.</p>
+<p>And the night audit itself is no longer universal.</p>
+<p>At least one established cloud PMS has removed the traditional audit completely, handling recent operational changes through a different workflow.</p>
+<p>That is worth paying attention to.</p>
+<p>If a historic control disappears, the important question is not whether the old ritual survives.</p>
+<p>It is where the control went.</p>
+<p>Two concepts help make sense of the rest.</p>
+<h3 id="business-date">Business Date</h3>
+<p>The hotel&#x27;s business date does not always have to match the calendar date.</p>
+<p>A drink poured at one in the morning may still belong to the previous trading day. The audit is traditionally where the hotel draws that line.</p>
+<p>Some platforms instead align the business date with midnight.</p>
+<p>That removes one source of confusion and introduces another around late-night activity.</p>
+<h3 id="trial-balance">Trial Balance</h3>
+<p>The trial balance is the daily test that the accounting entries reconcile.</p>
+<p>The casual explanation that revenue equals the money received is not enough.</p>
+<p>Not every debit is revenue. Taxes, deposits, transfers and cash paid out can appear without representing a sale.</p>
+<p>Not every credit is cash arriving. Discounts, refunds, complimentary stays and ledger transfers complicate the picture.</p>
+<p>Nor is a hotel necessarily balancing one simple ledger. Major PMS platforms may reconcile guest balances, city-ledger balances, deposits, packages and inter-property activity together.</p>
+<p>When the figures do not agree, the audit has discovered something.</p>
+<p>That is the control doing its job.</p>
+<p>The operational reports worth knowing include:</p>
+<ul><li>arrivals, departures and in-house guests;</li><li>the daily flash or manager&#x27;s report;</li><li>no-show and cancellation reporting.</li></ul>
+<p>The flash typically contains rooms sold, occupancy, room revenue, average daily rate and revenue per available room.</p>
+<p>The formulas sound simple.</p>
+<p>Average daily rate is room revenue divided by rooms sold.</p>
+<p>Revenue per available room is room revenue divided by rooms available.</p>
+<p>The complication is the denominator.</p>
+<p>Your PMS may remove out-of-order rooms from the room count when calculating occupancy and RevPAR. Some platforms do that automatically. Others do not. Some make it configurable.</p>
+<p>That is how the software reports.</p>
+<p>Benchmarking standards are a different matter.</p>
+<p>The benchmarking rule, which comes from USALI, says there should be no adjustment to reported room availability for rooms temporarily out of service for less than six months. Only three things come out: seasonal closure, closure of six months or more, and permanent use by the house. That is a reporting convention rather than a law, but your comparison breaks if you ignore it.</p>
+<p>That creates a very practical problem.</p>
+<p>A hotel can take the occupancy percentage directly from its PMS, send it into benchmarking and unintentionally make itself look stronger than the properties it is comparing itself with.</p>
+<p>Run both versions where necessary.</p>
+<p>Know which number you are quoting.</p>
+<p>The definitions also moved recently. The industry accounting standard is USALI, and its 12th Revised Edition took effect on 1 January 2026. Check which edition your own reports and your benchmarking provider are built on, because they may not match.</p>
+<p>And remember that rooms sold and rooms occupied are not identical: occupied rooms can include complimentary rooms.</p>
+<p>No-shows can create another oddity. Depending on the treatment, revenue can exist without a corresponding sold room night, moving ADR in a way that surprises anyone comparing the no-show report with the morning flash.</p>
+<p>Now imagine the audit fails at 2:30 in the morning.</p>
+<p>There are two operational responses.</p>
+<p>We&#x27;ll look at it tomorrow.</p>
+<p>Or:</p>
+<p>Here is the recovery procedure and the vendor&#x27;s out-of-hours number.</p>
+<p>Writing the second one takes very little time.</p>
+<p>Modern cloud systems may not stop reception working just because an audit step fails. The business date may continue to roll and staff may continue operating.</p>
+<p>But that does not make the failure harmless.</p>
+<p>You can end up with unposted revenue, incomplete statistics and a financial mess that somebody has to unwind later.</p>
+<p>Quite enough reason to have the procedure.</p>
+<h2 id="pms-selection-and-migration">PMS Selection and Migration</h2>
+<p>Buy the direction, not only the feature list.</p>
+<figure><img src="c01-07-pms-selection-and-migration.jpg" alt="Two hotel managers walk away from an old back-office setup toward a single new screen, with their data drawn along behind them as flowing lines." width="1280" height="832" loading="lazy" decoding="async"><figcaption>You are not buying today&#x27;s feature list. You are buying the next ten years of your operation.</figcaption></figure>
+<p>You are buying where the vendor is going and how well it understands the operation it is trying to support.</p>
+<p>Both usually outlast whatever feature happens to win the demonstration.</p>
+<p>My own bias, stated as bias: a vendor that has never understood a night audit can build one that demonstrates beautifully and fails under pressure in December.</p>
+<p>I cannot prove that as a universal rule.</p>
+<p>I have watched variations of it enough times to price it into the decision.</p>
+<p>Test systems against your actual operation.</p>
+<p>Choose five things your hotel genuinely does.</p>
+<p>A half-board supplement.</p>
+<p>A group reservation with a rooming list.</p>
+<p>A long-stay guest billed weekly.</p>
+<p>Then make every supplier perform them live.</p>
+<p>Do not ask whether the system can theoretically support them.</p>
+<p>Watch somebody do them.</p>
+<p>Software should follow your commercial logic.</p>
+<p>That does not mean preserving every historic process.</p>
+<p>Nearly every successful system change alters workflows. Hotels that demand exact replicas of every old habit often end up paying for custom configuration, and excessive customisation is one of the ways systems become hard to upgrade, difficult to connect and eventually painful to replace.</p>
+<p>Separate what matters from what is merely familiar.</p>
+<p>If the process reflects something commercially distinctive about your hotel, make sure the software can support it.</p>
+<p>If the process exists only because your previous PMS forced everybody to do it that way, migration may be the cheapest opportunity you will ever get to kill it.</p>
+<p>Then test the connections.</p>
+<p>A PMS is not an island.</p>
+<p>An API, or application programming interface, is the doorway other software uses to communicate with it.</p>
+<p>A partner logo on a website tells you that some kind of door exists.</p>
+<p>It does not tell you how wide the door is.</p>
+<p>It does not tell you what it costs to use.</p>
+<p>It does not tell you how frequently somebody may walk through it.</p>
+<p>And it does not tell you whether another system is already standing in the doorway.</p>
+<p>The difference between platforms can be enormous.</p>
+<p>Some vendors advertise open access with no connection fee and credentials a hotel or partner can configure directly.</p>
+<p>Others charge per transaction, impose request limits, enforce timing rules or constrain how event feeds can be consumed across a group.</p>
+<p>Those technical restrictions can create real architecture and cost consequences.</p>
+<p>Most of them are documented.</p>
+<p>Read them before you sign.</p>
+<p>And do not assume there is one mature hotel technology standard solving this for everybody.</p>
+<p>Open travel formats have not produced a single universal integration model. Major PMS vendors continue to operate their own platforms, APIs and connection ecosystems.</p>
+<p>So don&#x27;t stop at:</p>
+<p><em>Do you have an API?</em></p>
+<p>Ask:</p>
+<p><em>Can the system I actually want to use do the things I need through it, and what will it cost?</em></p>
+<p>Then plan the migration before the contract is signed.</p>
+<p>That is where hotels most easily lose their history.</p>
+<p>For every category of data, decide what comes with you, what is archived and what you are prepared to leave behind.</p>
+<p>Future reservations.</p>
+<p>Guest profiles.</p>
+<p>Balances and ledgers.</p>
+<p>Historical stays and bills.</p>
+<p>Rate configuration.</p>
+<p>Then:</p>
+<ol><li>Inventory the data.</li><li>Decide what migrates, what is archived and what is dropped, with senior sign-off.</li><li>Export everything possible from the old platform before cutover, and keep a copy you control in a documented format you will still understand years later.</li><li>Move during lower occupancy if you have the choice, with tight control over rate and configuration changes.</li><li>Validate the new system immediately after go-live: room counts, guests in house, deposits, integrations and the first financial close.</li></ol>
+<p>Sometimes you will not get a perfect migration window.</p>
+<p>Contracts end. Suppliers withdraw products. Projects slip.</p>
+<p>If you are forced to move during a difficult period, increase the checking rather than pretending the risk disappeared.</p>
+<p>For EU hotels, the Data Act, Regulation (EU) 2023/2854, gives the data-extraction part of this process additional legal weight. Use that leverage while negotiating rather than discovering your rights when the relationship has already broken down. Have the switching and exit clauses read by someone who knows the regulation before you sign.</p>
+<p>And before you buy any PMS, ask one final question:</p>
+<p><strong>Show me how I export all my data if we leave.</strong></p>
+<p>Then watch what happens.</p>
+<h2 id="common-questions">Common Questions</h2>
+<h3 id="what-does-a-hotel-pms-actually-do">What does a hotel PMS actually do?</h3>
+<p>A PMS holds three things: what exists, what is promised and what is owed. It carries the rooms, the reservations, the guest accounts and the daily books. The guest profile sits across all three. It is the record everyone in the building has agreed to believe.</p>
+<h3 id="is-a-cloud-pms-better-than-an-on-premise-one">Is a cloud PMS better than an on-premise one?</h3>
+<p>Cloud is the starting condition, not the strategy. Two products can both be cloud and be built very differently underneath. The useful questions are what the system connects to, who owns each important piece of information, and whether you can get your own data out.</p>
+<h3 id="what-happens-to-a-cloud-pms-when-the-internet-stops">What happens to a cloud PMS when the internet stops?</h3>
+<p>Less than most people assume. Mainstream cloud platforms generally do not offer a documented way to complete a full check-in with the PMS genuinely offline. Test three things: what reception can still see, what the payment terminal can do on its own, and how the transactions are reconciled afterwards.</p>
+<h3 id="what-is-the-difference-between-a-room-and-a-room-type">What is the difference between a room and a room type?</h3>
+<p>The room is the physical space. The room type is the product the guest buys. Most guests reserve a Superior Sea View, not room 214. Reception decides which physical room fulfils that promise, and can change that decision right up to arrival.</p>
+<h3 id="what-is-the-difference-between-out-of-order-and-out-of-servi">What is the difference between out of order and out of service?</h3>
+<p>Out of order commonly removes a room from sellable inventory. Out of service commonly describes a smaller defect, with the room often still sellable. But the labels are not the control. The behaviour is. Some platforms have no separate out-of-order status at all. Take a test room, apply each status and watch what happens to availability.</p>
+<h3 id="how-is-hotel-availability-calculated">How is hotel availability calculated?</h3>
+<p>Start with the physical rooms in a room type. Subtract rooms genuinely removed from inventory, reservations consuming that room type, and group blocks currently taking inventory. Then adjust for intentional overbooking. What remains is approximately what you can sell. Approximately matters, because systems make different decisions about provisional reservations and blocks.</p>
+<h3 id="what-is-a-rate-plan">What is a rate plan?</h3>
+<p>A product, not a price. It is the price plus its conditions: cancellation policy, inclusions, eligibility and length-of-stay rules. A derived rate inherits its price from another rate. That is powerful when configured correctly, and quietly expensive for months when it is not.</p>
+<h3 id="what-is-the-night-audit-and-is-it-still-necessary">What is the night audit, and is it still necessary?</h3>
+<p>Traditionally it closes one business day and opens the next. It checks unfinished arrivals and departures, posts room and tax charges, balances the financial activity, rolls the business date forward and produces the reports used to run the next day. At least one established cloud PMS has removed it completely. The question is not whether the old ritual survived. It is where the control went.</p>
+<h3 id="what-should-you-test-before-buying-a-pms">What should you test before buying a PMS?</h3>
+<p>Choose five things your hotel genuinely does. A half-board supplement. A group reservation with a rooming list. A long-stay guest billed weekly. Make every supplier perform them live rather than confirm they are possible. Then ask how you export all your data if you leave, and watch what happens.</p>
+<h2 id="key-terms">Key Terms</h2>
+<ul><li><strong>Property management system, or PMS.</strong> The software holding rooms, reservations, guest accounts and the daily books. The hotel&#x27;s operational record.</li><li><strong>Room type.</strong> The product a guest buys. The physical room is assigned separately, often close to arrival.</li><li><strong>Out of order.</strong> A status that commonly removes a room from sellable inventory. Test the behaviour rather than trusting the label.</li><li><strong>Out of service.</strong> A status commonly used for a smaller defect, where the room often stays in sellable inventory.</li><li><strong>Business date.</strong> The hotel&#x27;s trading day, which does not always match the calendar date. A drink poured at one in the morning may still belong to the previous day.</li><li><strong>Trial balance.</strong> The daily test that the accounting entries reconcile.</li><li><strong>Rate plan.</strong> A price plus its conditions: cancellation policy, inclusions, eligibility and length-of-stay rules.</li><li><strong>Derived rate.</strong> A rate that inherits its price from another, such as a non-refundable rate held a fixed percentage below the flexible rate.</li><li><strong>Restriction.</strong> A control over which demand you accept rather than what you charge. Minimum and maximum length of stay, arrival and departure rules, and stop sells.</li><li><strong>Release, or cut-off.</strong> The point at which unsold contracted rooms return from a block to general availability.</li><li><strong>Discrepancy report.</strong> The daily comparison between what housekeeping found in a room and what the system believes about it. Read it in both directions.</li><li><strong>API.</strong> The doorway other software uses to talk to the PMS. A partner logo tells you a door exists. It does not tell you how wide it is, what it costs, or who is already standing in it.</li></ul>
+<h2 id="how-this-connects-to-the-wider-hotel-technology-stack">How This Connects to the Wider Hotel Technology Stack</h2>
+<p>A PMS does not operate in isolation. The decisions and records described above move into almost every other part of the hotel technology stack.</p>
+<ul><li><strong><a href="../distribution-and-connectivity/">Distribution and Connectivity</a></strong> carries rooms, rates and availability out to booking channels. Mapping, certification and rate parity sit there. In an independent hotel the PMS will often be the authority on room inventory, but a central reservation system may legitimately be the master in a brand or group environment. </li><li><strong><a href="../direct-booking-and-e-commerce/">Direct Booking and E-commerce</a></strong> owns the website and booking engine. The moment a direct reservation lands in the PMS, it becomes an operational record. </li><li><strong><a href="../revenue-management/">Revenue Management</a></strong> decides price and, depending on the architecture, may also own restrictions or oversell limits. Occupancy, pickup, out-of-order rooms and no-shows all depend on the operational record being right. </li><li><strong><a href="../market-intelligence-and-analytics/">Market Intelligence and Analytics</a></strong> turns PMS output into comparison, benchmarking and forecast. Bad operational data becomes bad analysis. The occupancy denominator discussed above matters here because it changes what you benchmark. </li><li><strong><a href="../guest-technology-and-crm/">Guest Technology and CRM</a></strong> depends on the profile created through booking and check-in. In many hotels the master guest profile lives outside the PMS. Duplicate profiles are therefore not just an administrative nuisance; they carry a marketing cost. </li><li><strong><a href="../payments-and-financial-technology/">Payments and Financial Technology</a></strong> handles card authorisations and the movement of money. The bill may live in the PMS, but the payment moves through another system, and the night audit is where the two must reconcile. </li><li><strong><a href="../sales-groups-and-mice/">Sales, Groups and MICE</a></strong> brings rooming lists, blocks, cut-off dates and event billing into the PMS. Group blocks also sit inside the availability calculation, which is why group business and oversell problems often meet in the same argument. </li><li><strong><a href="../data-apis-and-integration/">Data, APIs and Integration</a></strong> is the layer underneath every connection in this article. It determines what the PMS can exchange, how quickly, under what limits, and whether you can get usable data back out. </li><li><strong><a href="../ai-automation-and-agents/">AI, Automation and Agents</a></strong> can only be as trustworthy as the record beneath them. AI built on bad room status, reservation or availability data simply multiplies the error faster. </li><li><strong><a href="../hotel-technology-strategy/">Hotel Technology Strategy</a></strong> weighs a PMS replacement against every other demand on the technology budget. </li><li><strong><a href="../emerging-hotel-technology/">Emerging Hotel Technology</a></strong> covers operating models and technologies that are real but not yet settled enough to treat as standard practice. </li></ul>
+<h2 id="related-reading">Related Reading</h2>
+<ul><li><strong>Why Your Hotel&#x27;s Future Runs on a Cloud PMS</strong> </li></ul>
+<p>As the wider article library grows, this section can expand with the most relevant supporting pieces rather than becoming a catalogue.</p>
+<p>A PMS earns its place by being boringly reliable about what exists and who has been promised it.</p>
+<p>And by allowing everything around it to read and write that truth without a fight.</p>
+<p>It is right because you decided it should be.</p>
+<p>It stays right only for as long as everything around it keeps telling it the truth.</p>
+<p>Judge it on the shower tray in room 214.</p>
+<p>On the queue at four.</p>
+<p>On the audit at half past two.</p>
+<p>And on what happens to your history the day you leave.</p>
+<p>I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.</p>
+</article>
+<footer class="page">
+<p>Written by Richard Bedenham, Director, primalRMS | Product Owner, webhotelier | primalres.
+Last reviewed 18 August 2026. Next review 18 November 2026.</p>
+<p><a href="../../">All guides</a></p>
+</footer>
+</main>
+</body>
+</html>
