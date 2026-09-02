@@ -1,7 +1,7 @@
 ---
 title: Hotel PMS and Operations: A Complete Practical Guide
-url: https://rbedenham.github.io/guides/hotel-operations-and-pms/
-markdown_url: https://rbedenham.github.io/guides/hotel-operations-and-pms/index.md
+url: https://richard-bedenham.github.io/guides/hotel-operations-and-pms/
+markdown_url: https://richard-bedenham.github.io/guides/hotel-operations-and-pms/index.md
 author: Richard Bedenham
 author_role: Director, primalRMS | Product Owner, webhotelier | primalres
 reviewed: 2026-08-18

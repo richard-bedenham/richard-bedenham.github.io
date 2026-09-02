@@ -1,7 +1,7 @@
 ---
 title: Hotel Distribution and Connectivity: A Complete Guide
-url: https://rbedenham.github.io/guides/distribution-and-connectivity/
-markdown_url: https://rbedenham.github.io/guides/distribution-and-connectivity/index.md
+url: https://richard-bedenham.github.io/guides/distribution-and-connectivity/
+markdown_url: https://richard-bedenham.github.io/guides/distribution-and-connectivity/index.md
 author: Richard Bedenham
 author_role: Director, primalRMS | Product Owner, webhotelier | primalres
 reviewed: 2026-08-18

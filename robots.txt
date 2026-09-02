@@ -60,4 +60,4 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://rbedenham.github.io/sitemap.xml
+Sitemap: https://richard-bedenham.github.io/sitemap.xml

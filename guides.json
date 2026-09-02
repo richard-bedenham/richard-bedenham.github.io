@@ -1,7 +1,7 @@
 {
   "name": "The Hotel Ecosystem",
   "description": "Practical reference guides to the systems that run a hotel.",
-  "url": "https://rbedenham.github.io/",
+  "url": "https://richard-bedenham.github.io/",
   "author": {
     "name": "Richard Bedenham",
     "role": "Director, primalRMS | Product Owner, webhotelier | primalres",
@@ -12,15 +12,15 @@
   "corpus": {
     "guides": 3,
     "words": 24043,
-    "markdown": "https://rbedenham.github.io/llms-full.txt"
+    "markdown": "https://richard-bedenham.github.io/llms-full.txt"
   },
   "guides": [
     {
       "id": "C01",
       "title": "Hotel PMS and Operations: A Complete Practical Guide",
       "description": "What a hotel PMS is really the record for, why cloud is a starting condition rather than a strategy, and the questions that decide if it serves your hotel.",
-      "url": "https://rbedenham.github.io/guides/hotel-operations-and-pms/",
-      "markdown": "https://rbedenham.github.io/guides/hotel-operations-and-pms/index.md",
+      "url": "https://richard-bedenham.github.io/guides/hotel-operations-and-pms/",
+      "markdown": "https://richard-bedenham.github.io/guides/hotel-operations-and-pms/index.md",
       "words": 7709,
       "readingMinutes": 34,
       "reviewed": "2026-08-18",
@@ -79,8 +79,8 @@
       "id": "C02",
       "title": "Hotel Distribution and Connectivity: A Complete Guide",
       "description": "Why hotel distribution is lost in mapping rather than in commission, how channel managers actually work, and what parity and wholesale contracts really require.",
-      "url": "https://rbedenham.github.io/guides/distribution-and-connectivity/",
-      "markdown": "https://rbedenham.github.io/guides/distribution-and-connectivity/index.md",
+      "url": "https://richard-bedenham.github.io/guides/distribution-and-connectivity/",
+      "markdown": "https://richard-bedenham.github.io/guides/distribution-and-connectivity/index.md",
       "words": 6706,
       "readingMinutes": 30,
       "reviewed": "2026-08-18",
@@ -139,8 +139,8 @@
       "id": "C03",
       "title": "Direct Booking and Hotel E-commerce: A Complete Guide",
       "description": "Direct bookings are not free, and the costs are simply spread out. How to cost every channel honestly, and build direct as a system rather than a campaign.",
-      "url": "https://rbedenham.github.io/guides/direct-booking-and-e-commerce/",
-      "markdown": "https://rbedenham.github.io/guides/direct-booking-and-e-commerce/index.md",
+      "url": "https://richard-bedenham.github.io/guides/direct-booking-and-e-commerce/",
+      "markdown": "https://richard-bedenham.github.io/guides/direct-booking-and-e-commerce/index.md",
       "words": 9628,
       "readingMinutes": 43,
       "reviewed": "2026-08-18",

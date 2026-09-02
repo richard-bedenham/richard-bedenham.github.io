@@ -1,7 +1,7 @@
 ---
 title: Direct Booking and Hotel E-commerce: A Complete Guide
-url: https://rbedenham.github.io/guides/direct-booking-and-e-commerce/
-markdown_url: https://rbedenham.github.io/guides/direct-booking-and-e-commerce/index.md
+url: https://richard-bedenham.github.io/guides/direct-booking-and-e-commerce/
+markdown_url: https://richard-bedenham.github.io/guides/direct-booking-and-e-commerce/index.md
 author: Richard Bedenham
 author_role: Director, primalRMS | Product Owner, webhotelier | primalres
 reviewed: 2026-08-18
