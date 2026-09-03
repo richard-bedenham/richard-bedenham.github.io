@@ -452,7 +452,7 @@ Schema markup removes ambiguity. It does not buy a result. Google Search has no 
 Direct booking touches almost every other part of hotel technology, which makes the boundaries important.
 
 - **[Distribution and Connectivity](../distribution-and-connectivity/)** owns how rates and availability reach each channel. If the question is how a rate gets there and stays accurate, it belongs there. If the question is what the guest sees and does once they arrive, it belongs here. Parity sits on the border.
-- **Revenue Management** sets the price, rules and rate structure. Direct booking sells them. A booking engine can lose the guest because the rate structure made sense on a spreadsheet but not on a screen.
+- **[Revenue Management](../revenue-management/)** sets the price, rules and rate structure. Direct booking sells them. A booking engine can lose the guest because the rate structure made sense on a spreadsheet but not on a screen.
 - **Payments and Financial Technology** owns payment providers, card-security checks, refunds and disputed charges. This article owns the conversion consequence at the point of sale. Whether a later no-show charge stands up can depend on how the card was verified inside the booking flow.
 - **Guest Technology and CRM** owns the guest record, consent and the messages sent before, during and after the stay. Direct booking creates first-party guest data; CRM determines what happens to it. Abandoned-booking recovery and repeat-guest offers sit on that boundary.
 - **Market Intelligence and Analytics** works out which channel caused which booking and what each channel actually contributes. That is what turns net value by channel into a number rather than an argument.

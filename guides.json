@@ -10,8 +10,8 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "licenseNote": "Free to quote, summarise and cite with attribution.",
   "corpus": {
-    "guides": 3,
-    "words": 24043,
+    "guides": 4,
+    "words": 32977,
     "markdown": "https://richard-bedenham.github.io/llms-full.txt"
   },
   "guides": [
@@ -192,6 +192,67 @@
         "Brand search",
         "First-party guest data",
         "Structured data"
+      ]
+    },
+    {
+      "id": "C04",
+      "title": "Hotel Revenue Management: A Complete Practical Guide",
+      "description": "Occupancy is not success and RevPAR is a starting point. How to price on recorded reasoning, agreed boundaries and net contribution rather than on instinct.",
+      "url": "https://richard-bedenham.github.io/guides/revenue-management/",
+      "markdown": "https://richard-bedenham.github.io/guides/revenue-management/index.md",
+      "words": 8934,
+      "readingMinutes": 40,
+      "reviewed": "2026-08-18",
+      "topics": [
+        "Hotel revenue management",
+        "RevPAR and hotel performance metrics",
+        "Hotel demand forecasting",
+        "Hotel rate structure and restrictions",
+        "Hotel segmentation and channel mix",
+        "Pricing automation and revenue management systems",
+        "Displacement analysis",
+        "Pricing governance"
+      ],
+      "keywords": "hotel revenue management, RevPAR, ADR, demand forecasting, booking pace, rate structure, channel mix, displacement analysis, pricing automation",
+      "sections": [
+        "The Short Version",
+        "Foundations and Definitions",
+        "Demand and Forecasting",
+        "Pricing Decisions and Governance",
+        "Rate Structure and Restrictions",
+        "Segmentation and Channel Mix",
+        "Pricing Automation",
+        "Commercial Strategy and Culture",
+        "Common Questions",
+        "Key Terms",
+        "How This Connects to the Wider Hotel Technology Stack",
+        "Related Reading"
+      ],
+      "questionsAnswered": [
+        "What is the difference between ADR and RevPAR?",
+        "What is the difference between pickup and pace?",
+        "Is RevPAR a good measure of hotel performance?",
+        "How do you work out the displacement cost of a group booking?",
+        "How much should a hotel overbook?",
+        "What is the difference between segment, channel and source?",
+        "Is a direct booking always worth more than an OTA booking?",
+        "Why does the same percentage discount give different results on different rate plans?",
+        "Do revenue management systems record why a price changed?",
+        "Is it legal to price from competitor data?"
+      ],
+      "definesTerms": [
+        "ADR, or average daily rate",
+        "RevPAR, or revenue per available room",
+        "TRevPAR, or total revenue per available room",
+        "GOPPAR, or gross operating profit per available room",
+        "Net contribution",
+        "Displacement",
+        "Pickup",
+        "Pace",
+        "Booking curve",
+        "Unconstrained demand",
+        "Last room availability, or LRA",
+        "Stale restriction"
       ]
     }
   ]

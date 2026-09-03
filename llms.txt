@@ -7,6 +7,7 @@
 - [Hotel PMS and Operations: A Complete Practical Guide](https://richard-bedenham.github.io/guides/hotel-operations-and-pms/): What a hotel PMS is really the record for, why cloud is a starting condition rather than a strategy, and the questions that decide if it serves your hotel. (7,709 words, reviewed 2026-08-18)
 - [Hotel Distribution and Connectivity: A Complete Guide](https://richard-bedenham.github.io/guides/distribution-and-connectivity/): Why hotel distribution is lost in mapping rather than in commission, how channel managers actually work, and what parity and wholesale contracts really require. (6,706 words, reviewed 2026-08-18)
 - [Direct Booking and Hotel E-commerce: A Complete Guide](https://richard-bedenham.github.io/guides/direct-booking-and-e-commerce/): Direct bookings are not free, and the costs are simply spread out. How to cost every channel honestly, and build direct as a system rather than a campaign. (9,628 words, reviewed 2026-08-18)
+- [Hotel Revenue Management: A Complete Practical Guide](https://richard-bedenham.github.io/guides/revenue-management/): Occupancy is not success and RevPAR is a starting point. How to price on recorded reasoning, agreed boundaries and net contribution rather than on instinct. (8,934 words, reviewed 2026-08-18)
 
 ## For machine readers
 

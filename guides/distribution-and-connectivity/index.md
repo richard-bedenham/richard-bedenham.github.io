@@ -417,7 +417,7 @@ Distribution touches almost every other part of hotel technology.
 
 - **[Hotel Operations and PMS](../hotel-operations-and-pms/)** owns the stay itself: room assignment, the folio, the night audit and the record of who is in the house. Where a booking is first created may instead be the CRS in a centrally managed setup, and the channel contract still determines what you owe the guest.
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** covers the website, booking engine and metasearch. Your own website is another distribution channel, but making it convert belongs there.
-- **Revenue Management** decides the price. Distribution carries it. Derived, occupancy-based and length-of-stay pricing can calculate the final guest price inside the connectivity layer, which is why the boundary needs to be explicit.
+- **[Revenue Management](../revenue-management/)** decides the price. Distribution carries it. Derived, occupancy-based and length-of-stay pricing can calculate the final guest price inside the connectivity layer, which is why the boundary needs to be explicit.
 - **Market Intelligence and Analytics** owns rate shopping, parity monitoring and channel-production reporting. Distribution creates the outcome; analytics helps you diagnose it.
 - **Guest Technology and CRM** inherits whatever guest data the channel gives you. Masked email addresses, channel messaging and missing consent are distribution facts with CRM consequences.
 - **Payments and Financial Technology** owns virtual cards, settlement, chargebacks and commission reconciliation. The commercial model chosen here and the collection model handled there are related, but they are not the same decision.
