@@ -34,13 +34,14 @@
       introTitle: 'Tell us what you think',
       introBody: [
         'We are working out what to build next in Revhero and RoomPulse, and we would rather ask you than guess.',
-        'It takes about five minutes. You can skip every question but one.'
+        'It takes about five minutes, and every question needs an answer.'
       ],
       introPoints: [
-        'Your answers are anonymous unless you choose to leave your details.',
+        'We ask for your property and your email so we can follow up on what you say. We will not add you to a mailing list.',
         'Your progress is saved on this device, so you can come back to it.'
       ],
       required: 'This one is needed before you can carry on.',
+      requiredGrid: 'Every row needs an answer. Use "Not used" or "Not sure" if that is the honest one.',
       doneTitle: 'Thank you — genuinely.',
       doneBody: [
         'Every response is read by the people who build Revhero and RoomPulse, and the themes go straight into what we work on next.',
@@ -58,13 +59,14 @@
       introTitle: 'Πείτε μας τη γνώμη σας',
       introBody: [
         'Ετοιμάζουμε το πλάνο μας για το Revhero και το RoomPulse και προτιμούμε να ρωτήσουμε εσάς παρά να υποθέσουμε.',
-        'Θα σας πάρει περίπου πέντε λεπτά. Μπορείτε να παραλείψετε κάθε ερώτηση εκτός από μία.'
+        'Θα σας πάρει περίπου πέντε λεπτά, και όλες οι ερωτήσεις χρειάζονται απάντηση.'
       ],
       introPoints: [
-        'Οι απαντήσεις σας είναι ανώνυμες, εκτός αν επιλέξετε να αφήσετε τα στοιχεία σας.',
+        'Ζητάμε το ξενοδοχείο και το email σας για να επικοινωνήσουμε μαζί σας για όσα μας πείτε. Δεν θα σας προσθέσουμε σε λίστα newsletter.',
         'Η πρόοδός σας αποθηκεύεται σε αυτή τη συσκευή, ώστε να μπορείτε να επιστρέψετε.'
       ],
       required: 'Χρειαζόμαστε αυτή την απάντηση για να συνεχίσετε.',
+      requiredGrid: 'Κάθε γραμμή χρειάζεται απάντηση. Χρησιμοποιήστε «Δεν το χρησιμοποιώ» ή «Δεν γνωρίζω» αν αυτή είναι η ειλικρινής απάντηση.',
       doneTitle: 'Ευχαριστούμε — ειλικρινά.',
       doneBody: [
         'Κάθε απάντηση διαβάζεται από τους ανθρώπους που φτιάχνουν το Revhero και το RoomPulse, και όσα μας λέτε περνούν κατευθείαν στο τι θα δουλέψουμε στη συνέχεια.',
@@ -147,7 +149,9 @@
   function answered(it) {
     var v = answers[it.id];
     if (it.t === 'check') return Array.isArray(v) && v.length > 0;
-    if (it.t === 'grid') return v && Object.keys(v).length > 0;
+    // A required grid means every row. Both scales carry an escape column
+    // ("Not used" / "Not sure") so there is always an honest answer.
+    if (it.t === 'grid') return !!v && Object.keys(v).length === it.rows.length;
     if (it.t === 'text' || it.t === 'para') return typeof v === 'string' && v.trim() !== '';
     return v !== undefined && v !== null && v !== '';
   }
@@ -449,7 +453,8 @@
     if (missing) {
       var box = app.querySelector('[data-qid="' + missing.id + '"]');
       if (box && !box.querySelector('.q-err')) {
-        var e = el('p', 'q-err', t().required);
+        var msg = (missing.t === 'grid') ? t().requiredGrid : t().required;
+        var e = el('p', 'q-err', msg);
         e.setAttribute('role', 'alert');
         box.appendChild(e);
         box.setAttribute('aria-invalid', 'true');
