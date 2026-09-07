@@ -1,0 +1,279 @@
+/* ==========================================================================
+   Revhero client feedback survey.
+
+   Built on the Revhero design system (Eden guide, 21-design-system): indigo
+   --primary-700 #4338c8, the neutral ramp, Inter with the product's fallback
+   chain, 4px control radius, the card shadow recipe. Raw tokens keep their
+   product names; components style through the semantic aliases below.
+
+   Revhero ships light-only. A dark palette is derived here because this page
+   is opened on phones at night by people who did not choose the theme.
+   ========================================================================== */
+
+:root{
+  /* primary (indigo) */
+  --primary-50:#ecebfa;
+  --primary-200:#d9d7f4;
+  --primary-400:#6960d3;
+  --primary-700:#4338c8;
+  --primary-800:#362da0;
+  --primary-900:#221c64;
+  --primary-foreground:#f7f8ff;
+  /* brand variants */
+  --brand-extra-light:#f7f8ff;
+  --brand-light:#eff1fe;
+  --brand-medium-light:#e7eafe;
+  --brand-darker-light:#d7dcfe;
+  --brand-medium:#aeb9fc;
+  --brand-dark:#000163;
+  /* neutral ramp */
+  --neutral-50:#f3f5f7;
+  --neutral-100:#dbe0e6;
+  --neutral-200:#c3cad5;
+  --neutral-300:#abb6c4;
+  --neutral-400:#94a1b4;
+  --neutral-500:#7c8ba3;
+  --neutral-700:#556278;
+  --neutral-900:#333c48;
+  --neutral-black:#222830;
+  --neutral-white:#fff;
+  /* semantic */
+  --positive-700:#428b42;
+  --critical-700:#e0382a;
+
+  /* aliases */
+  --background:var(--neutral-50);
+  --card:var(--neutral-white);
+  --muted-surface:var(--brand-light);
+  --foreground:var(--neutral-black);
+  --heading:var(--neutral-900);
+  --body:var(--neutral-700);
+  --text-muted:var(--neutral-500);
+  --text-faint:var(--neutral-400);
+  --divider:var(--neutral-100);
+  --border:var(--neutral-200);
+  --border-strong:var(--neutral-300);
+  --accent:var(--primary-700);
+  --accent-hover:var(--primary-800);
+  --accent-tint:var(--brand-light);
+  --accent-fg:var(--primary-foreground);
+  --accent-text:var(--primary-700);
+  --ring:var(--brand-medium);
+  --track:var(--neutral-100);
+  --danger:var(--critical-700);
+  --good:var(--positive-700);
+  --shadow-card:rgba(0,0,0,.08) 0 4px 12px;
+
+  /* type */
+  --font-sans:Inter,"Inter Fallback",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --text-xs:.75rem; --text-sm:.875rem; --text-base:1rem;
+  --text-lg:1.125rem; --text-xl:1.25rem; --text-2xl:1.5rem;
+  --tracking-tight:-.025em; --tracking-widest:.1em;
+
+  --radius-sm:.25rem; --radius:.5rem; --radius-xl:.75rem;
+  --duration:.15s; --ease:cubic-bezier(.4,0,.2,1);
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --background:#14161c; --card:#1b1f27; --muted-surface:#232833;
+    --foreground:#eef0f4; --heading:#f5f7fa; --body:#c8d0dc;
+    --text-muted:#95a1b3; --text-faint:#6f7c90;
+    --divider:#2b313c; --border:#333a47; --border-strong:#454e5e;
+    --accent:#7d74e0; --accent-hover:#8f87e8; --accent-tint:#232052;
+    --accent-fg:#12101f; --accent-text:#a29bec; --ring:#6960d3; --track:#2b313c;
+    --danger:#f08b80; --good:#7fc47f;
+    --shadow-card:rgba(0,0,0,.45) 0 4px 12px;
+  }
+}
+:root[data-theme="dark"]{
+  --background:#14161c; --card:#1b1f27; --muted-surface:#232833;
+  --foreground:#eef0f4; --heading:#f5f7fa; --body:#c8d0dc;
+  --text-muted:#95a1b3; --text-faint:#6f7c90;
+  --divider:#2b313c; --border:#333a47; --border-strong:#454e5e;
+  --accent:#7d74e0; --accent-hover:#8f87e8; --accent-tint:#232052;
+  --accent-fg:#12101f; --accent-text:#a29bec; --ring:#6960d3; --track:#2b313c;
+  --danger:#f08b80; --good:#7fc47f;
+  --shadow-card:rgba(0,0,0,.45) 0 4px 12px;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--background); color:var(--foreground);
+  font-family:var(--font-sans); font-size:var(--text-base); line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px;border-radius:2px}
+
+.skip{
+  position:absolute;left:-9999px;top:0;background:var(--accent);color:var(--accent-fg);
+  padding:10px 16px;border-radius:0 0 var(--radius) 0;z-index:10;font-weight:600;
+}
+.skip:focus{left:0}
+
+/* ---- masthead ---- */
+.masthead{background:var(--card);border-bottom:1px solid var(--border)}
+.masthead-in{
+  max-width:760px;margin:0 auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.wordmark{
+  font-weight:700;font-size:var(--text-base);letter-spacing:var(--tracking-tight);
+  color:var(--heading);
+}
+.wordmark span{color:var(--accent-text);margin:0 2px}
+
+.langsw{display:flex;border:1px solid var(--border-strong);border-radius:var(--radius-sm);overflow:hidden}
+.langsw button{
+  font:inherit;font-size:var(--text-xs);font-weight:600;padding:6px 12px;cursor:pointer;
+  border:0;background:var(--card);color:var(--text-muted);
+  transition:background var(--duration) var(--ease),color var(--duration) var(--ease);
+}
+.langsw button + button{border-left:1px solid var(--border-strong)}
+.langsw button:hover{background:var(--accent-tint);color:var(--accent-text)}
+.langsw button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg)}
+
+/* ---- layout ---- */
+main{max-width:760px;margin:0 auto;padding:20px}
+.rail{display:flex;gap:3px;margin-bottom:16px}
+.rail span{flex:1;height:3px;border-radius:999px;background:var(--track);transition:background var(--duration) var(--ease)}
+.rail span.on{background:var(--accent)}
+.rail span.now{background:var(--primary-400)}
+
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow-card);overflow:hidden;
+}
+.card-head{padding:22px 24px 18px;background:var(--accent-tint);border-bottom:1px solid var(--divider)}
+.card-head h1,.card-head h2{
+  margin:0;font-size:var(--text-2xl);font-weight:600;
+  letter-spacing:var(--tracking-tight);color:var(--heading);text-wrap:balance;
+}
+.card-head p{margin:6px 0 0;color:var(--body);font-size:var(--text-sm)}
+.card-body{padding:6px 24px 22px}
+.loading{color:var(--text-muted);padding:24px 0;text-align:center}
+
+/* ---- questions ---- */
+fieldset{border:0;margin:0;padding:0}
+.q{padding:22px 0;border-bottom:1px solid var(--divider)}
+.q:last-child{border-bottom:0;padding-bottom:6px}
+.q > legend, .q > .q-title{
+  padding:0;margin:0 0 4px;font-size:var(--text-base);font-weight:600;
+  line-height:1.4;color:var(--heading);text-wrap:balance;
+}
+.q .help{margin:0 0 12px;font-size:var(--text-sm);color:var(--text-muted)}
+.req{color:var(--danger);margin-left:3px}
+.q-err{
+  margin:10px 0 0;color:var(--danger);font-size:var(--text-sm);font-weight:500;
+}
+
+.opts{display:flex;flex-direction:column;gap:2px;margin-top:10px}
+.opt{
+  display:flex;align-items:flex-start;gap:11px;padding:10px 12px;
+  border-radius:var(--radius-sm);cursor:pointer;border:1px solid transparent;
+  font-size:var(--text-sm);color:var(--body);
+  transition:background var(--duration) var(--ease),border-color var(--duration) var(--ease);
+}
+.opt:hover{background:var(--muted-surface)}
+.opt input{accent-color:var(--accent);margin:2px 0 0;flex:none;width:17px;height:17px;cursor:pointer}
+.opt.sel{background:var(--accent-tint);border-color:var(--brand-darker-light);color:var(--foreground);font-weight:500}
+
+input[type=text],input[type=email],textarea{
+  width:100%;font:inherit;font-size:var(--text-base);color:var(--foreground);
+  background:var(--card);border:1px solid var(--border-strong);
+  border-radius:var(--radius-sm);padding:11px 12px;margin-top:10px;
+  transition:border-color var(--duration) var(--ease);
+}
+input:hover,textarea:hover{border-color:var(--accent)}
+textarea{min-height:96px;resize:vertical;line-height:1.55}
+::placeholder{color:var(--text-faint)}
+
+/* ---- scale (0-10) ---- */
+.scale{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.scale button{
+  flex:1 1 52px;min-width:44px;font:inherit;font-size:var(--text-sm);font-weight:500;
+  font-variant-numeric:tabular-nums;padding:11px 0;
+  border:1px solid var(--border-strong);background:var(--card);color:var(--body);
+  border-radius:var(--radius-sm);cursor:pointer;
+  transition:background var(--duration) var(--ease),border-color var(--duration) var(--ease),color var(--duration) var(--ease);
+}
+.scale button:hover{background:var(--accent-tint);border-color:var(--accent)}
+.scale button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);font-weight:600}
+.scale-ends{display:flex;justify-content:space-between;font-size:var(--text-xs);color:var(--text-muted);margin-top:7px}
+
+/* ---- grids ----
+   Rendered as one block per statement with a wrapping set of options, not as a
+   table. A six-column table is unusable on a phone, and this reads the same on
+   every width. */
+.grid{display:flex;flex-direction:column;gap:14px;margin-top:12px}
+.grid-row{border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 13px;background:var(--muted-surface)}
+.grid-row > .rowlabel{
+  display:block;font-size:var(--text-sm);font-weight:500;color:var(--foreground);
+  margin-bottom:9px;line-height:1.4;
+}
+.seg{display:flex;flex-wrap:wrap;gap:5px}
+.seg button{
+  flex:1 1 92px;font:inherit;font-size:var(--text-xs);font-weight:500;
+  padding:9px 6px;border:1px solid var(--border-strong);background:var(--card);
+  color:var(--body);border-radius:var(--radius-sm);cursor:pointer;line-height:1.25;
+  transition:background var(--duration) var(--ease),border-color var(--duration) var(--ease),color var(--duration) var(--ease);
+}
+.seg button:hover{background:var(--accent-tint);border-color:var(--accent);color:var(--accent-text)}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);font-weight:600}
+
+/* ---- nav ---- */
+.nav{
+  display:flex;align-items:center;gap:12px;padding:16px 24px;
+  border-top:1px solid var(--divider);background:var(--background);
+}
+.nav .spacer{flex:1}
+.btn{
+  font:inherit;font-size:var(--text-base);font-weight:600;padding:11px 24px;
+  border-radius:var(--radius-sm);cursor:pointer;border:1px solid var(--border-strong);
+  background:var(--card);color:var(--body);
+  transition:background var(--duration) var(--ease),border-color var(--duration) var(--ease),color var(--duration) var(--ease);
+}
+.btn:hover{background:var(--accent-tint);border-color:var(--accent);color:var(--accent-text)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-fg)}
+.btn[disabled]{opacity:.55;cursor:progress}
+
+/* ---- intro + done ---- */
+.prose{padding:8px 24px 20px;color:var(--body);font-size:var(--text-base)}
+.prose p{margin:0 0 12px;max-width:60ch}
+.prose ul{margin:0 0 12px;padding-left:20px;color:var(--text-muted);font-size:var(--text-sm)}
+.prose li{margin-bottom:5px}
+.done-icon{
+  width:44px;height:44px;border-radius:999px;background:var(--accent-tint);
+  color:var(--accent-text);display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:700;margin-bottom:14px;
+}
+.banner{
+  margin:0 24px 18px;padding:12px 14px;border-radius:var(--radius-sm);
+  border:1px solid var(--danger);color:var(--danger);font-size:var(--text-sm);
+  background:var(--card);
+}
+.saved{
+  font-size:var(--text-xs);color:var(--text-muted);padding:0 24px 14px;
+  font-family:var(--font-mono);
+}
+
+/* The honeypot. Not display:none — some bots skip hidden inputs, and this one
+   should look fillable to a machine and be invisible and unreachable to a person. */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.foot{max-width:760px;margin:0 auto;padding:6px 20px 40px;color:var(--text-faint);font-size:var(--text-xs)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+@media (max-width:576px){
+  main{padding:14px}
+  .card-head{padding:18px 16px 14px}
+  .card-body,.prose{padding-left:16px;padding-right:16px}
+  .nav{padding:14px 16px}
+  .banner,.saved{margin-left:16px;margin-right:16px}
+  .card-head h1,.card-head h2{font-size:var(--text-xl)}
+  .seg button{flex:1 1 46%}
+}
