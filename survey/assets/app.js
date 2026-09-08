@@ -25,7 +25,10 @@
 
   // Two versions of the same survey. ?v=short serves the 10-question one.
   // Anything else, including no parameter at all, serves the full 27.
-  var VARIANT = new URLSearchParams(location.search).get('v') === 'short'
+  // Pinned by /survey/short/index.html, so the client-facing link needs no
+  // query string. ?v=short still works, for testing and for anyone who has it.
+  var VARIANT = (window.SURVEY_VARIANT === 'short' ||
+                 new URLSearchParams(location.search).get('v') === 'short')
     ? 'short' : 'full';
 
   // Separate drafts, so someone who starts the long one and is then sent the
