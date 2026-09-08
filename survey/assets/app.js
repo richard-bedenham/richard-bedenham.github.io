@@ -31,10 +31,10 @@
     en: {
       start: 'Start', next: 'Next', back: 'Back', submit: 'Send my answers',
       sending: 'Sending…',
-      introTitle: 'Tell us what you think',
+      introTitle: 'What should we build next?',
       introBody: [
-        'We are working out what to build next in Revhero and RoomPulse, and we would rather ask you than guess.',
-        'It takes about five minutes, and every question needs an answer.'
+        'We are continuously improving the Revhero and RoomPulse service we offer, and we want to hear your honest feedback.',
+        'It takes five to seven minutes. Every question needs an answer, and every answer is read by the team that builds the system.'
       ],
       introPoints: [
         'We ask for your property and your email so we can follow up on what you say. We will not add you to a mailing list.',
@@ -48,6 +48,9 @@
         'You can close this page now.'
       ],
       failed: 'We could not send that just now. Your answers are still here — try again in a moment.',
+      retrying: 'Sending your answers. This is taking a moment — please leave this page open.',
+      stillTrying: 'We still cannot reach the server. Your answers are saved on this device — reopen this page later and they will send themselves.',
+      resuming: 'Finishing sending your answers…',
       offline: 'You appear to be offline. Your answers are saved on this device; try again when you are back.',
       savedNote: 'Saved on this device',
       restart: 'Start again',
@@ -56,10 +59,10 @@
     el: {
       start: 'Ξεκινήστε', next: 'Επόμενο', back: 'Πίσω', submit: 'Αποστολή απαντήσεων',
       sending: 'Γίνεται αποστολή…',
-      introTitle: 'Πείτε μας τη γνώμη σας',
+      introTitle: 'Τι να φτιάξουμε στη συνέχεια;',
       introBody: [
-        'Ετοιμάζουμε το πλάνο μας για το Revhero και το RoomPulse και προτιμούμε να ρωτήσουμε εσάς παρά να υποθέσουμε.',
-        'Θα σας πάρει περίπου πέντε λεπτά, και όλες οι ερωτήσεις χρειάζονται απάντηση.'
+        'Βελτιώνουμε συνεχώς την υπηρεσία Revhero και RoomPulse που σας προσφέρουμε, και θέλουμε να ακούσουμε την ειλικρινή σας γνώμη.',
+        'Θα σας πάρει πέντε με επτά λεπτά. Όλες οι ερωτήσεις χρειάζονται απάντηση, και κάθε απάντηση διαβάζεται από την ομάδα που φτιάχνει το σύστημα.'
       ],
       introPoints: [
         'Ζητάμε το ξενοδοχείο και το email σας για να επικοινωνήσουμε μαζί σας για όσα μας πείτε. Δεν θα σας προσθέσουμε σε λίστα newsletter.',
@@ -73,6 +76,9 @@
         'Μπορείτε να κλείσετε αυτή τη σελίδα.'
       ],
       failed: 'Δεν μπορέσαμε να το στείλουμε αυτή τη στιγμή. Οι απαντήσεις σας είναι εδώ — δοκιμάστε ξανά σε λίγο.',
+      retrying: 'Στέλνουμε τις απαντήσεις σας. Παίρνει λίγο χρόνο — παρακαλούμε αφήστε τη σελίδα ανοιχτή.',
+      stillTrying: 'Ακόμη δεν μπορούμε να συνδεθούμε. Οι απαντήσεις σας είναι αποθηκευμένες σε αυτή τη συσκευή — ανοίξτε ξανά τη σελίδα αργότερα και θα σταλούν μόνες τους.',
+      resuming: 'Ολοκληρώνουμε την αποστολή των απαντήσεών σας…',
       offline: 'Φαίνεται ότι είστε εκτός σύνδεσης. Οι απαντήσεις σας αποθηκεύτηκαν σε αυτή τη συσκευή· δοκιμάστε ξανά όταν συνδεθείτε.',
       savedNote: 'Αποθηκεύτηκε σε αυτή τη συσκευή',
       restart: 'Ξεκινήστε ξανά',
@@ -88,6 +94,12 @@
   var startedAt = null;
   var sending = false;
   var banner = null;
+  // Stable across every retry, so the server can recognise a repeat and store
+  // it once. Persisted with the draft, so it survives a reload mid-send.
+  var submissionId = null;
+  // Set the moment the respondent hits send, cleared only when the server has
+  // confirmed. While it is set, this response is owed to us.
+  var pendingSince = null;
 
   var app = document.getElementById('app');
   var rail = document.getElementById('rail');
@@ -110,7 +122,8 @@
   function saveDraft() {
     try {
       localStorage.setItem(DRAFT_KEY, JSON.stringify({
-        lang: lang, answers: answers, screen: screen, history: history, startedAt: startedAt
+        lang: lang, answers: answers, screen: screen, history: history,
+        startedAt: startedAt, submissionId: submissionId, pendingSince: pendingSince
       }));
     } catch (e) { /* private mode, or storage full — the survey still works */ }
   }
@@ -124,6 +137,8 @@
         answers = d.answers || {};
         history = Array.isArray(d.history) ? d.history : [];
         startedAt = d.startedAt || null;
+        submissionId = d.submissionId || null;
+        pendingSince = d.pendingSince || null;
         // Only resume onto a screen that still exists in this version.
         if (d.screen && (d.screen === 'intro' || section(d.screen))) screen = d.screen;
       }
@@ -398,15 +413,20 @@
     sec.items.forEach(function (it) { form.appendChild(questionNode(it)); });
 
     // Honeypot, once, on the first section.
+    //
+    // Deliberately NOT called "website", "email", "name" or anything else a
+    // browser or password manager recognises: autofill putting a value in here
+    // would flag a real client's response. autocomplete is off, it is not
+    // reachable by keyboard, and it is hidden from assistive technology.
     if (order.indexOf(screen) === 0) {
       var hp = el('div', 'hp');
       var hpi = document.createElement('input');
-      hpi.type = 'text'; hpi.name = 'website'; hpi.id = 'website';
-      hpi.tabIndex = -1; hpi.autocomplete = 'off';
+      hpi.type = 'text'; hpi.name = 'hp_ref'; hpi.id = 'hp_ref';
+      hpi.tabIndex = -1;
+      hpi.autocomplete = 'off';
       hpi.setAttribute('aria-hidden', 'true');
-      var hpl = el('label', null, 'Leave this field empty');
-      hpl.setAttribute('for', 'website');
-      hp.appendChild(hpl); hp.appendChild(hpi);
+      hp.setAttribute('aria-hidden', 'true');
+      hp.appendChild(hpi);
       form.appendChild(hp);
       window.__hp = hpi;
     }
@@ -501,23 +521,48 @@
   }
 
   // ---- submit -------------------------------------------------------------
-  function submit() {
-    if (sending) return;
+  //
+  // A response that reached the end of the survey must not be lost to one bad
+  // moment on the network, a Railway redeploy, or a rate limit. So:
+  //
+  //   - it retries, with a widening gap, rather than failing on the first try
+  //   - the draft is kept until the server has actually confirmed it
+  //   - a page that is closed mid-send picks the attempt back up on next load
+  //   - every attempt carries the SAME submissionId, so retries cannot create
+  //     duplicate rows however many times they land
+  //
+  // Delays in seconds. The last one is long on purpose: a Railway deploy takes
+  // a couple of minutes and there is no point hammering it meanwhile.
+  var RETRY_DELAYS = [2, 5, 12, 30, 60, 120];
 
-    if (navigator.onLine === false) {
-      banner = t().offline;
-      render();
-      return;
-    }
+  function newSubmissionId() {
+    try {
+      if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    } catch (e) { /* fall through */ }
+    // Fallback for older browsers: not cryptographically strong, but it only
+    // has to be unique among this respondent's own retries.
+    var s = '';
+    for (var i = 0; i < 32; i++) s += Math.floor(Math.random() * 16).toString(16);
+    return s.slice(0, 8) + '-' + s.slice(8, 12) + '-4' + s.slice(13, 16) + '-a' +
+           s.slice(17, 20) + '-' + s.slice(20, 32);
+  }
 
+  function submit(attempt) {
+    attempt = attempt || 0;
+    if (sending && attempt === 0) return;
+
+    if (!submissionId) submissionId = newSubmissionId();
+    pendingSince = pendingSince || Date.now();
     sending = true;
     banner = null;
-    render();
+    saveDraft();
+    if (attempt === 0) render();
 
     var payload = {
+      submissionId: submissionId,
       language: lang,
       durationMs: startedAt ? (Date.now() - startedAt) : null,
-      website: (window.__hp && window.__hp.value) || '',
+      hp_ref: (window.__hp && window.__hp.value) || '',
       answers: answers
     };
 
@@ -526,24 +571,57 @@
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     }).then(function (r) {
-      return r.json().then(function (j) { return { ok: r.ok, body: j }; });
+      return r.json().catch(function () { return {}; })
+        .then(function (j) { return { status: r.status, ok: r.ok, body: j }; });
     }).then(function (res) {
-      sending = false;
-      if (res.ok) {
-        clearDraft();
-        screen = 'done';
-        render();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
+      if (res.ok) return succeed();
+
+      // 4xx other than 429 means the server will never accept this payload,
+      // so retrying is pointless — show what it said.
+      if (res.status >= 400 && res.status < 500 && res.status !== 429) {
+        sending = false;
+        pendingSince = null;
         banner = (res.body && res.body.error) ? res.body.error : t().failed;
-        render();
+        saveDraft(); render();
+        return;
       }
+
+      var wait = (res.status === 429 && res.body && res.body.retryAfter)
+        ? Number(res.body.retryAfter) : null;
+      again(attempt, wait);
     }).catch(function () {
-      sending = false;
-      banner = t().failed;
-      render();
+      again(attempt);
     });
   }
+
+  function succeed() {
+    sending = false;
+    pendingSince = null;
+    clearDraft();
+    screen = 'done';
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function again(attempt, waitSeconds) {
+    if (attempt >= RETRY_DELAYS.length) {
+      // Out of automatic attempts. The answers are still on this device and
+      // still pending, so a reload — or coming back online — tries again.
+      sending = false;
+      banner = t().stillTrying;
+      render();
+      return;
+    }
+    var wait = waitSeconds || RETRY_DELAYS[attempt];
+    banner = t().retrying;
+    render();
+    setTimeout(function () { submit(attempt + 1); }, wait * 1000);
+  }
+
+  // Coming back online is the most likely moment for a stuck send to work.
+  window.addEventListener('online', function () {
+    if (pendingSince && !sending) submit(0);
+  });
 
   // ---- boot ---------------------------------------------------------------
   function render() {
@@ -562,5 +640,15 @@
 
   loadDraft();
   document.documentElement.lang = lang;
-  render();
+
+  // A response that was submitted but never confirmed is owed to us. Pick it
+  // up automatically rather than waiting for someone to think to try again —
+  // they will not. The submissionId makes this safe to repeat.
+  if (pendingSince && Object.keys(answers).length) {
+    banner = t().resuming;
+    render();
+    submit(0);
+  } else {
+    render();
+  }
 })();
