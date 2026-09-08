@@ -23,8 +23,20 @@
     if (override) API = override;
   }
 
-  var DRAFT_KEY = 'revhero-survey-draft-v1';
-  var SURVEY = window.SURVEY;
+  // Two versions of the same survey. ?v=short serves the 10-question one.
+  // Anything else, including no parameter at all, serves the full 27.
+  var VARIANT = new URLSearchParams(location.search).get('v') === 'short'
+    ? 'short' : 'full';
+
+  // Separate drafts, so someone who starts the long one and is then sent the
+  // short link does not resume half a different survey.
+  var DRAFT_KEY = 'revhero-survey-draft-v1-' + VARIANT;
+
+  var RAW = window.SURVEY;
+  // The short variant rides alongside the full one in the generated file.
+  var SURVEY = (VARIANT === 'short' && RAW && RAW.short)
+    ? { packs: RAW.short.packs, questionCount: RAW.short.questionCount }
+    : RAW;
 
   // ---- copy that is not part of the question set -------------------------
   var UI = {
@@ -35,6 +47,10 @@
       introBody: [
         'We are continuously improving the Revhero and RoomPulse service we offer, and we want to hear your honest feedback.',
         'It takes five to seven minutes. Every question needs an answer, and every answer is read by the team that builds the system.'
+      ],
+      introBodyShort: [
+        'We are continuously improving the Revhero and RoomPulse service we offer, and we want to hear your honest feedback.',
+        'Ten questions, about two minutes. Every one needs an answer, and there is a box at the end for anything else you want to say.'
       ],
       introPoints: [
         'We ask for your property and your email so we can follow up on what you say. We will not add you to a mailing list.',
@@ -63,6 +79,10 @@
       introBody: [
         'Βελτιώνουμε συνεχώς την υπηρεσία Revhero και RoomPulse που σας προσφέρουμε, και θέλουμε να ακούσουμε την ειλικρινή σας γνώμη.',
         'Θα σας πάρει πέντε με επτά λεπτά. Όλες οι ερωτήσεις χρειάζονται απάντηση, και κάθε απάντηση διαβάζεται από την ομάδα που φτιάχνει το σύστημα.'
+      ],
+      introBodyShort: [
+        'Βελτιώνουμε συνεχώς την υπηρεσία Revhero και RoomPulse που σας προσφέρουμε, και θέλουμε να ακούσουμε την ειλικρινή σας γνώμη.',
+        'Δέκα ερωτήσεις, περίπου δύο λεπτά. Όλες χρειάζονται απάντηση, και στο τέλος υπάρχει χώρος για ό,τι άλλο θέλετε να μας πείτε.'
       ],
       introPoints: [
         'Ζητάμε το ξενοδοχείο και το email σας για να επικοινωνήσουμε μαζί σας για όσα μας πείτε. Δεν θα σας προσθέσουμε σε λίστα newsletter.',
@@ -367,7 +387,8 @@
     card.appendChild(head);
 
     var prose = el('div', 'prose');
-    t().introBody.forEach(function (p) { prose.appendChild(el('p', null, p)); });
+    var body = (VARIANT === 'short' && t().introBodyShort) ? t().introBodyShort : t().introBody;
+    body.forEach(function (p) { prose.appendChild(el('p', null, p)); });
     var ul = document.createElement('ul');
     t().introPoints.forEach(function (p) { ul.appendChild(el('li', null, p)); });
     prose.appendChild(ul);
@@ -560,6 +581,7 @@
 
     var payload = {
       submissionId: submissionId,
+      variant: VARIANT,
       language: lang,
       durationMs: startedAt ? (Date.now() - startedAt) : null,
       hp_ref: (window.__hp && window.__hp.value) || '',
