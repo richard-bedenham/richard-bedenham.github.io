@@ -75,6 +75,38 @@
       restart: 'Start again',
       of: 'of'
     },
+    it: {
+      start: 'Inizia', next: 'Avanti', back: 'Indietro', submit: 'Invia le mie risposte',
+      sending: 'Invio in corso…',
+      introTitle: 'Cosa dovremmo sviluppare?',
+      introBody: [
+        'Miglioriamo continuamente il servizio Revhero e RoomPulse che le offriamo, e vogliamo sentire il suo parere sincero.',
+        'Richiede dai cinque ai sette minuti. Ogni domanda richiede una risposta, e ogni risposta viene letta dal team che sviluppa il sistema.'
+      ],
+      introBodyShort: [
+        'Miglioriamo continuamente il servizio Revhero e RoomPulse che le offriamo, e vogliamo sentire il suo parere sincero.',
+        'Dieci domande, circa due minuti. Tutte richiedono una risposta, e alla fine trova uno spazio per qualsiasi altra cosa voglia dirci.'
+      ],
+      introPoints: [
+        'Le chiediamo la struttura e la sua email per poterla ricontattare su quanto ci dira. Non la aggiungeremo a nessuna lista di mailing.',
+        'I suoi progressi vengono salvati su questo dispositivo, cosi puo riprendere piu tardi.'
+      ],
+      required: 'Questa risposta serve per proseguire.',
+      requiredGrid: 'Ogni riga richiede una risposta. Usi "Non lo uso" o "Non saprei" se e la risposta sincera.',
+      doneTitle: 'Grazie — davvero.',
+      doneBody: [
+        'Ogni risposta viene letta dalle persone che sviluppano Revhero e RoomPulse, e i temi che emergono finiscono direttamente in cio su cui lavoreremo.',
+        'Puo chiudere questa pagina.'
+      ],
+      failed: 'Non siamo riusciti a inviare in questo momento. Le sue risposte sono ancora qui — riprovi tra poco.',
+      retrying: 'Stiamo inviando le sue risposte. Ci sta mettendo un momento — lasci aperta questa pagina.',
+      stillTrying: 'Non riusciamo ancora a raggiungere il server. Le sue risposte sono salvate su questo dispositivo — riapra questa pagina piu tardi e verranno inviate da sole.',
+      resuming: 'Stiamo completando l invio delle sue risposte…',
+      offline: 'Sembra che lei sia offline. Le sue risposte sono salvate su questo dispositivo; riprovi quando torna online.',
+      savedNote: 'Salvato su questo dispositivo',
+      restart: 'Ricomincia',
+      of: 'di'
+    },
     el: {
       start: 'Ξεκινήστε', next: 'Επόμενο', back: 'Πίσω', submit: 'Αποστολή απαντήσεων',
       sending: 'Γίνεται αποστολή…',
