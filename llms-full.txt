@@ -2,7 +2,7 @@
 
 > Practical reference guides to the systems that run a hotel. Written by Richard Bedenham, Director, primalRMS | Product Owner, webhotelier | primalres.
 
-4 guides, 32,977 words. Licence CC BY 4.0: free to quote and cite with attribution.
+6 guides, 55,907 words. Licence CC BY 4.0: free to quote and cite with attribution.
 Canonical home: https://richard-bedenham.github.io/
 
 ---
@@ -940,8 +940,8 @@ A PMS does not operate in isolation. The decisions and records described above m
 - **[Distribution and Connectivity](../distribution-and-connectivity/)** carries rooms, rates and availability out to booking channels. Mapping, certification and rate parity sit there. In an independent hotel the PMS will often be the authority on room inventory, but a central reservation system may legitimately be the master in a brand or group environment.
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** owns the website and booking engine. The moment a direct reservation lands in the PMS, it becomes an operational record.
 - **[Revenue Management](../revenue-management/)** decides price and, depending on the architecture, may also own restrictions or oversell limits. Occupancy, pickup, out-of-order rooms and no-shows all depend on the operational record being right.
-- **Market Intelligence and Analytics** turns PMS output into comparison, benchmarking and forecast. Bad operational data becomes bad analysis. The occupancy denominator discussed above matters here because it changes what you benchmark.
-- **Guest Technology and CRM** depends on the profile created through booking and check-in. In many hotels the master guest profile lives outside the PMS. Duplicate profiles are therefore not just an administrative nuisance; they carry a marketing cost.
+- **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** turns PMS output into comparison, benchmarking and forecast. Bad operational data becomes bad analysis. The occupancy denominator discussed above matters here because it changes what you benchmark.
+- **[Guest Technology and CRM](../guest-technology-and-crm/)** depends on the profile created through booking and check-in. In many hotels the master guest profile lives outside the PMS. Duplicate profiles are therefore not just an administrative nuisance; they carry a marketing cost.
 - **Payments and Financial Technology** handles card authorisations and the movement of money. The bill may live in the PMS, but the payment moves through another system, and the night audit is where the two must reconcile.
 - **Sales, Groups and MICE** brings rooming lists, blocks, cut-off dates and event billing into the PMS. Group blocks also sit inside the availability calculation, which is why group business and oversell problems often meet in the same argument.
 - **Data, APIs and Integration** is the layer underneath every connection in this article. It determines what the PMS can exchange, how quickly, under what limits, and whether you can get usable data back out.
@@ -1395,8 +1395,8 @@ Distribution touches almost every other part of hotel technology.
 - **[Hotel Operations and PMS](../hotel-operations-and-pms/)** owns the stay itself: room assignment, the folio, the night audit and the record of who is in the house. Where a booking is first created may instead be the CRS in a centrally managed setup, and the channel contract still determines what you owe the guest.
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** covers the website, booking engine and metasearch. Your own website is another distribution channel, but making it convert belongs there.
 - **[Revenue Management](../revenue-management/)** decides the price. Distribution carries it. Derived, occupancy-based and length-of-stay pricing can calculate the final guest price inside the connectivity layer, which is why the boundary needs to be explicit.
-- **Market Intelligence and Analytics** owns rate shopping, parity monitoring and channel-production reporting. Distribution creates the outcome; analytics helps you diagnose it.
-- **Guest Technology and CRM** inherits whatever guest data the channel gives you. Masked email addresses, channel messaging and missing consent are distribution facts with CRM consequences.
+- **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** owns rate shopping, parity monitoring and channel-production reporting. Distribution creates the outcome; analytics helps you diagnose it.
+- **[Guest Technology and CRM](../guest-technology-and-crm/)** inherits whatever guest data the channel gives you. Masked email addresses, channel messaging and missing consent are distribution facts with CRM consequences.
 - **Payments and Financial Technology** owns virtual cards, settlement, chargebacks and commission reconciliation. The commercial model chosen here and the collection model handled there are related, but they are not the same decision.
 - **Sales, Groups and MICE** brings corporate rates, group blocks and event business into the distribution stack through GDS and corporate booking tools. It is also where allocations and blocks remain the right instrument.
 - **Data, APIs and Integration** sits underneath all of this. Mapping and certification are the hotel-facing expression of the deeper integration layer.
@@ -1875,8 +1875,8 @@ Direct booking touches almost every other part of hotel technology, which makes 
 - **[Distribution and Connectivity](../distribution-and-connectivity/)** owns how rates and availability reach each channel. If the question is how a rate gets there and stays accurate, it belongs there. If the question is what the guest sees and does once they arrive, it belongs here. Parity sits on the border.
 - **[Revenue Management](../revenue-management/)** sets the price, rules and rate structure. Direct booking sells them. A booking engine can lose the guest because the rate structure made sense on a spreadsheet but not on a screen.
 - **Payments and Financial Technology** owns payment providers, card-security checks, refunds and disputed charges. This article owns the conversion consequence at the point of sale. Whether a later no-show charge stands up can depend on how the card was verified inside the booking flow.
-- **Guest Technology and CRM** owns the guest record, consent and the messages sent before, during and after the stay. Direct booking creates first-party guest data; CRM determines what happens to it. Abandoned-booking recovery and repeat-guest offers sit on that boundary.
-- **Market Intelligence and Analytics** works out which channel caused which booking and what each channel actually contributes. That is what turns net value by channel into a number rather than an argument.
+- **[Guest Technology and CRM](../guest-technology-and-crm/)** owns the guest record, consent and the messages sent before, during and after the stay. Direct booking creates first-party guest data; CRM determines what happens to it. Abandoned-booking recovery and repeat-guest offers sit on that boundary.
+- **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** works out which channel caused which booking and what each channel actually contributes. That is what turns net value by channel into a number rather than an argument.
 - **[Hotel Operations and PMS](../hotel-operations-and-pms/)** owns whether the offer or package sold online can actually be delivered by the team on shift.
 - **Data, APIs and Integration** owns the connections that let the website, booking engine, PMS and CRM agree with each other.
 - **AI, Automation and Agents** is where the machine reader stops merely indexing and starts acting. **Emerging Hotel Technology** tracks where that shift is heading.
@@ -2420,8 +2420,8 @@ Revenue management sits in the middle of the commercial side of the hotel, so th
 - **[Hotel Operations and PMS](../hotel-operations-and-pms/)** owns the booking, room status and operational record. In an independent hotel the PMS is often the main system of record, while a central reservation system may hold that authority in a group environment. Revenue systems also write rates, availability and restrictions back into that stack.
 - **[Distribution and Connectivity](../distribution-and-connectivity/)** carries rates and availability to market. Revenue decides the price; distribution carries it and may transform how the guest finally sees it.
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** owns the booking engine and website experience. Channel-mix strategy is decided here; the conversion tools live there.
-- **Market Intelligence and Analytics** supplies competitor pricing, benchmarking and performance analysis. Reading a competitor-rate report is not revenue management; deciding what to do with it is.
-- **Guest Technology and CRM** owns the guest profile, repeat behaviour and relationship data that sharpen segmentation. The profile itself may live across several systems, so the boundary is about accountability rather than storage.
+- **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** supplies competitor pricing, benchmarking and performance analysis. Reading a competitor-rate report is not revenue management; deciding what to do with it is.
+- **[Guest Technology and CRM](../guest-technology-and-crm/)** owns the guest profile, repeat behaviour and relationship data that sharpen segmentation. The profile itself may live across several systems, so the boundary is about accountability rather than storage.
 - **Payments and Financial Technology** governs deposits, prepayment and the strength of non-refundable terms. A rate is only as strong as the payment mechanism behind it.
 - **Sales, Groups and MICE** owns blocks, options and the rooms groups hand back. Displacement analysis is the shared border, and neither side should quote group business alone.
 - **Data, APIs and Integration** moves forecasts, rates, restrictions and decisions between systems. Most automation ambitions eventually meet this layer.
@@ -2441,6 +2441,1150 @@ This list grows. New Knowledge Articles are added in batches rather than one at 
 The hotels that win this are not the ones with the cleverest pricing model. They are the ones where the reasoning behind every rate is captured, the boundaries are agreed in advance, and the whole building knows its decisions show up in the revenue. Occupancy is a number. Explained, defensible decisions are the asset.
 
 Get the record of why right, and the rest of this domain becomes teachable.
+
+I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+---
+
+---
+title: Hotel Market Intelligence, Rate Shopping and Analytics
+url: https://richard-bedenham.github.io/guides/market-intelligence-and-analytics/
+markdown_url: https://richard-bedenham.github.io/guides/market-intelligence-and-analytics/index.md
+author: Richard Bedenham
+author_role: Director, primalRMS | Product Owner, webhotelier | primalres
+reviewed: 2026-09-09
+words: 9309
+reading_minutes: 41
+license: CC BY 4.0 - free to quote and cite with attribution
+---
+
+# The Complete Guide to Hotel Market Intelligence and Analytics
+
+![Three hotel colleagues in a bright glass-walled office study a wall of bar charts, trend lines and coloured ribbons, with a sunlit European square outside.](c05-00-market-intelligence-analytics-cover.jpg)
+
+*Seeing the market clearly is a skill, not a feed to be watched. Every decision that follows starts with a number that means what you think it means.*
+
+It is a Tuesday in June. You are looking at Saturday 15 August.
+
+Your competitor is showing 210 and you are showing 185.
+
+Now what?
+
+Nothing yet.
+
+You have a number on a screen.
+
+This guide follows that number. Where it came from, what it is worth, what it can and cannot tell you, and what has to be true before you let it move a price. By the end, that Saturday will have produced a decision with a name and a date on it. Everything in between is the work that makes the decision worth taking.
+
+Start with what you do not know.
+
+You do not know what the 210 includes. Is it the room only, against your room plus half board? Is it priced for two adults or one? Was it captured on a channel you do not even sell through? Is there a single room left at that price? You do not know whether anybody paid it.
+
+There is a worse possibility, and almost nobody checks it.
+
+You do not know whether your competitor set that price at all. Booking.com and Expedia are online travel agencies, or OTAs: the big booking sites that sell your rooms and take a commission. Booking.com's own partner pages say it plainly. Under Booking Sponsored Benefit the site pays part of the room cost itself. The help page tells hotels they "may notice your rates appear lower on our platform than the rate you set". Expedia says it funds One Key rewards so that the cost does not touch your revenue strategy.
+
+So the 210 you are staring at may be a 230 with somebody else's money on top.
+
+From the outside, a discount funded by the booking site and a discount funded by the hotel look identical. Same screen, opposite meaning.
+
+Then check the 185.
+
+That is your number, and you are trusting it. In my experience the most common data error in this whole subject is not the competitor's price. It is your own. A broken link between your system and the booking site. A price that was supposed to follow another price and stopped following it. A stop sell nobody lifted. Hotels check the other side of the screen in detail, then simply assume their own side is right.
+
+That is the gap.
+
+**Market intelligence is treated as a feed to be watched, when it is a skill to be practised.**
+
+Watching it costs you money.
+
+Practising it earns you money.
+
+This subject is about seeing the market clearly.
+
+Acting on what you see is a different job. That job is revenue management.
+
+It is tempting to draw that as a line between departments, with one team observing and another team pricing. It is not one. It is not how hotels actually work. Every serious revenue management system now feeds shopped competitor rates straight into its pricing logic. There is no human moment in the middle where somebody inspects the number before it moves a price. And in most hotels in the world, the same person shops, reads and prices inside the same ten minutes.
+
+So the line is not between two teams.
+
+It is between two jobs, and the order matters.
+
+First establish that a number means what you think it means.
+
+Then let it move a price.
+
+Automation makes that discipline more important, not less. When nobody looks at the number, nobody catches it.
+
+There is a second reason the order matters. What you choose to look at decides what you are able to price. Suppose you check that Saturday for two adults, room only, cancellable, on a single booking site. You have already decided that your pricing will be led by the price a single guest pays when booking on a website. You have made your pricing by customer type, by length of stay and by channel invisible to yourself. Every decision you make after that is limited by that one choice.
+
+**A number that is precise and wrong is more dangerous than no number at all.**
+
+![A hotel manager in a lobby reaches toward two glowing price tags on a screen, ringed by icons for meals, location, time and a discount voucher.](c05-01-210-vs-185-problem.jpg)
+
+*Your competitor is showing 210 and you are showing 185. A number that is precise and wrong is more dangerous than no number at all.*
+
+You act on it.
+
+## The Short Version
+
+- Market intelligence is a skill to be practised, not a feed to be watched. Seeing the market clearly comes first. Acting on what you see is a different job, and that job is revenue management.
+- A shopped rate is an asking price, not a sale. Part of it may be discounted with the booking site's money. From the outside the two look identical. Same screen, opposite meaning.
+- Your own number is the one to check first. In my experience the most common data error is not the competitor's price. A broken link. A rate that stopped following another. A stop sell nobody lifted.
+- The word compset covers two jobs that conflict. Your shopping set should flex with guest substitution. Your benchmarking set has to stay stable. Its value is a series that stays comparable over time.
+- Like-for-like capture is the discipline. Occupancy, meal plan, room type and length of stay. Channel, taxes, cancellation terms, and the moment the price was seen. A perfect comparison is not possible.
+- An index tells you your share of a market. It does not tell you whether you made money. Read it beside last year, budget and profit. Then go and buy the profit half.
+- Definitions come before dashboards. Most of them are already written for you in the accounting and benchmarking standards. Every report should end in a decision. Give that decision a name and a date.
+
+## First Question: Who Is the 210?
+
+Before the price means anything, you have to know whose price it is, and why that hotel is on your screen at all.
+
+Rate shopping means collecting competitors' public prices automatically, at regular intervals, and storing them so you can read the movement over time.
+
+That is the core of it.
+
+It records asking prices.
+
+The products have moved well past that core, and buying decisions still get made on the old description. A current rate intelligence service returns much more than a price. It tells you whether the rate is sold out. The minimum stay attached to it. Whether a meal is included. Whether it can be cancelled. Whether value added tax, VAT, and city tax are inside the figure. The room name. The maximum number of guests. And the exact moment the price was seen. Other parts of the same service tell you whether your price matches across channels, where you rank, and what demand looks like. Some tools make test bookings to trace where a leaked rate came from. So treat "it records asking prices" as the least a rate shopper does, not the most.
+
+But the tool only watches the hotels you told it to watch.
+
+### The List Is a Judgement, Not a Map
+
+If that list is wrong, everything you work out from it is wrong too.
+
+Your competitive set, or compset, is the group of hotels you measure yourself against. It is a commercial judgement, not a list of nearby hotels. In my experience most are chosen badly: by distance, by star rating, or by whoever the general manager mentions in meetings. I have no survey to prove that, and I am not going to pretend I do. Distance and class are not worthless. The benchmarking providers use both. But neither one tells you which hotel the guest books instead when your price is 20 too high.
+
+The right test is substitution.
+
+A guest opens a booking site with your dates, budget and reason for travelling.
+
+Which hotels appear on the same screen and could take that booking instead of you?
+
+Those are your competitors. They may sit further away than the hotel across the road, and carry a different star rating. A resort with a private beach and a resort without one are not substitutes for a family in August, whatever the map says.
+
+Which is worth pausing on, because it is your Saturday. In August that beach decides the booking. Run the same test for a Tuesday in November and you may get a different list of hotels entirely.
+
+Know the limits of that test. It is built around a guest looking at a booking screen. Some resort markets run mainly on allotments: blocks of rooms contracted to tour operators twelve to eighteen months ahead. Much of that demand never touches a booking screen at all. Rates for groups, and for meetings, incentives, conferences and exhibitions, the MICE trade, are quoted privately and never published. If a third of your business arrives that way, everything in this section sees one half of your market and nothing else. That is not a reason to skip it. It is a reason to stop treating it as a picture of the whole market.
+
+### One Word Doing Two Jobs That Conflict
+
+Now for the distinction that causes more confusion than almost anything else in this subject.
+
+The word *compset* is doing two different jobs, and the rules do not agree with each other.
+
+![A hotel manager stands between two walls: one covered in loose flowing shapes, the other in a neat grid of identical hotel building icons.](c05-02-two-different-compsets.jpg)
+
+*The word compset is doing two different jobs. One list should flex with the season. The other has to hold still for years.*
+
+The shopping compset is the list of hotels whose public prices you watch. You choose it. You can change it when you like. It should flex with substitution. In August the resort with the private beach is your competitor. In November it may not be.
+
+The benchmarking compset is the group of hotels whose actual results are added together, so your performance can be compared against theirs. Its entire value is a series that stays comparable over time. So it has to be stable, and the provider will not let you treat it casually.
+
+CoStar requires at least four participating hotels besides yours. At least three of them must not be affiliated with each other, and they must come from at least two unaffiliated companies. Changing the set means moving at least two participating hotels that have been open at least five months. Amadeus runs different rules again. Your own hotel must appear in every set. There is a thirty-day cooling-off period after a change. And one customer is capped at three sets.
+
+There is a harder limit underneath. These products report whole-hotel results: occupancy, average room rate, revenue per available room. There is no competitor data broken down by customer type on sale anywhere. So you can shop a set built for one customer type. You cannot benchmark against one. Build a leisure set and a corporate set expecting a leisure score and a corporate score, and you will not get them.
+
+Build both deliberately, and do not manage them on the same cycle.
+
+1. Split the shopping sets by customer type first. Your leisure and corporate competitors are often different hotels, and one blended list serves neither. Then accept that your benchmarking set is a single blended one, because that is all the data allows.
+2. Four to eight hotels per set. The minimum of four is not my opinion. It is the provider's rule, written into the terms you signed. It exists because one closure or one missing month distorts a small group. The maximum of eight is my judgement, and no provider publishes an upper limit. My reasoning is that above eight you stop measuring yourself against competitors and start measuring yourself against the whole town. If your tool can weight the set by hotel size, that is the better control, and it is the one most hotels never touch.
+3. Write down why each hotel is in. If you cannot say why, take it out.
+4. Review the shopping set every season. A shopping compset that never changes is one nobody is thinking about. Do not review the benchmarking set on the same cycle. That set is a record built up over years. Rebuilding it every quarter destroys the year-on-year comparison you need for everything else.
+
+*A note on the rules above. The set sizes, the cooling-off periods and the change limits come from the benchmarking providers, not from law. They sit in the agreement you signed, every provider writes them differently, and they change. Read the current rules in your own agreement before you plan a set around them.*
+
+## Second Question: Is the 210 the Same Product as the 185?
+
+You now know whose price it is. You still do not know whether it is comparable with yours.
+
+A shopped rate is comparable only if it was captured on the same terms as yours. Go back to the Saturday and check it against this list before you touch a price.
+
+- Occupancy. Two adults against one is not a price difference. It is a different product.
+- Meal plan. Comparing your room-only rate against a competitor's half-board rate is the classic error, and it happens constantly. You conclude you are expensive, drop 15, and you were cheaper all along.
+- Room type. The lowest rate in the hotel and the lowest rate in a room category are two different questions. Good tools show both separately for exactly this reason.
+- Length of stay. Ask for one night where the competitor demands three, and you get nothing back, or a rate nobody can book.
+- Channel. The same hotel does not show one price everywhere.
+- Inclusions. Taxes, city fees, resort fees, currency. Note which currency the price was captured in, and when it was converted. A stale exchange rate invents a price difference that does not exist.
+- Tax display. This one depends on the country, not on the hotel. Google's own policy requires base price plus fees in the United States and Canada, and base plus taxes plus fees elsewhere. Separately, several markets tightened their own rules on displayed prices from 2025 onwards. Those changed what a shop returns there, not only what a guest sees. So a 2026 shop is not comparable with a 2024 one.
+- Cancellation terms. Read a non-refundable rate against your cancellable rate and you are treating a discount as if it were the price.
+- Who the price was shown to. Rates are routinely varied by device, by whether the user is signed in, by loyalty membership, by country and by language. Google's rules for hotel rates carry a field for each. A price you cannot see is still a real price.
+- Who funded the discount. Covered above, and it belongs on this list. A member discount is your competitor's money. A discount sponsored by the booking site is the site's. They look identical.
+- Capture time. Prices taken at different hours on a moving date are not one snapshot. Add freshness to that. Shops fail, get blocked and come back half empty, and some tools carry the last known price forward without telling you. Every rate is a price that was seen at a moment, not a price that is true now. You can satisfy every other condition on this list and still be pricing against a three-day-old number.
+
+Those are the minimum, not the complete list.
+
+And there is one item you cannot fix by shopping harder. Google's rules allow a hotel to offer a rate to a random percentage of users, described in Google's own specification in exactly those terms. Two identical shoppers can be shown different prices by design. Shopping more often does not solve that.
+
+On the price comparison sites, a perfect comparison is not possible. So build your process to work with imperfect data rather than to wait for perfect data.
+
+*The display and targeting rules described above are platform rules written by Google and the booking sites, not law. They are rewritten regularly and the wording differs by market. Check the current specification rather than this article, and read your own contract rather than a summary of it.*
+
+## Third Question: Did Anybody Pay It?
+
+Suppose the 210 survives every check. Same room type, same occupancy, same board, same channel, captured this morning.
+
+It is still only an asking price.
+
+Rate shopping tells you what a hotel is asking. It does not tell you what sold. Those are different questions, and hotels confuse them daily. A competitor showing 260 all week may have sold nine rooms.
+
+That limit is the one most people know. There is a second one, it comes first, it is larger, and it is much less discussed.
+
+A growing share of asking prices cannot be shopped at all. Rates for signed-in users, for mobile, for specific countries, and for closed groups only appear when the request carries the matching details. Booking.com's own data feed returns a separate public price field alongside the real one, which means the platform itself admits the public price is not the real one. Add group and MICE rates, which are never published, and allotment rooms, which never reach a booking screen.
+
+The error always runs the same way. Published rates look high against what members, package guests and contracted guests actually pay. Fix only the asking-versus-sold problem and you will still conclude you are expensive when you are not.
+
+### The Empty Hotel That Is Not Empty
+
+That leads to a tempting conclusion, and one I have drawn myself.
+
+Availability looks like the answer. Your competitor's 210 sits untouched through June and July. The Saturday is getting closer and the rate has not moved. That feels like an unsold hotel.
+
+As a general rule it is wrong. It is worth understanding why, because the thinking behind it is still useful.
+
+- Some hotels do not move price at all. A study across eight European capitals found roughly one hotel in nine held a completely static rate across the whole booking window. Their flat rate tells you about their pricing policy, not their occupancy.
+- Direction is not universal. In that same study prices fell towards arrival on business-led dates and rose towards arrival on leisure-led ones.
+- Some contracts guarantee that a room can always be booked at a given rate. A rate that persists there is a contract, not a demand signal.
+- Allotment and contracted rooms sell out at an unchanged price, because the price was agreed a year ago.
+- "Only two rooms left" counts only that channel. The large booking sites have given consumer authorities undertakings about this kind of scarcity message. In broad terms, they have agreed to make clear that such a statement refers only to the offer on their own site. So read it as a count of the rooms that one site is holding, not of the hotel.
+
+The usable version is narrower, and it takes more work. You need price and availability captured together over time. You need the whole competitor group moving as well. And you need to exclude the hotels you know never move price, the channels with guaranteed availability, and the contracted blocks.
+
+Then a rate that never moves while everything around it does is a real signal.
+
+On its own, it is a guess with a number attached to it.
+
+## Fourth Question: What Is Coming, and From Where?
+
+The shop has now told you everything it can about that Saturday, which is less than you hoped.
+
+It cannot tell you how much business is coming to the destination, from which countries, or how far ahead it intends to book. For the Saturday that is the difference between holding 185 and moving it.
+
+Market and demand data looks at the other side of the deal.
+
+Keep three families apart.
+
+### Historical Market Performance
+
+This is the real, completed results of a panel of hotels, a group that agrees to send in its actual numbers, added together. Usually occupancy, average room rate and revenue per available room, by month or by day. It is the past, reported to a common standard, and it is the basis of most benchmarking.
+
+Its weakness is coverage. If the panel is six hotels and two of them stop reporting, your market appears to move when nothing in the market has actually changed. Providers know this. That is why they enforce the minimum membership rules described earlier, and will switch off a set that falls below them.
+
+Two practical things follow. In a small secondary market or on an island, you may not be able to get a benchmark at all, because there are not enough participating hotels that are not you. And in any market, a set that quietly loses a reporting hotel is a set whose past figures no longer mean what they used to. Ask your provider how you will be told.
+
+### Forward-Looking Demand Signals
+
+Search volumes for your destination. Booking intent. Airline seats scheduled into your airports. Bookings already on the books at other hotels, shared across a panel. These describe demand that has not reached your reservation system yet.
+
+Be careful with the tempting version of this, which is that forward data is the only kind worth paying for. The thinking behind it is right. The data most worth paying for is the data you cannot produce yourself. Your own bookings on the books you can see for free. Other hotels' bookings you cannot. So the real dividing line is your data against everybody else's. That is not the same line as historical against forward. Historical panel data is worth paying for. So is rate shopping. And one of the forward signals in that list is other hotels' bookings on the books, which makes the point on its own.
+
+Then be careful not to treat everything in that family as the same kind of evidence.
+
+- Committed demand is business already booked. Panel products report it as rooms on the books, and as pickup, the bookings added since the last report. Worth knowing that the main forward benchmarking product reports rooms and occupancy on the books and the pickup between reports, and carries no rate at all. It will not answer a rate question.
+- Intent is a search or a click. It tells you about interest, not commitment. And the rate at which interest turns into bookings is not stable across markets or seasons.
+- Capacity is a supply number, not a demand number. Scheduled airline seats are the clearest case. An airline putting more seats into your airport is not demand. It is the possibility of demand. Useful as background. Dangerous in a forecast if you treat it as arrivals.
+
+### The Marathon on Your Saturday
+
+Now the third family, and the one hotels most often buy and least often use.
+
+Event and calendar data. Congresses, concerts, sports fixtures, trade fairs, and public and school holidays in the countries your guests come from.
+
+Suppose there is a marathon on your Saturday. Consider two entries in an events calendar.
+
+"City marathon, 14 to 16 August."
+
+"City marathon, 14 to 16 August. Around 8,000 runners, a third of them travelling from outside the region, most with one companion, booking two to three months out, staying two nights."
+
+The first is a date in a diary.
+
+![A woman touches a plain calendar card that bursts into arrows toward icons for crowd size, origin markets, companions, booking window and length of stay.](c05-03-event-data-to-demand-data.jpg)
+
+*An events calendar that gives you only a date changes nothing. The version that moves a price is something you build, not something you can buy.*
+
+The second is a forecast input.
+
+Only the second one tells you anything about your 185. Eight thousand runners booking two to three months out means the demand for your Saturday is arriving right now, in June, while you are looking at the screen. A date in a diary tells you nothing about when to move.
+
+If your events calendar only produces the first, it is not helping you price.
+
+Be honest about where the second one comes from, because it is not a subscription. Event data suppliers will sell you predicted attendance, a rank for the event, even predicted spending broken out by accommodation. What no supplier publishes, as far as I can establish, is where the attendees come from, how far ahead they book, or how long they stay. Nor do they publish how accurate their attendance predictions have been, which is its own reason for caution. Market demand data gives you the countries guests come from and the most-searched length of stay, but for the market and the date, not for the event.
+
+So the enriched entry is something you build, by joining two datasets to your own history. It is a project worth doing. It is not something you can buy ready-made.
+
+For group business the best forward data is already inside your own hotel. Your own sales office knows the block sizes, the bookings taken against them and the cut-off dates. So does the local convention bureau. No data supplier knows more than they do.
+
+Three habits separate the hotels that use this data from those that merely subscribe.
+
+- Record where the guests come from, not only how many. Ten thousand extra arrivals mean something different if they are two-night city breakers rather than fourteen-night families.
+- Read when the bookings arrive, not only how many arrive. Demand arriving three weeks out and demand arriving six months out call for different responses, and only one is still available to you.
+- Separate the market's demand from your own. Your compset can be full while the destination is soft, and the reverse happens too. I cannot tell you which way round it happens more often, and neither can anybody else I have read. What I can tell you is that assuming the two move together is how a hotel ends up discounting into a market that was fine.
+
+One more caution, an expensive one. Averaged market data hides the mix. A market whose average rate fell may have had a strong month. One large cheap group may have pushed out higher-paying individual guests, in a handful of hotels, on a handful of dates. The average is accurate and useless. When a market number surprises you, ask which part of the business moved, not by how much.
+
+**Market data does not make decisions. It removes excuses.**
+
+## Fifth Question: August Is Over. How Did You Do?
+
+You held 185. The Saturday came and went.
+
+Now somebody wants to know whether that was right, and the answer arrives as a score.
+
+Start with two definitions, because every score below is built on them.
+
+- Average daily rate, ADR, is your room revenue divided by the number of rooms you sold. It describes only the rooms you managed to sell, which is why it looks good even on a night when you sold very little.
+- Revenue per available room, RevPAR, is your room revenue divided by the number of rooms you had to sell. It is also occupancy multiplied by ADR. It counts the rooms you failed to sell.
+
+Nobody disputes those formulas. What is disputed, constantly, is what you are allowed to put into them.
+
+The reporting rules are stricter than most hotels realise. Most of them come from the Uniform System of Accounts for the Lodging Industry, the USALI, now in its 12th Revised Edition, effective from 1 January 2026. The benchmarking providers layer their own reporting guidelines on top of it.
+
+Room revenue excludes taxes. Resort and destination fees are not room revenue at all, and belong in miscellaneous income. Free rooms are excluded from rooms sold. A guest who books and never arrives, a no-show, counts as revenue but no room night is recorded. Rooms out of service for less than six months do not reduce your available rooms.
+
+Add all that up and one thing follows. Occupancy multiplied by ADR only equals RevPAR when both sides use the same rulebook. Build an "adjusted occupancy" in a spreadsheet by taking broken rooms out of your room count, multiply it by ADR, and the answer is not the RevPAR your benchmark is comparing you against.
+
+### Fair Share and the Benchmarking Indices
+
+Benchmarking compares you against your benchmarking set. The comparison is expressed as an index against fair share. Fair share is the idea that supply, demand and revenue would be spread evenly across the hotels in the group.
+
+Get the arithmetic right, because a surprising amount of training material states it wrongly. Fair share is a share of demand, and demand here means room nights sold. Say you have 100 rooms in a set of 500 rooms in total. You hold 20 percent of the rooms. So your fair share is 20 percent of the room nights that set sold. It is not 20 percent of the set's occupancy. Occupancy is already a percentage, and taking a fraction of a percentage produces nothing. For a set running at 70 percent it would give you a "fair share" of 14 percent, which is not a quantity of anything.
+
+### Two Details That Change the Score
+
+Two details decide whether your numbers match your provider's, and almost nobody checks either.
+
+The first is whether your own hotel is counted inside the set's figures or left out of them. It matters more than it sounds. If you are part of the number you are being measured against, the score gets pulled towards 100 and can never show a difference as clearly as one that leaves you out. I cannot settle this for you from published sources, and I am not going to guess in print. The providers do not appear to agree with each other. One of them points in both directions at once. Its definition of fair share covers "all properties in a selected group", which suggests you are counted. Its rules for choosing a set count four participating hotels not including yours, which suggests you are not. The other provider requires your hotel to be in every set. The clearest statement I could find about how the standard report actually behaves is in a training deck from 2018, and nothing current restates it.
+
+So ask your provider in writing, and put the answer in your definitions document. Do not attach anybody's bonus to a score before you have.
+
+The second is how the set's occupancy and rate are worked out. They are weighted by hotel size: all the competitors' rooms sold, divided by all the competitors' rooms available. They are not the average of your competitors' percentages. With four to eight hotels of different sizes, those two calculations come out materially different. Rebuild the score in a spreadsheet the wrong way and you will not match your report.
+
+Here are the scores themselves, with the names the industry actually uses. You will meet the abbreviations before you meet the words.
+
+- Occupancy index, or market penetration index, MPI: your occupancy divided by the set's, times 100.
+- Rate index, or average rate index, ARI: your ADR divided by the set's ADR, times 100.
+- RevPAR index, or revenue generating index, RGI: your RevPAR divided by the set's, times 100.
+
+A score of 100 means you took exactly your fair share.
+
+Above it, you took more than your share of the rooms would predict. Below it, less.
+
+Read it as performance against the set, not as something you are owed.
+
+*The reporting rules in this section come from accounting and benchmarking standards, not from law. Standards get revised, providers apply them differently, and national accounting and tax rules sit on top of them. Check the edition your own accountant and your own benchmarking return actually use.*
+
+## Sixth Question: The Index Went Up. Did You Make Money?
+
+Say the score came back well. Your August index is up.
+
+Here is where it goes wrong.
+
+An index answers: *did we win or lose share?*
+
+It does not answer: *did we make money?*
+
+![Two hotel colleagues at a panoramic office window at sunset trace ribbons of light that curve apart, one thin red line rising while a broad pale band falls.](c05-04-index-vs-profit.jpg)
+
+*An index answers whether you won share. It does not answer whether you made money. The two move apart more often than anybody admits.*
+
+Those two move in opposite directions far more often than anybody admits.
+
+Consider two Octobers. In the first, your RevPAR index reads 112, up nine points. It rose because the market fell harder than you did. Your own RevPAR was down five percent. The set's was down twelve. You won nine points of share in a month where your revenue fell, your fixed costs did not move, and your rooms profit fell with the revenue.
+
+Index up, business worse.
+
+You will also hear a version of that story in which the hotel takes an extra 900 room nights through a high-commission channel and still ends up behind on profit. Be careful with that one. Do the arithmetic before you use it in front of a controller, because it usually does not hold.
+
+Take a room sold at 150. Commission at 18 percent is 27. Housekeeping, linen and utilities are perhaps 25. Breakfast food is perhaps 7, and remember that is per guest, not per room. Card costs are around 3. Add those up and about 62 of the 150 has gone. That leaves roughly 88 a night, so about 59 percent of the revenue reaches profit. Genuinely extra business at those numbers makes money. For volume like that to reduce profit, commission would have to run past 70 percent of the rate.
+
+What does produce index-up and profit-down is one of three things. The market falling faster than you, as above. New business pushing out better-paying business you already had, which means you were near full and it was never extra at all. Or a fixed cost that jumps: reopening a floor, hiring temporary staff through an agency, overtime, or a local charge that steps up to a higher band. Those are the mechanisms. Ordinary volume with ordinary costs behind it is not one of them.
+
+In the second October, your index falls to 94 because a competitor opened 200 rooms and discounted to fill them. Your rate held. Your costs held. Your profit rose.
+
+Index down, business better.
+
+That second reading is sound for a month. Do not stretch it across years. A score that falls year after year while margin rises looks to a buyer or a lender like an owner taking cash out of a hotel and not investing in it. They will judge you on future RevPAR share whether or not you think it measures the right thing.
+
+So read an index as one input among four, not as the whole commercial answer.
+
+1. The index tells you your share of a market.
+2. Same time last year tells you your own direction of travel.
+3. Budget and forecast tell you whether you are meeting the commitments you made.
+4. Contribution and profit tell you whether any of it was worth doing.
+
+Be precise on the fourth, because the wrong measure cannot answer the question. Three measures can settle a specific decision, because you can trace them to a channel or a type of business. Net ADR, meaning the rate left after distribution and payment costs. Contribution per occupied room. And rooms profit.
+
+One measure cannot: GOPPAR, gross operating profit per available room. It is a whole-hotel figure struck after the costs that belong to no single department, so it will never tell you whether one piece of business was worth taking. Gross operating profit is also the operator's measure. The owner is usually asking about a figure further down the accounts, either net operating income or earnings before interest, tax, depreciation and amortisation. Those come after management and franchise fees, the reserve for replacing furniture and equipment, ground rent, insurance and property tax.
+
+If you run several hotels, watch one more thing. Two of your own hotels sitting in the same set can both show rising scores while the group as a whole loses rate.
+
+That fourth lens does not appear on a standard benchmarking report, and it does not appear in the RevPAR index pack the revenue team circulates on a Monday. That is the accurate version of a claim you will hear stated far more strongly. It is not true that profit is missing from benchmarking. CoStar sells profit and loss benchmarking alongside its revenue product, and defines total revenue per available room, TRevPAR, and GOPPAR inside it. HotStats does nothing but benchmark profit against a competitor set. Kalibri Labs publishes COPE RevPAR, contribution to operating profit and expenses per available room. That is room revenue less the cost of winning the booking, divided by available rooms: the net contribution measure, sold as a product.
+
+If your index report has no profit line on it, that is a decision somebody made about your report. It is not a limit of the industry. Go and buy the profit reporting as well.
+
+### Two Integrity Rules
+
+First, do not change a compset to improve a score. It is the easiest number in hospitality to make look better than it is, and your colleagues will know you have done it.
+
+There is a harder reason than embarrassment, and it is the one that should stop you. Your index against a named set is often written into brand management agreements as a performance test. It turns up in franchise agreements. It turns up in the conditions on your loans, sometimes with termination and default rights attached. Whether yours does any of that is a question about your own documents. Go and read them, and if the answer matters, have somebody qualified read them with you.
+
+Which also means the set may not be yours to change at all. In a branded or managed hotel it often is not. If it must change, restate the history beside it and say what changed. Check first that restating is even possible. Providers publish rules about changes and cooling-off periods rather than promising to rebuild your history, and in some contracts the set belongs to a region rather than to you.
+
+Second, be careful benchmarking a period you did not trade normally. Take a hotel closed three weeks for refurbishment. The reporting rule in general use is that rooms out of service for under six months do not reduce your reported room count. So the score still gets calculated, and it is not wrong. It measures the consequence of that closure with total accuracy. You had those rooms on your books and you did not sell them.
+
+What it is not is a read on your commercial position.
+
+Do not hide it. Do not send it round on its own either, because somebody will make a pricing decision about a month in which part of the hotel was closed. Write the closure next to the number. And take the same care in reverse. A competitor's abnormal month distorts your score just as effectively, and nobody sends you a note about theirs.
+
+**Compare like with like, or do not compare.**
+
+## Seventh Question: Why Does Nobody in the Room Agree?
+
+The Saturday now has a score attached to it. The meeting should be short.
+
+It is not, because two people in the room are holding different ADRs for the same August and neither can say why.
+
+Business intelligence, BI, means bringing data from separate systems into a shared analytical view, defining every number consistently and presenting it so a person can decide something.
+
+That used to mean copying everything into one big database. It no longer has to. The major data platforms all sell the ability to read data where it sits, without moving it, and some hotel groups now work that way. What did not change is the part that matters.
+
+One agreed set of definitions.
+
+One place people go to settle an argument.
+
+**What has to be brought together is the meanings, not the technology.**
+
+![Coloured streams from hotel buildings, a spreadsheet grid, bar charts and currency symbols pass through a single upright glass pane into one dashboard, where a woman stands.](c05-05-one-set-of-definitions.jpg)
+
+*What has to be brought together is the meanings, not the technology. One agreed set of definitions, and one place people go to settle an argument.*
+
+The technology can be solved. That does not make it easy. Joining hotel systems together is genuinely hard. There is no common data format across property management systems, the PMS, the system that holds your rooms and reservations. Matching up room types and rate plans across the PMS, the central reservation system, the channel manager and the revenue system is a permanent job that is never finished. Reservations get changed, and often there is no reference number that stays the same, so they are hard to follow. Hotels trading in more than one currency make all of it worse.
+
+But it is solvable with money and time. The definitional work is what actually fails, and no budget fixes it.
+
+BI is where market data, booking data and operational data finally meet. Most hotels I have worked with have all three and join none of them. The rate shopper sits behind one login. The reservations sit in the property management system. The market benchmark arrives as a monthly document. The housekeeping record is kept in a spreadsheet nobody outside the floor ever sees.
+
+Each is coherent on its own. Together they answer what none of them can answer separately. Why a week with strong bookings converted badly. What a room type out of order for eleven days cost you at market rate.
+
+Whoever decides what a number means decides who wins the argument. If ADR means one thing in the revenue report and another in the finance report, and nobody in the room can say which is which, the meeting stops being about the market. It becomes about whose spreadsheet is right.
+
+### Most of Your Definitions Are Already Written
+
+Here is the part I would put differently from most advice on this subject.
+
+This is not an invitation to invent your own definitions. Several of these questions already have answers, and they were not written by you. The Uniform System of Accounts for the Lodging Industry reached its twelfth revised edition, adopted from 1 January 2026. The benchmarking reporting guidelines sit on top of it. Between them:
+
+- Taxes are out of room revenue. Resort and destination fees are out of room revenue too, and go to miscellaneous income.
+- Free rooms are excluded from rooms sold.
+- Whether booking site revenue is reported gross or net is set by the booking model, not by preference. Net for wholesale rates and for rates paid at the time of booking. Gross for rates paid later.
+- Recognising revenue is an accounting policy, not a dashboard setting. Under the accounting standards in general use, room revenue is recognised across the nights of the stay. A deposit taken at booking is a debt you owe until then.
+
+So the job is not "settle your definitions". It is narrower and more useful. Adopt the standard definitions where a standard exists. Write down only the places you genuinely need to differ. And know, for every number you circulate, whether it can be compared against the benchmark or is only for internal use.
+
+What is genuinely yours to decide is a shorter list, and it still has to be written down once, for the whole hotel.
+
+- Is a cancellation removed from the day it was made, or from the night it was for?
+- Which exchange rate do you convert at, and as at when?
+- How do rooms used by the hotel itself behave in your own reporting, as opposed to what you send the benchmark?
+- Which versions of ADR after costs do you keep, and what is each one called?
+
+That distinction is the one that gets missed, and it costs real money. The problem you are solving is comparability, not just consistency. An ADR that includes resort fees can be perfectly consistent across all your own reports and still be impossible to compare with the benchmark you are measured against. You will have written down a rule that produces a number you cannot defend.
+
+Two reports can legitimately show different ADRs. A finance ADR, a benchmark submission ADR and an ADR after the cost of winning the booking are three different tools for three different jobs. What is not legitimate is nobody being able to name which is which, and get from one to the other. Give each one a name. Write down once how they connect.
+
+**That definitions document is worth more than the dashboard it feeds.**
+
+*These are accounting standards, not law. They are revised over time, and national accounting and tax rules sit on top of them, including how revenue is recognised and how tax is treated. Agree the current edition with your own accountant before you rewrite a definition.*
+
+## Last Question: What Happened to the Decision?
+
+Go back to the Saturday one last time.
+
+A report should end in a decision. A report nobody acts on is a cost. Somebody builds it, somebody circulates it, somebody half-reads it, and nothing changes. Before you commission one, name the decision it supports and who makes it. If you cannot name both, do not build it. Reporting for control and compliance is a genuine exception, and it covers far fewer reports than most hotels keep.
+
+This is the loop I use, and it works because every step has an owner.
+
+1. Pull the raw data. Take it from every source, unedited, and save a copy marked with the date you pulled it. This is the step people get wrong. Your sources change under you. Bookings change. Forecasts get overwritten. Restrictions get lifted. If you only ever hold today's version, you cannot reconstruct how the Saturday was tracking back in June, or what the forecast said on the day you decided to hold 185. Steps two and five then stop working.
+2. Prepare and analyse. Clean it, apply the agreed definitions, and cut it down to what you can act on.
+3. Discuss and build an action list. Meet, and produce a list of proposed actions, not observations.
+4. Execute the approved list. Each action approved by a named person, executed by a named person, against a date.
+5. Track the actions. Come back to that list at the next meeting and record what happened.
+
+Step five is the one that gets dropped.
+
+Drop it and the revenue meeting becomes a description of what happened, with nothing decided. Without tracking you cannot tell a good decision from a lucky one.
+
+The loop assumes more than one person, and in a lot of hotels all five names are the same name. That does not make it useless. When you are approving your own actions, the written record is the only difference between a decision and a vague memory of a decision. Write it down anyway.
+
+So here are the two versions of your Saturday, as they appear in the minutes.
+
+"Rate index down four points in August."
+
+"Rate index down four points in August, driven by the two August Saturdays we held at 185 against a compset showing 210 on a half-board basis we had not matched. Board basis corrected in the shopping set. Saturdays repriced for September, reviewed on 15 September, owner RB."
+
+The first is a finding.
+
+The second is a decision with a name and a date attached.
+
+Only one of them is worth the eleven weeks you spent looking at that number.
+
+**Dashboards do not improve hotels. Decisions do.**
+
+![Four colleagues talk around a meeting table by a garden window, under a looping arrow linking icons for search, processing, discussion, a checklist and back again.](c05-06-data-to-decision-loop.jpg)
+
+*A report nobody acts on is a cost. Name the decision it supports and who makes it, or do not build it.*
+
+## Common Questions
+
+### What is rate shopping in hotels?
+
+Rate shopping means collecting competitors' public prices automatically, at regular intervals. Storing them lets you read the movement over time. A current service returns far more than a price. Sold-out status, minimum stay, meal plan, taxes and the exact moment the rate was seen come with it.
+
+### What is a compset in hotels, and how do you choose one?
+
+A compset, or competitive set, is the group of hotels you measure yourself against. Choosing one is a commercial judgement. A list of nearby hotels is not the same thing. The right test is substitution. Which hotels appear on the same booking screen and could take that booking instead of you?
+
+### What is the difference between a shopping compset and a benchmarking compset?
+
+A shopping compset is the list of hotels whose public prices you watch. You choose it, and it should flex with substitution. A benchmarking compset is the group whose actual results are added together. That set has to stay stable. Providers set rules on its size and on how often it may change. Those are provider rules in your own agreement, not law, and each provider writes its own.
+
+### How many hotels should be in a competitive set?
+
+Four to eight hotels per set works. The minimum of four is the provider's rule, not a legal requirement, and providers can change it. It exists because one closure or one missing month distorts a small group. The maximum of eight is my judgement, not an industry rule. Above eight you stop measuring against competitors and start measuring against the whole town.
+
+### Why do competitor rates look cheaper than mine?
+
+Competitor rates often look cheaper because the comparison is not like for like. Check occupancy, meal plan, room type and length of stay first. Then check channel, taxes and cancellation terms. Then check who funded the discount. Booking sites pay part of the room cost on some rates.
+
+### Does a competitor's availability tell you how well they are selling?
+
+Availability is a signal, not proof. One study across eight European capitals found a static rate at roughly one hotel in nine. Contracts, allotments and guaranteed availability also hold a price still. Capture price and availability together over time. Exclude the hotels you know never move price.
+
+### What is the difference between ADR and RevPAR?
+
+ADR, average daily rate, is room revenue divided by the rooms you sold. RevPAR, revenue per available room, is room revenue divided by the rooms you had to sell. RevPAR counts the rooms you failed to sell. ADR looks good even on a night when you sold very little.
+
+### What does an index score of 100 mean in hotel benchmarking?
+
+A score of 100 means you took exactly your fair share of the set. MPI compares your occupancy against the set's. ARI compares your ADR, and RGI compares your RevPAR. Above 100 you took more than your share of the rooms would predict. Below it, less.
+
+### Can a benchmarking index go up while the business gets worse?
+
+An index can rise while the business gets worse. The two move apart more often than anybody admits. Your RevPAR index can gain nine points because the market fell harder than you did. Meanwhile your revenue and your rooms profit both fell. Read an index as share, not as the commercial answer.
+
+### Is rate shopping legal under competition law?
+
+Collecting published competitor prices and pricing against them is ordinary commercial behaviour. Exposure comes from something else. Exchanging information that is not public. A group of competitors all relying on the same pricing system, and accepting almost every price it recommends. Reports that name individual competitors. Data combined from so few hotels that one hotel's figures can be worked out from it. This area has been moving in several countries at once, and where it has got to depends entirely on where you trade. None of it is a reason to stop benchmarking. Take the question to a lawyer in your own country, and treat none of this as legal advice from me.
+
+## Key Terms
+
+- **Rate shopping.** Rate shopping is the automatic collection of competitors' public prices at regular intervals, stored so the movement can be read over time.
+- **Compset.** A compset, or competitive set, is the group of hotels you measure yourself against. Substitution, not distance or star rating, is the test.
+- **Shopping compset.** A shopping compset is the list of hotels whose public prices you watch. You choose it, and it should flex by season and by customer type.
+- **Benchmarking compset.** A benchmarking compset is the group whose actual results are pooled for comparison. Provider rules, not law, govern its minimum size and how often it may change.
+- **Like-for-like comparison.** Like-for-like comparison means a shopped rate was captured on the same terms as yours. Occupancy, meal plan, room type, length of stay, channel, inclusions and cancellation terms all count.
+- **Allotment.** An allotment is a block of rooms contracted to a tour operator twelve to eighteen months ahead. Much of that demand never reaches a booking screen.
+- **Average daily rate, or ADR.** Average daily rate is room revenue divided by the rooms you sold. Room revenue excludes taxes, and resort fees belong in miscellaneous income. Those definitions come from the USALI, 12th Revised Edition, effective 1 January 2026.
+- **Revenue per available room, or RevPAR.** Revenue per available room is room revenue divided by the rooms you had to sell. Occupancy multiplied by ADR equals RevPAR only when both sides use the same rulebook.
+- **Fair share.** Fair share is your share of the room nights the benchmarking set sold, taken from your share of its rooms. Fair share is not a fraction of the set's occupancy.
+- **Benchmarking indices.** Benchmarking indices compare you against your set, and are scored against 100. MPI covers occupancy, ARI covers ADR and RGI covers RevPAR.
+- **Net ADR.** Net ADR is the rate left after distribution and payment costs. Net ADR, contribution per occupied room and rooms profit can each be traced to a channel or a type of business.
+- **GOPPAR.** Gross operating profit per available room is a whole-hotel figure struck after costs that belong to no single department. GOPPAR cannot tell you whether one piece of business was worth taking.
+
+## How This Connects to the Wider Hotel Technology Stack
+
+Market intelligence establishes what is true enough to act on. Almost every other commercial subject depends on it.
+
+- **[Hotel Operations and PMS](../hotel-operations-and-pms/)** supplies rooms sold, occupancy and much of the operational record. Revenue often needs transformation before it is benchmark-ready, and recently closed data may still change after the trading day.
+- **[Distribution and Connectivity](../distribution-and-connectivity/)** decides much of what a rate shopper can see. A competitor price usually becomes visible only after it has been distributed somewhere public, while private and conditional rates can remain invisible. Your own distribution error is also often the first thing to check.
+- **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** supplies search, website and conversion data. Market demand is more useful when read beside what guests actually did on your own channels.
+- **[Revenue Management](../revenue-management/)** is the other half of this. Market intelligence works out what the signal means, and revenue management decides what to do about it. Automation only makes that first step more important.
+- **[Guest Technology and CRM](../guest-technology-and-crm/)** adds repeat behaviour, profile data and lifetime value, turning a market-share number into a customer-value question.
+- **Payments and Financial Technology** owns the cost of taking the money: payment fees, currency conversion and chargebacks. Distribution commission is covered elsewhere, but net contribution needs both.
+- **Sales, Groups and MICE** contributes forward demand that public market feeds often miss: enquiry volume, block sizes, pickup against blocks, cut-off dates and conversion of enquiries into business.
+- **Data, APIs and Integration** is the dependency underneath almost every joined report in this article. API connections help, but file-based integration still matters where direct connectivity is weak.
+- **AI, Automation and Agents** can spot anomalies and create modelled signals faster, but those outputs should still be distinguished from observed data.
+- **Hotel Technology Strategy** covers how to select and pay for rate shopping, benchmarking and BI tools, while **Emerging Hotel Technology** tracks new data sources before they are stable enough to price against.
+
+## Related Reading
+
+Rate Shopping and Compset - 10 Things to Look For in a Rate-Shopping Tool
+
+This list grows. New Knowledge Articles are added in batches rather than one at a time.
+
+Seeing the market is a skill, and it is not the same skill as pricing. Choose the compset as a commercial judgement, and know which of your two compsets you are talking about. Capture like for like, and accept that on some channels a perfect comparison is not possible. Read an index as share, not as profit, and go and buy the profit half rather than assuming it does not exist. Then put market data beside your booking and operational data under one set of definitions, most of which somebody else has already written for you. Every decision you make next door starts from something true, or it does not start from anything.
+
+The hotels that struggle here are not short of data. They are short of definitions, and short of the discipline to close the loop on what the data told them.
+
+I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+---
+
+---
+title: Hotel Guest Technology, CRM and Loyalty: A Full Guide
+url: https://richard-bedenham.github.io/guides/guest-technology-and-crm/
+markdown_url: https://richard-bedenham.github.io/guides/guest-technology-and-crm/index.md
+author: Richard Bedenham
+author_role: Director, primalRMS | Product Owner, webhotelier | primalres
+reviewed: 2026-08-18
+words: 13621
+reading_minutes: 61
+license: CC BY 4.0 - free to quote and cite with attribution
+---
+
+# The Complete Guide to Hotel Guest Technology and CRM
+
+![A bright hotel lobby where a guest walks past reception with a phone, while floating icons for profiles, messages, stars and keys hover near the desk and wall screens.](c06-00-guest-technology-crm-cover.jpg)
+
+*Winning a new guest is the expensive part. Recognising one you already have is the cheap part.*
+
+A guest checks out on Sunday morning.
+
+It is their fourth stay with you.
+
+Reception wishes them a safe journey, then asks how to spell their surname.
+
+Nothing was broken.
+
+The systems worked. The booking arrived. The room was clean. The invoice was right and the card was charged.
+
+And the hotel still missed the point.
+
+The person at the desk was one of the most valuable relationships it has.
+
+**Most hotels do not have a guest problem. They have a guest record problem.**
+
+![A guest with a suitcase walks past a back office where five colleagues each look at a different screen showing a different coloured version of the same record.](c06-01-one-guest-five-records.jpg)
+
+*The same person, five times over. Every one of those records is correct, and together they describe nobody.*
+
+The same human being exists five times across your estate. Once in the property management system, the PMS, from a direct booking. Once from an online travel agency, under a stand-in email address. Once in the booking engine. Once in the spa diary. And once in a spreadsheet somebody keeps for the Christmas mailing. Every one of those records is correct.
+
+Together they describe nobody.
+
+The software has not quietly solved this while you were not looking. One industry study of connected hotel databases counted it. Roughly one profile in eight carried an agency email rather than the guest's own. Only about half carried a phone number. Suppliers keep shipping features that try to match guests to themselves. They do that because the problem keeps being there.
+
+This domain is about closing that gap.
+
+Not with sentiment.
+
+Not by buying software that promises a single view of the guest. By understanding four things. What a guest record is. How identity gets broken. What the law lets you do with it. And which of the tools sold under this heading take work off the guest rather than hand it to them.
+
+Winning a new guest is the expensive part.
+
+Recognising one you already have is the cheap part. That is true of each single act of recognition, which is what makes it worth doing. Building the machinery underneath it is not cheap at all. Be honest about that. Most hotels spend heavily on winning guests. Then they leave recognition to the memory of whoever is on shift.
+
+## The Short Version
+
+- Most hotels do not have a guest problem. They have a guest record problem. The same person can exist five times across your estate. Every record is correct. Together they describe nobody.
+- Service messages and marketing messages stand on different ground. A service message is about a booking the guest made. A marketing message needs a lawful reason you have written down. That reason is what Article 6 of Regulation (EU) 2016/679, the GDPR, calls a lawful basis. Put an offer inside a confirmation and the safe assumption is that the whole message counts as marketing.
+- Identity is the core CRM problem. No shared number for a person exists across your systems. Matching means rules that combine several fields into a confidence score. Merge the confident cases and send the doubtful band to a human.
+- Preferences are not one kind of data. A nut allergy is health data. Article 9 of Regulation (EU) 2016/679, the GDPR, puts health data in a special class. For a hotel the usual ground for holding it is the guest's clear and explicit consent. Keep those preferences out of the marketing database.
+- Reviews feed guest trust and platform ranking through two different machines. The displayed score is usually a plain average. Recency and volume do their work on the ranking side. Replying to reviews has the better measured effect.
+- In-stay technology has one test. Does it take work off the guest, or move work from your staff onto the guest? A mobile key answers that test as a building programme, not a software connection.
+- Loyalty at an independent hotel competes on recognition, not on currency. Judge the programme against what would have happened anyway. Comparing members with similar non-members overstates the effect badly.
+
+## Guest Journey and Communication
+
+The guest journey is a run of moments where your hotel can say something useful. Searching. Booking. Waiting to arrive. Arriving. Staying. Leaving. Deciding whether to come back. Technology touches every one of them. In most hotels it says the same bland thing at four of them, and nothing at all at the rest.
+
+Two rules separate a messaging programme from a nuisance.
+
+They are my own working rules, not laws of nature, but I would defend them in any hotel.
+
+**One message, one job.** A confirmation confirms. A message before arrival prepares the guest. If it earns the right, it can also sell something that fits a stay already paid for. A message after the stay asks for feedback, or invites a return. Not both. And never in the same breath as a correction to an invoice. A message trying to do three jobs does none of them. It also trains the guest to stop opening the next one.
+
+**Time messages against the stay, not against the calendar.** Seven days before arrival. The morning of departure. Thirty days after check-out. A newsletter that goes to everybody on the first Tuesday of the month is a different job with a different purpose. Do not confuse the two.
+
+### Service and Marketing Messages Are Different
+
+Keep service messages and marketing messages apart.
+
+They stand on different ground. A service message is about a booking the guest has made. A confirmation, a change, directions, an invoice. A marketing message asks for their attention on something they never requested.
+
+What the second one demands of you depends on three things. Where the guest is. Which channel you use. And whether they are already your customer. Get the shape of it right and you will ask your own lawyer the right question.
+
+- Across the European Union, marketing email normally needs permission you can prove. The rule sits in Article 13 of Directive 2002/58/EC, the ePrivacy Directive. There is a real and widely used exception in the same article. If you got the address while selling that person a stay, you may market similar things to them. You must have offered a way out when you took the address, and in every message since. That exception is often called the soft opt-in. It is why many hotels lawfully email past guests with no tick box on file. A directive is written into national law country by country, so the detail differs. The UK and other European countries outside the EU run their own versions of the same idea. Check the wording that applies where your guest is.
+- In the United States, marketing email generally runs the other way round. The broad pattern there is that you do not need permission first. What you do need is to say who you are, give a working unsubscribe link, and act on it quickly. I am not naming the statute, because US rules sit at both federal and state level and they change. If you market into the United States, have that checked by somebody who practises there.
+- The trap is that the United States flips again on text messages, sent by SMS, the short message service. Marketing by text there is generally understood to need written permission first. On that reading it is a higher bar than European email. The detail is set by US law and by litigation, so treat this as the shape of the problem. Ask a US lawyer before you build the programme.
+
+So the honest rule is not *marketing needs consent*.
+
+It is this:
+
+**Every marketing message needs a lawful reason you have written down.**
+
+![A guest reads her phone in a doorway while a member of staff hands over towels, with an orange speech bubble beside her and email and chat icons beside him.](c06-02-service-vs-marketing.jpg)
+
+*A service message is about a booking the guest made. A marketing message needs a lawful reason you have written down.*
+
+That reason is what Article 6 of the GDPR calls a lawful basis. Article 6 lists the grounds you can rely on, and consent is only one of them. Which ground fits changes by country and by channel. Record the one you are relying on, list by list, and record why you chose it.
+
+One thing is settled enough to say plainly. Slipping an offer into a booking confirmation gets better open rates. It is also how a hotel ends up with a legal problem attached to its best-performing email. The general European position here is firm. Once a service message carries marketing content, the safe assumption is that the whole message counts as marketing. Its main purpose does not save it. That brings it inside Article 13 of Directive 2002/58/EC, and inside Article 6 of the GDPR. Enforcement in this area is real, though I am not pointing you at any particular case. American rules are usually described as gentler, and treat the message as commercial instead. If you operate in Europe, treat the confirmation as sacred. If the money in that offer is material, get the wording checked locally.
+
+### Choose the Channel for the Job
+
+The channel matters as much as the words:
+
+- Email carries detail and attachments, and the guest can find it again months later. It is the default for confirmations and invoices.
+- Text is short and costs real money per message. It is getting dearer rather than cheaper, as the phone networks add fees. Save it for things urgent to the guest, not urgent to you. And know something suppliers never mention. Business text has no read receipt at all. The networks confirm delivery. They cannot tell you the message was opened. Every "98% open rate" figure in circulation traces back to a press release, not a study. You are buying a channel you cannot measure.
+- Messaging apps feel personal. They also set an expectation that you will reply. Their cost runs backwards compared with email. On WhatsApp you can write freely only inside a window the guest opens by messaging you first. That window is currently twenty-four hours. Outside it you may send only messages approved in advance, and you pay for each one. Marketing messages are capped per person. None of that is law. It is the platform's own business policy, and the platform can change it whenever it likes. That changes who enforces it, not whether you have to follow it. Data protection law still applies on top. So the channel is cheap when the guest starts the conversation and expensive when you do. Build a programme of outbound messages on it and the sums will not look like the demo.
+- App alerts reach only guests who installed your app and left notifications switched on. That is a smaller group than any supplier demo suggests. The only public hotel figures I can find are from 2017 and 2018. They put app use at around one guest in five. Nobody has published a current number. Meanwhile the phone makers have made notification permission harder to get, not easier.
+
+**If a channel can receive a reply, staff it or do not use it.** The worst outcome in guest communication is an automatic message that invites a reply into an inbox nobody opens.
+
+### Two Failures That Quietly Break Guest Communication
+
+Two failures cause most of the damage.
+
+Neither one shows up on a dashboard.
+
+The first is the masked address. That is a forwarding address the platform hands you instead of the guest's own. This is not an occasional quirk of a few agency bookings. Booking.com, the Expedia brands and Airbnb all mask by default. For most European hotels that means the bulk of agency business arrives with no real address on it. Some routes pass no email at all. Bed banks and wholesalers, who buy rooms from you and resell them, are the main offenders.
+
+Two things get confused here, and the difference matters day to day. The forwarding address itself usually keeps working. What runs out is the platform's messaging window. You have a limited period after check-out to reach the guest through the platform, and that period differs by platform. So the failure is not normally that your message vanishes. It is that the address belongs to the platform. The platform's rules decide what you may send through it. Those rules are contract terms rather than law, and they still bind you. And holding the address is not permission to market to anybody. Marketing needs a lawful basis of its own under Article 6 of the GDPR. It also quietly inflates your contact list with addresses that will never produce a direct booking. An honest count of the guests you can reach leaves them out.
+
+Do not assume European platform law has fixed this. As of August 2026 the large agencies still do not hand over private guest email addresses as a matter of course. Where new rights of access do exist, they generally depend on the traveller agreeing. I am not going to point you at a specific provision here, because this area is moving. Check the current position for your platform and your territory before you plan around it.
+
+The second failure is email that never arrives.
+
+The usual explanation is wrong, and that changes what you should look for.
+
+The received wisdom runs like this. Mail that cannot prove who sent it gets quietly filtered and never bounces. Quiet filtering is real. It is not what happens to a hotel that has proved nothing. The big mailbox providers now refuse that mail outright and tell you why. Gmail sends back a specific error saying the sender is unproven. Microsoft used to file failing bulk mail as junk. It now refuses it, and has enforced that since May 2025. These are mailbox provider policies rather than law. Nobody fines you for failing them. Your mail simply does not arrive. Refused mail bounces. You will see it.
+
+The genuinely invisible failure is a different one. A hotel publishes a DMARC record. That stands for domain-based message authentication, reporting and conformance, and it is the third of the three records below. The hotel sets it to watch only. It puts no reporting address inside it. Nothing is enforced and no reports are sent anywhere. The hotel believes it has done the work. It has wired a switch to nothing.
+
+### SPF, DKIM and DMARC Are Different Jobs
+
+So learn what the three records actually do. Treating them as one thing is why hotels set up the first and stop. All three are settings published against your domain name. They tell mailbox providers whether mail claiming to be from you is genuine.
+
+- SPF, the sender policy framework, lists which servers are allowed to send using your domain.
+- DKIM, domain keys identified mail, signs the message so the receiver can check that a domain took responsibility for it. It is not a list of who may send. It is also the one most often left half configured.
+- DMARC ties the other two to the address the guest actually sees. It tells receivers what to do when those do not line up. And it sends you reports. Put a reporting address in it and read them.
+
+Keep bulk sending apart from the mailbox your reservations team uses for one-to-one email. Do it with a subdomain of your main domain, something like mail.yourhotel.com. Do not buy a lookalike domain for the job. A fresh domain starts with no reputation at all. It breaks the link back to your real name. And it looks exactly like the pattern used to impersonate brands. For a small hotel sending modest volumes, a different sending address on the same domain is usually enough.
+
+Then write in the guest's language. That means more than translation. It is the date format, the order of an address, and whether a phone number appears in a form the guest can dial. Store numbers in the international format. Show them the way the guest's own country writes them.
+
+## CRM and Guest Profiles
+
+CRM stands for customer relationship management.
+
+In a hotel, it means something different from what it means in a sales company. For ordinary individual guests there is no pipeline of deals to push along. There is a crowd of people, and you will never speak to most of them one to one. The job is to know four things about each. Who they are. What they did. What you are allowed to send them. And what they are worth. Group and MICE sales is the exception. MICE stands for meetings, incentives, conferences and exhibitions, and that business does have a pipeline, with deals, decision dates and reasons you won or lost. It is a different craft and it lives in the Sales, Groups and MICE guide.
+
+### Identity Is the Core CRM Problem
+
+**Everything rests on identity. Identity is where it breaks.**
+
+![Two colleagues study a screen together, one pointing, while icons for email, phone, loyalty, payment and wi-fi are joined by dotted lines to a single glowing marker.](c06-03-guest-identity-resolution.jpg)
+
+*No system in your hotel holds a shared number for a person. Every link between them has to be built and maintained.*
+
+It is tempting to say your systems do not hold people at all, only transactions. That was true once. It is not true now. Every serious property management system holds a proper record of a person. Suppliers call it a profile, a customer, a central store of guest data or a single guest profile. Some go further and separate the person who booked from the main guest. Nor are those records sealed off. Some point of sale systems, the tills behind your bar and restaurant, can pull the guest profile onto a restaurant bill, preferences included. Spa systems sync with the major PMS brands.
+
+The real problem is sharper than that, and it is the one that costs money.
+
+There is no shared number for a person. Each system invents its own for the same human being. Any link between them has to be set up, matched and maintained by somebody. The property management system knows a guest by its own number. The booking engine may only ever have seen an anonymous visit. The till attaches a name to a bill if a member of staff remembered to ask. The spa knows an appointment. Every one of those records is valid. Nothing in your estate says they are the same person unless you make it say so.
+
+### Matching Records Without Creating New Errors
+
+Matching those records is the central technical problem in this domain. Every field you might match on fails in its own way:
+
+- Email is the strongest single field. In this industry its biggest failure is the masked agency address. That comes ahead of the ordinary causes: families sharing one address, and the guest who changed provider.
+- A mobile number is strong where you have it, and often you do not. Where you do, it fails on shared numbers and on sloppy international formatting.
+- Name and date of birth is weak on its own and useful alongside something else. It depends on staff typing it the same way every time.
+- A loyalty number is exact when it is there. It is absent most of the time.
+- A payment card token is not the identity field it looks like. This one is worth getting right, because the usual worry about it points the wrong way.
+
+Take the last one slowly.
+
+It is the point I see stated backwards most often. A token is a stand-in code that replaces a card number, so nobody has to store the real one. The common fear is that a token breaks when the guest gets a new card. That is precisely the failure the card networks engineered away. A network token survives the card being replaced, reissued or lost. The limit that really rules it out is the one nobody mentions. Tokens are fenced in on purpose. A token is unique to one shopper, at one merchant account, at one payment provider. It cannot be lifted out and used elsewhere. That fence comes from card scheme and payment provider rules rather than from law. It is no less binding on you for that. That is not a shortcoming. It is the entire point of using tokens. So a token can tell you the same card came back to the same merchant account. It cannot join a spa record to a restaurant bill to a booking. That is the job people keep trying to give it. The card networks do publish a code designed to follow a card across different merchants. Even that identifies a card account rather than a person. Joint cards, company cards and one person holding four cards all break it. And pushing payment codes into your marketing database works directly against the reason you replaced the card numbers in the first place.
+
+No single field is reliable enough on its own for the messy case.
+
+In a hotel, the messy case is the normal one. Where you control the number completely, a single field can be enough. A membership number the guest signs in with is the example. Everywhere else, matching means a set of rules that combine several fields and produce a confidence score.
+
+Use two cut-off scores, not one. Above the higher one, merge the records automatically. Below the lower one, do nothing. Between them sits the band of real doubt. That band goes to a human. Squeeze it down to a single line and the score was pointless. That said, this is a design choice rather than an industry law. Some platforms match fully automatically with no review queue, and sell that as the feature. At least one major PMS does the opposite and refuses to merge anything without a person saying yes.
+
+### The Golden Record Is Only as Good as the Merge
+
+The merged result is often called a *golden record*. The phrase is borrowed from the wider business of keeping one clean version of shared data, and it is worth knowing. Do not expect to hear it from the people selling to you. Hotel platforms say unified profile, single guest profile, central profiles or identity resolution. They mean roughly the same thing.
+
+You will be told to insist that merges can be undone, so a bad one can be reversed. The advice is right in spirit. In at least one of the most widely used hotel PMS platforms, it is simply not available. The supplier's own documentation says it plainly. Once a merge finishes, the second profile no longer exists and you cannot undo it. Several well-known guest data platforms say the same. Other systems do work the other way and keep the absorbed record linked rather than deleted. Some rebuild profiles from the original events, so undo means change the rules and run it again.
+
+Ask which of those three you have. Then do the things that work in all of them:
+
+1. Prevent rather than reverse. Where the system lets you mark a pair as "not the same person", use it. The only bad merge you can be sure of fixing is the one you never made.
+2. Do the hard matching somewhere you can run again, ahead of the PMS. Treat the merge inside the PMS as the last write and a permanent one, not the first.
+3. Take a copy before any bulk merge run. The audit log will tell you a merge happened. It will rarely hold enough to rebuild the record that lost.
+
+And take a bad merge seriously. Two guests fused into one is a failure of accuracy the moment it happens. Keeping personal data accurate is a duty under European data protection law, so log it and assess it like any other data incident. If one guest can now see the other's stay history or invoices, it is worse than that. It is still not automatically something you must report to a regulator. Where that line sits, and how fast you have to move, is set out in national guidance. Agree it with your own adviser before it happens rather than after. Treating every duplicate as a phone call to the authorities will exhaust everybody. So log it, weigh the risk, and escalate if the answer is that somebody's data has been exposed.
+
+### Booker, Guest, Payer and Account Holder Are Different
+
+Keep the commercial roles apart.
+
+Hotels collapse them all the time:
+
+- The booker made the reservation.
+- The guest stayed in the room.
+- The payer settled the bill.
+- The account holder negotiated the rate and receives the invoice.
+
+That fourth one is the omission I would most want back. In corporate and group business the company is the real customer, and the systems know it. There is a company or account record carrying the agreed rate, the credit terms and the invoice. Behind it sit others worth naming when they apply. The travel agent. The source of business that earns commission. The group organiser. And the extra people sharing the room, who often appear on a legally required registration form and nowhere in your marketing database.
+
+These are different relationships. They are not different legal permissions. The distinction matters, because the reason usually given for it is wrong. Your legal right to contact somebody does not come from their commercial role. It comes from what you are doing and why. That is the logic of Article 6 of Regulation (EU) 2016/679, the GDPR. You pick a lawful basis for a purpose, not for a job title. Each role does point at a different purpose, and the purpose is what decides the right. A company paying an invoice has no marketing relationship with you at all, unless something else created one.
+
+A related point holds, with one correction. The person who stayed is the only one who can tell you what the stay was like. The booker can tell you what booking was like. The organiser can tell you what contracting was like. Ask the right person about the right thing. Then ask, separately, whether you are allowed to contact them at all.
+
+A useful profile holds identity, stay history, preferences, permissions and value. It also holds two things that belong on their own shelf. Identity documents taken for legal registration, which have their own rules on how long you keep them. Those rules are national, they differ, and you should look yours up rather than assume. And payment details, which sit with your payment provider rather than with you. Where a supplier handles guest data on your instructions, Article 28 of the GDPR governs the contract between you.
+
+Then there is the part of the profile most hotels never sort out. It is the biggest legal exposure this whole design creates.
+
+### Preferences Can Become Sensitive Data
+
+*This part of the law varies by country and it moves. What follows is how I read the general position, not legal advice for your hotel. The European rules named here are the starting point. Your own country adds to them. Check where you actually stand before acting on any of it.*
+
+*Preferences* is not one kind of data. A nut allergy is health data. A dietary requirement can point at a religious belief. A request for a step-free room points at a disability. Article 9 of Regulation (EU) 2016/679, the GDPR, puts data of that kind in a special class. Article 9 starts by prohibiting the processing of it, then sets out the narrow grounds that lift the ban. So you need one of those grounds to hold this data at all. That sits on top of your ordinary Article 6 basis for the rest of the profile. For a hotel that ground is nearly always the guest's clear and explicit consent. Regulators have also taken the view that an inference counts, whether or not your guess turns out to be right. I am not citing a particular decision for that, so check how it is applied where you are.
+
+This is not theory. It is documented behaviour in mainstream products. A hotel till system can pull the guest's allergy notes onto a restaurant terminal. That is a good feature and exactly what the kitchen should see. It is also special category data arriving at a till, in the Article 9 sense. From there, if you are not careful, it flows on into a marketing system under a permission that does not stretch that far. The consent that let the kitchen keep a guest safe is not consent to sell them a tasting menu.
+
+So separate them by design. Hold the preferences you need in order to serve the guest, under a clear consent and a narrow purpose. Keep them out of your marketing groupings and out of the marketing database. Be able to say who can see them and why. This is the one design decision in this domain most likely to be wrong in your hotel today.
+
+**Permission is not a tick box.** Consent is one of the lawful bases listed in Article 6 of the GDPR, and it has to be earned rather than assumed. Record what was agreed. When. Through what. For what purpose. And the exact words the guest was shown. Then record any withdrawal with the same care, and make withdrawing as easy as giving. A one-click opt-in on a wi-fi page, against an opt-out that means emailing a named officer, is the pattern that tends to get found first.
+
+Collect what you will use and no more. Then decide how long you keep it, set of data by set of data. Accept that in this industry many of those periods are not yours to choose. Guest registration data has legal minimums in some European countries and legal maximums in others. The two pull in opposite directions, and both are set nationally. Periods running from a few months to a few years are common. Six months, a year and three years all turn up in different countries. Some countries also set who may see the register and who may ask for it. I am not putting a figure against a country here, because those instruments change and I have not verified them for this piece. Look the number up for each country you operate in, and write it down. Tax and accounting records usually have to outlive all of them. One blanket rule across the whole group cannot meet that. A schedule per set of data, per country, can.
+
+### Deletion Is a Workflow, Not a Button
+
+*Deletion rights come from European data protection law, and the exceptions to them are often set nationally. What follows is the general shape of it, not legal advice for your hotel. Check the position where you operate before you write your own process down.*
+
+Deletion deserves the same honesty. The practical instinct is right and widely ignored. When a guest asks to be deleted, the request has to reach every system that received a copy. Not just the CRM screen the request landed on. The right itself is Article 17 of Regulation (EU) 2016/679, the GDPR, the right to erasure. A deletion that leaves the guest alive in three other systems is barely a deletion. But state that as an absolute and you teach a standard nobody can meet. In places it is also plain wrong.
+
+- Some data you may not delete. Article 17 of the GDPR carries its own exceptions, and one of them covers data you have to keep to meet a legal obligation. Registration records and tax records normally survive the request on that basis. Which records those are is set by national law, so check your own list.
+- You must pass the request on to the systems and companies you shared the data with. The exception is where that is impossible or takes unreasonable effort. Where a supplier only handles the data on your instructions, your contract with them under Article 28 of the GDPR should already say what happens. An agency is different. You cannot force it to delete anything. It holds its own copy and answers for that copy itself.
+- A do-not-contact list is the right answer when somebody objects to marketing. It is not a failed deletion. You have to keep a bare record of the person exactly so you never contact them again. Keep it to the smallest amount of data that does the job, and use it for nothing else. Delete that record and you will email them next quarter.
+- Backups are normally put beyond use and overwritten on schedule. They are not edited line by line.
+
+So the honest instruction is this:
+
+Know every place the data went. Pass the request on where you can. Write down what you cannot do, and why.
+
+And never delete the record that proves you must not make contact.
+
+### Guest Value Needs Behaviour, Not Memory
+
+Measure a guest's value on what they did, not on the impression they left. The old model is called RFM: recency, frequency and monetary value. How recently they stayed. How often. And how much they spent, counting everything beyond the room. It is crude and it has outlived a great many clever ones. Add length of stay and what the booking channel cost you. Then you can see which guests are genuinely worth keeping, rather than which ones you happen to remember.
+
+Two warnings, because I have seen this used where it cannot work. Frequency only tells you something if enough guests come back, and most hotels have no such base. Analysis of several million hotel guest records from 2024 to 2026 found three things. The great majority of revenue came from first-time guests. A very small fraction of guests ever reached five stays. And most second-time guests never came back a third time. If almost everybody in your database has stayed once, RFM collapses to two letters. The recency of a once-a-year holiday guest is mostly telling you the season. The model earns its place at a city hotel full of business travellers, at a resort with a club, at a casino, or inside a membership base. Elsewhere, use it knowing what it can and cannot see. And check before you promise it. Length of stay and channel cost are rarely held on the profile in a standard PMS or CRM. So the good version of this analysis usually needs work on the data first.
+
+## Reviews and Reputation
+
+Reviews do two jobs at once. They are how a guest decides whether to trust you. They are also an input into where the agency platforms place you in their lists. Every major platform says so in its own documentation. Booking.com lists guest reviews among its ranking factors. Tripadvisor builds its popularity ranking from review quality, recency and quantity. Google says more reviews and better ratings help local ranking. Expedia's default sort order uses review scores and volume. So reputation is a marketing asset and a distribution asset at the same time.
+
+Whether it is also a pricing asset is a weaker claim than it usually sounds, and I would rather be straight about that. The study everyone quotes is from Cornell in 2012, using data gathered around 2009 to 2012. It found that a one-point rise in a hotel's review index was worth roughly nine tenths of a percent on rate. It was worth about one and a half percent on RevPAR, which is revenue per available room. Nobody has repeated the study since. In between came a pandemic, a rewrite of Booking.com's scoring, Google becoming a major place to leave reviews, and ratings drifting upward everywhere. The study also found a smaller price response at the luxury end, not a bigger one. That is the opposite of the idea that there is more headroom higher up. So treat the link between score and rate as real, dated and roughly a straight line. And treat the notion that crossing a score band buys you extra pricing room as my judgement rather than a measured effect.
+
+Understand the mechanics before you set a target. The popular explanation mixes up two different machines.
+
+### Review Score and Ranking Are Different Machines
+
+**The score on display and the ranking system are not the same thing.**
+
+![A manager in an office holds up two floating cards, one of stars and one of a clock, while two colleagues pin notes to a planning board nearby.](c06-04-reviews-score-ranking.jpg)
+
+*The score on display and the ranking system are two different machines. Know which one you are aiming at.*
+
+Tripadvisor says its displayed rating is a plain average of all posted ratings. It puts the weighting for recency into its sort orders instead. Google says its score is the average of all published ratings. Booking.com's live partner pages describe the score as an average too. They separately say reviews are archived after thirty-six months, and the score recalculated on what is left.
+
+Recency and volume do matter. They matter on the ranking side, and in the reader's head, rather than inside the score itself. Anybody reading eleven reviews judges the hotel cautiously. That is a real effect and worth managing. It is not evidence that the platform is correcting your number statistically.
+
+I have to flag one live disagreement rather than pretend to settle it. Several hotel technology sources report that Booking.com moved to a three-year score weighted for recency in January 2025. They quote partner guidance. Booking.com's own live partner pages, read this month, still describe an average. I cannot square those from the outside. If your commercial plan turns on which is true, ask your account manager and get the answer in writing.
+
+The lopsidedness is real and worth doing the arithmetic on. Add one review to a set of n. The average moves by the gap between that review and your current average, divided by n plus one. So the damage from a bad score depends on how far below your average it sits. It bites hard in hotels because hotel averages sit near the top of the scale. Take a Booking.com average around 8.5 out of 10. A score of 2 pulls roughly four times as hard as a 10. On Google at 4.5 out of 5, a one-star pulls about seven times as hard as a five-star. There is far more room below you than above you. If your average sat in the middle of the scale the effect would vanish. So state it as a condition, not a law.
+
+Recovery follows from the same arithmetic. Restoring the average after a run of bad scores takes several good ones for each bad one. Roughly four on Booking.com and seven on Google. Two things can rescue you without any of them. Volume dilutes. A hotel with four hundred reviews absorbs a bad month that would sink a hotel with forty. And on Booking.com the bad run eventually drops out of the thirty-six month window by itself. That is not true on Google or Tripadvisor, where the average covers all time.
+
+Tell the difference between reviews you asked for and reviews you did not. Then know where that difference applies. The science is solid. When people choose for themselves whether to review, the ratings pile up at the extremes. In one well-known controlled study, unprompted ratings ran over seventy percent at four stars and above. Asking everybody produced only three percent five-star and seven percent one-star. The people who write unprompted are the delighted and the aggrieved.
+
+The way this is usually framed by platform needs correcting. On Booking.com and Expedia there is no unprompted group at all. Only guests who booked and stayed can review, and the platform sends the invitation itself a couple of days after check-out. The asked-versus-unasked split is a Google and Tripadvisor matter. On the agency platforms your problem is different. It is which of the invited guests bother to answer. Research published in early 2026 found the bias runs in opposite directions on different platforms. Google posters rated lower than they did in surveys. Tripadvisor posters rated higher. Do not pool them without thinking.
+
+### Ask Consistently, Reply Deliberately
+
+*Most of the rules in this part are platform terms rather than law. Platform terms change without notice and differ by platform. Consumer law on reviews also differs by country. Read the current terms, and take advice where money or your listing is at stake.*
+
+Inviting every departing guest, every time, is still the first thing I would do. I want to be precise about why. It is the biggest thing a hotel directly controls, on the platforms where the hotel controls the invitation. In practice that means Google and Tripadvisor. On Booking.com and Expedia you cannot add to their invitations at all. Inviting everybody stops the guests selecting themselves. It does not remove the bias in who replies. And it has to be run evenly. Inviting everybody the same way, whatever happened during the stay, is both the version that works and the version that keeps you out of trouble. Picking who gets asked is banned by the major platforms under their own terms. That is a contract you signed, not a statute. Consumer law in several countries also treats filtered reviews as misleading, though the detail differs and I am not citing it here. Either way the practice has a name. It is called review gating.
+
+One thing has a better-measured effect than inviting, and most hotels can already do it. Research published in 2017 found that hotels which started replying to reviews saw their ratings rise by about a tenth of a star. They also received about twelve percent more reviews. If you want a number to justify the work, that is the number.
+
+**Never reward a review.** The rule is usually stated as "never buy a five-star review". That is true and far too narrow, and the narrow version is what gets hotels into trouble. The major platforms ban all rewards, not only the ones tied to a good score. These are platform terms rather than law. Tripadvisor's published policy bans any review connected in any way to the offer or promise of a benefit, and names prize draws. Google and Trustpilot publish much the same rule. Terms are versioned, so read the current ones for the platforms you actually use. So take the manager running a monthly prize draw for anyone who reviews, good or bad, confident it is fine because it never asks for five stars. That manager has breached all three. Note also that the law in most places is narrower than the platform rules, and it is the platform rules that will hit you first. A platform does not need a regulator in order to act. It just acts. Tripadvisor's published penalties include a ranking penalty lasting a year, being barred from awards, and a visible badge on repeat offenders. Inviting a review is fine. Paying for one is not. And a raffle ticket is payment.
+
+Have a policy for replies and write it down. Which reviews get a reply. Within what time. And who signs them. Reply to the negative ones as a matter of course. The research above supports that rule. Do not stretch it into replying to everything. There is evidence that heavy replying to positive reviews has an unhelpful effect on later ratings. The negatives are where the effort belongs.
+
+Write the reply for the next reader. The usual reason given is that the reviewer has gone and will never come back to the page. Nobody has measured that. The better reason is the one the research does support. Your replies are visible to the people who have not written their review yet. Replying changes what they write. Complaints become fewer, longer and more specific, because a vague grumble now has an audience that answers back. So answer the substance. Skip the defensive paragraph about how seriously you take feedback. And never argue with the guest's experience in public.
+
+### The Words in Reviews Are Operational Data
+
+The most under-used part of reputation technology is not the score.
+
+It is the words. Sort a quarter of reviews into themes and you have the cheapest operational audit you will ever run. It will tell you which room numbers generate complaints. Whether the noise problem is the lift or the road. And whether breakfast is genuinely slow, or only slow at nine o'clock. Send those themes to the departments that own them. Reputation then stops being a marketing number and becomes a maintenance schedule.
+
+Mind the sample size before you act on a movement. To pin down how common a theme is to within ten percentage points, you need something like a hundred reviews in the period. A hotel drawing twenty a quarter cannot tell a trend from noise. It should pool a year rather than chase a quarter. Remember too that you are reading the people who chose to write, not your guests.
+
+Run your own survey alongside the public platforms. Its purpose is different. It catches the fixable problem before it becomes a public review, while the guest is still in the building and something can still be done. Keep it genuinely separate from your public invitations. A survey that decides who then gets asked for a public review is the gating described above. The platforms ban it under their own terms, and consumer regulators in several countries take a dim view of it as well. Do not build it.
+
+## In-Stay and Mobile
+
+Test everything in this section against one question:
+
+**Does this make things easier for the guest, or does it move work from your staff onto the guest and call that innovation?**
+
+### Digital Check-in Must Remove Work, Not Duplicate It
+
+*Guest registration duties are national law. They differ by country, they change, and I am not naming any of the instruments here. Treat what follows as the shape of the problem, not as legal advice for your property.*
+
+Digital check-in passes the test when it genuinely shortens or removes the queue. It fails when the guest fills in a form on their phone, arrives, and is asked for the same passport and the same card at the desk.
+
+The two causes people reach for first are real. Checking who the guest is, and getting the card approved. They are not the only ones, and they do not explain almost every case. Whether the room is ready blocks it in its own right. One large chain will not release a key until the room is ready, not merely allocated. A signature on the registration form is another. Then add device binding, where the key is tied to the phone it was issued to. Change handset and the guest walks to the desk. No industry survey counts which of these fails most often. So treat any ranking of them, mine included, as field experience rather than data.
+
+Checking who the guest is needs a stronger warning than the usual one. It is not always a standard you can design towards. In some countries it is close to a ban. In at least one large European market, the national rule requires the manager to identify the guest in person on arrival. That position moved twice during 2025 and ended up broadly where it began. Where a rule of that kind applies, the workable reading is narrow. Remote checking passes only if it happens live, in real time, over a connection that confirms the match. Live video at the door may qualify. Uploading a document to be looked at later usually does not. I am deliberately not naming the instrument or the decisions, because these are national rules and they move. Elsewhere in Europe the picture splits. Some countries still expect a handwritten signature on the day of arrival, at least from foreign nationals. Others run fully digital registers and are relaxed about how you verify. Two neighbouring countries can sit at opposite ends of that range. So a process that is perfectly fine in one property can be unlawful in the one across the border. So before you design the process, ask whether it is legal in that country at all. And do not expect digital identity wallets to rescue you soon. On the European timetable as it stands, hotels are not among the sectors that will be required to accept them. That may change. It has not changed yet, and I would not build a plan on it.
+
+Getting the card approved is also usually blamed on the wrong party. The constraint is not what your payment provider prefers. It is a mix of law and card network rules. Your provider is only where those rules land on you. The two halves are worth telling apart. In Europe, strong customer authentication comes from Directive (EU) 2015/2366, known as PSD2. The detail sits in Delegated Regulation (EU) 2018/389. Those rules cover payments taken remotely, with no card in the room. Card network rules sit alongside them and are not law at all. Whether a given process qualifies for an exemption depends on three things. Your setup. Your card processor. And what the guest's own bank does on the day. The providers say so themselves. Exemptions are not guaranteed.
+
+### Identity, Payment and Holds Are Separate Problems
+
+While you are there, separate three things that all get called *pre-authorisation*.
+
+They are not the same message. A hold placed on the guest's funds. A zero-amount check that the card is valid. And storing a card for charges later. They carry different rules and different consequences. Most of those rules are card network rules rather than law. Your acquirer is how they reach you, and your acquirer is who enforces them.
+
+And know the constraint that actually breaks stays. Almost nobody raises it at the design stage. Holds expire. Depending on the card network, and on whether the card was physically present, the window can be as short as a couple of days. It is commonly under a week. Take a hold three days before arrival for a seven-night stay and it can lapse before the guest checks out. Some providers can extend a hold a limited number of times. The guest's own bank has the final say. Solve identity checks, card approval and how long a hold lives before you buy the software.
+
+### Mobile Keys Are a Building Project
+
+Digital keys need far more systems to agree than the three usually named. The lock itself has to support the radio the phone uses. Above the locks sits a system that manages them. Above that sits a service that issues keys and cancels them. The locks usually need a network of small relay boxes to talk to, which means proper wireless coverage in every corridor. Then the app or the phone wallet. Then the service that loads the key into the wallet. Then the link to the property management system. If your lifts need a reader, that is often the single largest piece of building work in the project. And even the smoothest wallet key usually still needs the guest to install your app once to sign up.
+
+Say that out loud before the budget meeting.
+
+**A mobile key is not a software connection. It is a building programme with a software connection on top.**
+
+![A guest holds a phone to a guest room lock in a corridor, with a cutaway showing riser cabling, lift shafts and a colleague issuing the key on a tablet.](c06-05-mobile-key-ecosystem.jpg)
+
+*A mobile key is not a software connection. It is a building programme with a software connection on top.*
+
+The timing problem is real and under-appreciated. You cannot issue a key for a room nobody has allocated. Where the platform waits for the room to be ready, it is stricter still. A hotel that allocates rooms late in the morning cannot deliver keys early. That is a change to how you run the hotel, not a setting in the software. Is it the most common reason mobile key projects stall? I cannot show you. There is no survey data either way. The obstacles on record are just as often the expensive ones. Locks that do not support the radio. Corridors with no coverage. Lifts with no readers. Sign-up runs modestly too, commonly twenty to thirty percent in the first year. Take the timing point as my experience. Budget for the building work regardless.
+
+### In-Stay Messaging Has a Simple Test
+
+Messaging during the stay is the thing in this section I would fund first. A guest can report broken air conditioning in one line at eleven at night, and get an answer. That guest is much less likely to write a review about it. Not certain to stay quiet, though, and it is worth knowing why. The best hotel study on this found that putting things right cuts bad word of mouth substantially. It does not bring it back to the level of a guest who never had the problem at all. A recovery is a repair, not an eraser. Getting it right the first time still beats fixing it well.
+
+The condition is the same as before. Somebody has to be reading it. And be careful with the word "cheap". Next to the other things in this section it is cheap. In hard money, an answer at eleven at night means night staff or an on-call rota. That is a fixed cost and it does not shrink with your room count. At a twenty-room hotel it is the whole business case.
+
+Ordering from a phone, digital guest directories and in-room service requests work when somebody keeps them up to date. They embarrass you when nobody does. A digital directory listing a restaurant that closed last season is worse than no directory at all. It was presented as the official answer.
+
+### Upsell Only What Operations Can Deliver
+
+Selling extras belongs here, and it belongs tied to what you can actually deliver. Offer early check-in, late check-out or an upgrade at the right moment and it sells well. The guest is already committed and already thinking about the stay. A few days before arrival, and again at check-in, is the usual starting point. It is a starting point to test, not a proven best answer.
+
+Then split the offers, because they fail differently.
+
+- An upgrade is sold out of the rooms you have. Checking availability as it happens is already standard in the main platforms. So this is a question to ask a supplier rather than a warning about the whole category.
+- Early check-in and late check-out are not rooms at all. There is no stock to count down. What limits them is the pattern of arrivals and departures, and the housekeeping schedule. Most property management systems do not offer either as something a selling tool can check. So these are usually set up as manual extras. That is where the sale you cannot deliver actually comes from.
+
+There is a second failure the suppliers are quieter about. These tools price to make the sale, not to protect what the room could have earned. Sell tonight's last suite as a cheap upgrade to a guest already in the house and the tool records a win. If somebody else would have booked that suite at full rate, it is a loss. Knowing what rooms you have is necessary and not sufficient. Put that rule in the brief.
+
+**A selling tool that cannot see what you can deliver is a complaints machine with good sales figures.**
+
+![A guest with a backpack stands at reception while a manager holds a tablet of ticked boxes, linked by a line to a grid of rooms on the desk.](c06-06-upsell-meets-operations.jpg)
+
+*A selling tool that cannot see what you can deliver is a complaints machine with good sales figures.*
+
+Two constraints apply to everything above.
+
+Never make a digital route the only route. The guest with no app, no data connection or no confidence is still a guest. I hold that as a service rule. Its legal weight is messier than it is usually presented. European accessibility law has covered booking sites and apps since 28 June 2025, and self-service kiosks as products. The instrument is Directive (EU) 2019/882, the European Accessibility Act. E-commerce services are brought into scope by Article 2(2)(f). Article 4(5) then exempts microenterprises that provide services, which in practice means firms under ten staff and two million euro turnover. That covers a lot of independent hotels. Transitional arrangements also let existing equipment run on for a period. It is a directive, so it is written into national law country by country. Check your own country's version of it. The United States has its own hotel-specific rule about reservations. The broad effect is that accessible rooms must be bookable the same way, and at the same hours, as any other. Wider obligations for websites there have been shaped by litigation rather than by one clear rule, and they are inconsistent. I am not naming the US instruments here. If you sell into the United States, have that checked by a US lawyer. Here is the crucial part, as I read it. The rules I am aware of do not require a non-digital alternative. They require the digital route to work for everybody. That is a different duty, and a harder one. So keep the human route because it is right, and because it is cheap insurance. Not because I can point you at a regulation that says you must.
+
+### Guest Wi-Fi Is a Weakening Identity Layer
+
+*The permission rules below come from European data protection law, and they are applied differently in different countries. This is how I read the general position, not legal advice for your hotel. Check yours before you design the sign-in page.*
+
+And treat guest wi-fi carefully, for two reasons that have both changed.
+
+The first is permission, and the precision matters. Providing wi-fi does not usually rest on the guest's consent. It rests on your contract with the guest, and on your own legitimate interest in running the service. Contract, legitimate interest and consent are three of the grounds listed in Article 6 of Regulation (EU) 2016/679, the GDPR. Legitimate interest is the one that covers doing the obvious thing people already expect of you. Consent belongs to the marketing sitting on top. A login page that collects an email address for marketing, with no clear and separate opt-in freely given, is not a marketing list. It is a liability. And making the wi-fi conditional on accepting marketing is the pattern most likely to be found not freely given. Consent that is not freely given is not consent.
+
+The second is that the phone makers are dismantling the whole idea of collecting data this way. Recent iPhone software changes the phone's wi-fi address regularly, by default, on exactly the kind of open sign-in network hotels run. That breaks any attempt to recognise a returning device. The small browser that opens on the sign-in page is now walled off from stored cookies and password managers. Encrypted lookups and private relay services get in the way of the redirect to that page. The direction of travel is towards signing in with saved credentials rather than filling in a form. So wi-fi is still a place to ask permission and still a place to engage. As a way of recognising people, in 2026, it is degraded. A guest data plan built on sign-in page emails and device addresses is built on ground that is being removed underneath it. Expect this to move again within a year.
+
+## Loyalty
+
+Start with an honest position.
+
+If you are an independent hotel or a small group, a standalone programme cannot beat a global chain on currency. Their points are worth more to a guest because they can be spent across thousands of hotels. No amount of design fixes that arithmetic for points you can only spend in one building. Compete on recognition instead.
+
+That is the thing large programmes are worst at.
+
+Two corrections to that, and both strengthen the argument rather than weaken it.
+
+The word "standalone" is doing real work. You can rent the arithmetic. Independents now join alliances and collections that issue a genuinely global currency. One large chain opened its programme to hundreds of independent luxury hotels. The biggest independent alliance covers dozens of brands, hundreds of hotels and tens of millions of members. If your market wants the currency, that is the practical route. It is a distribution and brand decision more than a technology one.
+
+And be clear about who pays for the chain currency the guest values. Franchise disclosure documents put the loyalty charge at around four percent of the qualifying guest bill, on top of the other fees. The big programme is worth more to the guest partly because the hotel owner funds it. That is the same net contribution test this section ends on, applied to somebody else's programme.
+
+### Four Loyalty Models
+
+There are broadly four options.
+
+This is my framing rather than an industry classification, and real programmes mix them freely.
+
+- Points, earned and redeemed. Flexible, familiar, and the most expensive to run.
+- Tiers, which grant status and benefits based on what the guest did before. Cheap to run and effective at the top end. Meaningless if everybody qualifies.
+- An instant benefit, usually a member rate or a fixed set of member perks. Simplest to explain, and the quickest to shift the booking in front of you. Note the trade. An instant discount moves this booking. A points balance moves the next one. Those are different jobs and the choice is not obvious.
+- Recognition only, with no currency at all. Knowing the guest, remembering the preference, and acting on it. Free, and the hardest to do consistently.
+
+### The Member Rate Sits Across Three Domains
+
+The member rate deserves attention. It sits across three domains. And the standard advice about it is now wrong in the market most of my readers work in.
+
+The standard advice goes like this. A member rate is shown only to a closed group. So you can price it below your public rate without breaking parity, because it is not publicly available. Parity is the promise in your agency contracts that you will not sell the same thing cheaper elsewhere. Retire that sentence. It fails on three separate points.
+
+First, "not publicly available" is not the test anybody actually applies. Parity here is contract, not law. The exemption in the big agency agreements covers rates that are unpublished and not marketed online. Those words mean what your agreement says they mean, not what they mean in ordinary English. And "published online" is defined to include showing enough detail for a customer to work the rate out. "Members save 10% when you book direct" is therefore published, on the face of the contract. It does not help that the rate itself sits behind a sign-in. One major agency's European terms contain no membership or closed-group exception at all. They also define publication to include anything shown on channels you own.
+
+Second, in much of Europe the rule you are working around no longer exists. The largest agency's own partner terms now list the whole European Economic Area as a no-parity territory, along with Switzerland, Russia and South Africa. European platform law has also moved in your favour here. Regulation (EU) 2022/1925, the Digital Markets Act, applies to platforms the Commission has designated as gatekeepers. Where a platform carries that designation, your freedom to advertise a cheaper direct rate is better protected than it once was. Whether it covers the platform you are arguing with is worth checking rather than assuming. So a European hotel hiding its direct saving behind a login is losing bookings to solve a problem it does not have. Narrow parity still applies in markets such as the UK, Australia, Japan and Turkey. Narrow parity limits only what you publish on your own website. Wide parity limits what you give every other channel as well, and it still applies across much of the rest of the world. That includes the United States, where the risk in the old advice is higher than it sounds rather than lower.
+
+Third, the way you would actually show a member rate tends to defeat the exemption anyway. The supported way to show one on Google puts the public rate on screen with a line through it and the member saving beside it. Google also requires the programme to be free to join. That is enough detail to calculate the discount, published, to everybody.
+
+So the honest version is this:
+
+A rate behind a fence is still one of the legitimate ways to shift business towards direct. Where parity does bind you, that rate must be genuinely unpublished and unmarketed, as your own agreement defines those words. Read the agreement you signed, for the territory you are in. If the money is material, get a lawyer to read it with you. Contract wording is versioned and changes without notice. So this is not knowledge you can hold for five years.
+
+One practical note, because this is where it breaks in practice rather than in principle. Your loyalty system does not enforce the member rate. The booking engine or central reservation system enforces it, by deciding who qualifies for that rate plan. What the outside world can see is decided by rate mapping in the channel manager. Mapping is the record of which rate on your side equals which rate on theirs. A member rate leaks because somebody mapped it, not because somebody designed it badly.
+
+### Points Are an Accounting Liability, Not Free Currency
+
+Points carry a cost most hotels account for badly. The usual shorthand for it is wrong in a way an auditor will spot at once.
+
+The instinct is right. A point you issue is a debt, and it starts the moment the guest earns it, not when they spend it. What is wrong is the measurement. "Value it at what the redemption will actually cost you" is the old incremental-cost method. The main international accounting standards moved away from it well over a decade ago, and the American equivalent did the same. I am not naming the standards here, and I am not an accountant. Your auditor will tell you which ones apply to your accounts.
+
+Here is the shape of the correct treatment, in plain terms. Say the points give the member something they could not simply have bought. That promise is a separate thing you sold as part of the stay. So you split the price the guest paid. You set the points share aside as revenue you have not earned yet, and you hold it there until the points are used. How much you set aside is based on what the promise is worth to the guest, adjusted for how likely it is to be used. It is not based on what the redemption will cost you. Those are different numbers. The second is smaller, because the first includes your margin.
+
+That difference is not cosmetic for anyone in this trade. Done correctly, the points cost comes off rooms revenue on the stay that earned them. It moves your average daily rate, your ADR, and it moves your RevPAR. Done the shorthand way, revenue is overstated and the debt is understated. The numbers you report to owners are then wrong in a direction that flatters you.
+
+Three things follow that are worth knowing before you spend money on this.
+
+- A franchisee paying a brand loyalty charge carries no points debt at all. The promise belongs to the brand. Applying the rule above would put a liability on your balance sheet that does not belong there.
+- A programme whose only benefit is a member rate, free for anybody to join, generally creates no debt either. A discount everybody can have is not a separate promise. The simplest programme is also the cleanest accounting.
+- Smaller companies in some countries have recently lost the simplified treatment they used to rely on here. In the UK and Ireland that change took effect for accounting periods starting in January 2026. The industry's own reporting standard revised its loyalty accounts in the same month. Check with your accountant whether it has caught you, because the dates differ by country.
+
+Take that as the shape of the problem, not as the answer for your programme. Whether a given benefit counts, and how you measure it, is a question for an accountant. Find one who has signed off a set of hotel accounts with a loyalty programme in them.
+
+Breakage needs the same correction. Breakage is the share of points nobody ever claims. It is tempting to say a programme planning for high breakage is quietly relying on disappointing its members. The moral instinct is fine. The mechanism is wrong. Estimating breakage is not a design choice you can decline. The standards require you to estimate it, and to look at it again every period. And the estimate sits inside the amount you set aside. So assuming higher breakage means setting less aside and booking more revenue now. The accounting pressure therefore runs towards over-estimating breakage, because that flatters today's numbers. That is a risk to your audit and to the quality of your earnings. It is a better reason to be cautious than the moral one.
+
+While you are designing expiry, check the law where your members live. Some countries ban points expiring through the passing of time alone.
+
+### Measure Loyalty Against What Would Have Happened Anyway
+
+**Judge the programme on evidence, not on sign-ups.** Sign-up counts measure how hard reception pushes. What matters is three things. How many guests come back. What share of bookings arrive direct. And what each member stay contributes after the cost of the benefit. That last one is the right discipline and I would not change it.
+
+The way you measure it does need to change, and this is the part most loyalty reports get wrong. Comparing members against similar non-members overstates the effect, badly. The best study on this corrected for one fact. People who join were already more likely to come back. Once corrected, the measured effect of membership fell to around a seventh of the naive figure. Matching on market, segment, length of stay and rate class cannot fix it. What drives both joining and returning is the guest's existing intention, and you cannot see that in your data. Two things make it worse in hotels. Guests usually join at the moment of a booking they were making anyway, so that stay gets credited to the programme. And people who travel to your city often join because they are frequent, not the other way round.
+
+Two designs fix it, and a single hotel can run either.
+
+1. Compare each member with themselves. Look at what they did before and after the date they joined, using groups that joined at different times. Every member is their own control.
+2. Better still, hold the benefit back. Pick a share of members at random and withhold the benefit, not the membership. Then compare. It feels uncomfortable. It is the only clean answer you will ever get.
+
+If members book direct at a clearly better net contribution, and come back more often than they would have anyway, it works. If the programme mostly discounts guests who were coming regardless, it is a rate cut with paperwork attached. The naive report will not tell you which one you have.
+
+Keep the unglamorous point in view.
+
+**The strongest loyalty tool available to a hotel is a guest record accurate enough that the person at the desk knows who just walked in.**
+
+![A receptionist smiles as she hands a returning guest a newspaper and a cup of coffee, with an abstract tier diagram on a screen behind them.](c06-07-recognition-over-points.jpg)
+
+*The strongest loyalty tool a hotel has is a guest record accurate enough that the person at the desk knows who just walked in.*
+
+Everything in the first two sections of this article exists to make that possible.
+
+## Common Questions
+
+### How do you match guest records across different hotel systems?
+
+Matching guest records means combining several fields into a confidence score. Email is the strongest single field. Its biggest failure in this industry is the masked agency address. Phone, name and loyalty number each fail in their own way. Use two cut-offs. Merge automatically above the higher one. Do nothing below the lower one. Send the doubtful band in between to a human.
+
+### What is the difference between a service message and a marketing message?
+
+A service message is about a booking the guest has made. A confirmation, a change, directions or an invoice. A marketing message asks for attention on something the guest never requested. The two stand on different ground. Marketing needs a lawful basis of its own, in the sense used by Article 6 of Regulation (EU) 2016/679, the GDPR. Record the lawful reason for each marketing list you hold, and record why you chose it.
+
+### Can a hotel put a marketing offer in a booking confirmation email?
+
+Slipping an offer into a confirmation lifts open rates. It also attaches a legal problem to your best-performing email. The general European position is blunt about it. Once a service message carries any marketing at all, the safe assumption is that the whole message counts as marketing. That puts it inside Article 13 of Directive 2002/58/EC and Article 6 of the GDPR. American rules are usually described as gentler, and treat the message as commercial instead. Check the position where your guest actually is.
+
+### Why do agency bookings arrive without the guest's real email address?
+
+Booking.com, the Expedia brands and Airbnb all mask the address by default. What you receive is a forwarding address owned by the platform. The address usually keeps working. The platform's rules decide what you may send through it, and those rules are contract terms rather than law. Having the address is not permission to market. That still needs a lawful basis of its own. Bed banks and wholesalers often pass no address at all.
+
+### Can a payment card token be used to recognise a returning guest?
+
+A payment token is not the identity field it looks like. Tokens are fenced in on purpose. One token belongs to one shopper, one merchant account and one payment provider. A token can confirm the same card came back to the same account. It cannot join a spa record to a restaurant bill.
+
+### Are guest preferences such as allergies special category data?
+
+A nut allergy is health data. A dietary requirement can point at a religious belief. A step-free room points at a disability. Article 9 of Regulation (EU) 2016/679, the GDPR, puts data of that kind in a special class. It prohibits processing unless one of a narrow set of grounds applies. For a hotel that ground is nearly always the guest's clear and explicit consent. Keep it out of the marketing database.
+
+### How much does one bad review move a hotel's average score?
+
+One review moves the average by its gap from your current average. Divide that gap by the number of reviews plus one. Hotel averages sit near the top of the scale. So the damage is lopsided. On a Booking.com average near 8.5, a score of 2 pulls about four times as hard as a 10. Volume dilutes, and a hotel with four hundred reviews absorbs a bad month.
+
+### Can a hotel offer a prize draw for guests who leave a review?
+
+Prize draws are banned by the major platforms under their own terms, which are contract rather than law. Tripadvisor's policy bans any review connected to the offer or promise of a benefit. Google and Trustpilot publish much the same rule. A draw open to good and bad reviews alike still breaches all three. Read the current terms, because platforms revise them without notice. Inviting a review is fine. Paying for one is not.
+
+### Why does digital check-in still end at the front desk?
+
+Digital check-in fails when the guest fills in a form and is asked for the same things again at the desk. Identity checks and card approval are the usual causes. Room readiness blocks it too. Some chains will not release a key until the room is ready. A signature requirement or device binding can also send the guest to the desk.
+
+### Does a member rate break rate parity?
+
+A member rate is usually defended as closed, and therefore outside parity. That defence is weaker than it sounds. Parity is a contract term rather than a law, and the contract sets the definitions. Agency contracts typically define published to include showing enough detail to work the rate out. In much of Europe the largest agency now treats the whole European Economic Area as a no-parity territory. Read the agreement you signed, for the territory you are in.
+
+## Key Terms
+
+- **Golden record.** The single merged version of a guest, built from several source records. Hotel platforms usually call it a unified profile, a single guest profile or identity resolution.
+- **Identity resolution.** The work of deciding that records in different systems describe the same person. No shared number exists across your estate, so somebody has to build the link and maintain it.
+- **Masked email address.** A forwarding address the platform hands you instead of the guest's own. Booking.com, the Expedia brands and Airbnb all mask by default. The address belongs to the platform, and its rules decide what you may send.
+- **Soft opt-in.** The exception in Article 13 of Directive 2002/58/EC, the ePrivacy Directive, that lets you market similar things to someone whose address you took while selling them a stay. You must have offered a way out at the time, and in every message since. A directive is written into national law country by country, so the wording that binds you is your own country's.
+- **Special category data.** The class of data set out in Article 9 of Regulation (EU) 2016/679, the GDPR, including health, religion and disability. A nut allergy, a dietary requirement and a step-free room request can all fall inside it. Article 9 prohibits processing unless a narrow ground applies. Explicit consent is nearly always the ground a hotel relies on.
+- **Network token.** A stand-in code for a card number that survives the card being replaced. Under card scheme rules a token is unique to one shopper, one merchant account and one payment provider. Those are scheme rules rather than law. A token is not a guest identifier.
+- **SPF, DKIM and DMARC.** Three separate settings published against your domain name. SPF lists the servers allowed to send. DKIM signs the message. DMARC ties both to the address the guest sees, and reports back to you.
+- **Pre-authorisation.** One word covering three different messages. A hold on the guest's funds, a zero-amount check that a card is valid, and storing a card for later charges. Each carries different card scheme rules and different consequences. Holds also expire, sometimes within days.
+- **Review gating.** The practice of choosing who gets invited to review, usually by filtering out unhappy guests. The major platforms ban it under their own terms. Consumer law in several countries also treats it as misleading, though the detail differs by country. Invite every departing guest the same way instead.
+- **RFM.** Recency, frequency and monetary value. How recently a guest stayed, how often, and how much they spent. RFM needs a base of returning guests, and most hotels do not have one.
+- **Member rate.** A rate offered only to members of your programme. Your booking engine or central reservation system enforces who qualifies, not the loyalty platform. Rate mapping in the channel manager decides what the outside world can see.
+- **Breakage.** The share of issued points nobody ever claims. The main accounting standards require you to estimate it, and to revisit that estimate each period. Which standard applies to your accounts is a question for your accountant. A higher estimate books more revenue now, so the pressure runs towards over-estimating.
+
+## How This Connects to the Wider Hotel Technology Stack
+
+Guest technology touches almost every part of the hotel, so the boundaries matter.
+
+- **[Hotel Operations and PMS](../hotel-operations-and-pms/)** holds the reservation, room status and usually a guest profile of its own. This domain reconciles and improves that record; it does not replace the operational system.
+- **[Distribution and Connectivity](../distribution-and-connectivity/)** determines whether the hotel receives a real guest email address or a masked one. It also decides whether a member rate remains protected or leaks through rate mapping.
+- **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** wins the booking and usually enforces eligibility for member rates. This domain owns what happens to the guest relationship after the booking exists.
+- **[Revenue Management](../revenue-management/)** uses segments and repeat behaviour defined here, and prices the member rate that this domain operates.
+- **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** compares reputation and guest satisfaction against the market. The comparison belongs there; the operational response to what guests actually wrote belongs here.
+- **Payments and Financial Technology** owns card tokens, payment security and the payment relationships that can sometimes help recognise repeat activity. Those identifiers are not a universal guest identity layer.
+- **Sales, Groups and MICE** brings guests who arrive under someone else's contract. The account holder may be the commercial customer while the individual traveller is still the guest.
+- **Data, APIs and Integration** moves guest data between systems and governs whether identity matching is even possible.
+- **AI, Automation and Agents** applies automated messaging, summarisation and personalisation to this data. The same requirements remain: explainability, limits and trustworthy source records.
+- **Hotel Technology Strategy** is where the hotel decides whether a dedicated CRM is justified or whether the existing stack can do enough already.
+- **Emerging Hotel Technology** tracks new guest-facing categories before they are stable enough to commit to.
+
+## Related Reading
+
+No supporting articles have been published in this section yet.
+
+As the wider article library grows, the most relevant supporting pieces can be added here in batches.
+
+Guest technology is sold on the promise of a single view of the guest. It is bought by hotels that have not yet decided who wins when two records disagree. Decide that first. And decide it the right way round.
+
+The instinct to name one system that owns the truth is a good instinct pointed at the wrong thing. No hotel system owns all of it, and no supplier sells one that does. Your payment provider is built so that it cannot hand you the card details. Your property management system owns what happened in the house. Your record of what the guest agreed to has to survive independently of both. So do it one kind of data at a time. For each kind, name the system that owns it. Name the direction the data flows. And write the rule that says which record wins when two disagree. That question has an answer. "Which system owns the truth" does not.
+
+The software is the easy part. The rules are the part that makes any of it work.
+
+Get the record right, and recognition stops depending on who happens to be on shift.
 
 I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
 

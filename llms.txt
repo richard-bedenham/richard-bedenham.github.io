@@ -8,6 +8,8 @@
 - [Hotel Distribution and Connectivity: A Complete Guide](https://richard-bedenham.github.io/guides/distribution-and-connectivity/): Why hotel distribution is lost in mapping rather than in commission, how channel managers actually work, and what parity and wholesale contracts really require. (6,706 words, reviewed 2026-08-18)
 - [Direct Booking and Hotel E-commerce: A Complete Guide](https://richard-bedenham.github.io/guides/direct-booking-and-e-commerce/): Direct bookings are not free, and the costs are simply spread out. How to cost every channel honestly, and build direct as a system rather than a campaign. (9,628 words, reviewed 2026-08-18)
 - [Hotel Revenue Management: A Complete Practical Guide](https://richard-bedenham.github.io/guides/revenue-management/): Occupancy is not success and RevPAR is a starting point. How to price on recorded reasoning, agreed boundaries and net contribution rather than on instinct. (8,934 words, reviewed 2026-08-18)
+- [Hotel Market Intelligence, Rate Shopping and Analytics](https://richard-bedenham.github.io/guides/market-intelligence-and-analytics/): A competitor rate is an asking price of unknown composition. How to establish that a number means what you think it means before you let it move your price. (9,309 words, reviewed 2026-09-09)
+- [Hotel Guest Technology, CRM and Loyalty: A Full Guide](https://richard-bedenham.github.io/guides/guest-technology-and-crm/): Most hotels do not have a guest problem, they have a guest record problem. Identity resolution, lawful basis and loyalty that is measured rather than assumed. (13,621 words, reviewed 2026-08-18)
 
 ## For machine readers
 

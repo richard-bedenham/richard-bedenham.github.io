@@ -10,8 +10,8 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "licenseNote": "Free to quote, summarise and cite with attribution.",
   "corpus": {
-    "guides": 4,
-    "words": 32977,
+    "guides": 6,
+    "words": 55907,
     "markdown": "https://richard-bedenham.github.io/llms-full.txt"
   },
   "guides": [
@@ -253,6 +253,127 @@
         "Unconstrained demand",
         "Last room availability, or LRA",
         "Stale restriction"
+      ]
+    },
+    {
+      "id": "C05",
+      "title": "Hotel Market Intelligence, Rate Shopping and Analytics",
+      "description": "A competitor rate is an asking price of unknown composition. How to establish that a number means what you think it means before you let it move your price.",
+      "url": "https://richard-bedenham.github.io/guides/market-intelligence-and-analytics/",
+      "markdown": "https://richard-bedenham.github.io/guides/market-intelligence-and-analytics/index.md",
+      "words": 9309,
+      "readingMinutes": 41,
+      "reviewed": "2026-09-09",
+      "topics": [
+        "Hotel rate shopping",
+        "Hotel competitive set",
+        "Hotel benchmarking",
+        "RevPAR index",
+        "Hotel market and demand data",
+        "Hotel business intelligence",
+        "Fair share and market penetration index",
+        "Hotel revenue analytics"
+      ],
+      "keywords": "hotel rate shopping, competitive set, hotel benchmarking, RevPAR index, market penetration index, hotel demand data, hotel business intelligence, ADR and RevPAR",
+      "sections": [
+        "The Short Version",
+        "First Question: Who Is the 210?",
+        "Second Question: Is the 210 the Same Product as the 185?",
+        "Third Question: Did Anybody Pay It?",
+        "Fourth Question: What Is Coming, and From Where?",
+        "Fifth Question: August Is Over. How Did You Do?",
+        "Sixth Question: The Index Went Up. Did You Make Money?",
+        "Seventh Question: Why Does Nobody in the Room Agree?",
+        "Last Question: What Happened to the Decision?",
+        "Common Questions",
+        "Key Terms",
+        "How This Connects to the Wider Hotel Technology Stack",
+        "Related Reading"
+      ],
+      "questionsAnswered": [
+        "What is rate shopping in hotels?",
+        "What is a compset in hotels, and how do you choose one?",
+        "What is the difference between a shopping compset and a benchmarking compset?",
+        "How many hotels should be in a competitive set?",
+        "Why do competitor rates look cheaper than mine?",
+        "Does a competitor's availability tell you how well they are selling?",
+        "What is the difference between ADR and RevPAR?",
+        "What does an index score of 100 mean in hotel benchmarking?",
+        "Can a benchmarking index go up while the business gets worse?",
+        "Is rate shopping legal under competition law?"
+      ],
+      "definesTerms": [
+        "Rate shopping",
+        "Compset",
+        "Shopping compset",
+        "Benchmarking compset",
+        "Like-for-like comparison",
+        "Allotment",
+        "Average daily rate, or ADR",
+        "Revenue per available room, or RevPAR",
+        "Fair share",
+        "Benchmarking indices",
+        "Net ADR",
+        "GOPPAR"
+      ]
+    },
+    {
+      "id": "C06",
+      "title": "Hotel Guest Technology, CRM and Loyalty: A Full Guide",
+      "description": "Most hotels do not have a guest problem, they have a guest record problem. Identity resolution, lawful basis and loyalty that is measured rather than assumed.",
+      "url": "https://richard-bedenham.github.io/guides/guest-technology-and-crm/",
+      "markdown": "https://richard-bedenham.github.io/guides/guest-technology-and-crm/index.md",
+      "words": 13621,
+      "readingMinutes": 61,
+      "reviewed": "2026-08-18",
+      "topics": [
+        "Hotel CRM",
+        "Guest identity resolution",
+        "Hotel guest data protection",
+        "Hotel guest messaging",
+        "Hotel reviews and reputation",
+        "Mobile check-in and digital keys",
+        "Hotel loyalty programmes",
+        "Guest profile management"
+      ],
+      "keywords": "hotel CRM, guest profile, identity resolution, guest messaging, hotel reviews, mobile key, hotel loyalty, guest data consent",
+      "sections": [
+        "The Short Version",
+        "Guest Journey and Communication",
+        "CRM and Guest Profiles",
+        "Reviews and Reputation",
+        "In-Stay and Mobile",
+        "Loyalty",
+        "Common Questions",
+        "Key Terms",
+        "How This Connects to the Wider Hotel Technology Stack",
+        "Related Reading"
+      ],
+      "questionsAnswered": [
+        "How do you match guest records across different hotel systems?",
+        "What is the difference between a service message and a marketing message?",
+        "Can a hotel put a marketing offer in a booking confirmation email?",
+        "Why do agency bookings arrive without the guest's real email address?",
+        "Can a payment card token be used to recognise a returning guest?",
+        "Are guest preferences such as allergies special category data?",
+        "How much does one bad review move a hotel's average score?",
+        "Can a hotel offer a prize draw for guests who leave a review?",
+        "Why does digital check-in still end at the front desk?",
+        "Does a member rate break rate parity?"
+      ],
+      "definesTerms": [
+        "Golden record",
+        "Identity resolution",
+        "Masked email address",
+        "Soft opt-in",
+        "Special category data",
+        "Network token",
+        "SPF, DKIM and DMARC",
+        "Pre-authorisation",
+        "Review gating",
+        "RFM",
+        "Member rate",
+        "Breakage"
       ]
     }
   ]
