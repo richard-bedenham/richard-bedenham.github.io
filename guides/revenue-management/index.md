@@ -540,3 +540,5 @@ The hotels that win this are not the ones with the cleverest pricing model. They
 Get the record of why right, and the rest of this domain becomes teachable.
 
 I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+This guide is also published on LinkedIn, where you can react, comment and share it: [The Complete Guide to Hotel Revenue Management](https://www.linkedin.com/pulse/complete-guide-hotel-revenue-management-richard-john-bedenham-qv3ee/).

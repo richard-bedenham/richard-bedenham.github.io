@@ -963,3 +963,5 @@ On the audit at half past two.
 And on what happens to your history the day you leave.
 
 I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+This guide is also published on LinkedIn, where you can react, comment and share it: [The Complete Guide to Hotel Operations and the PMS](https://www.linkedin.com/pulse/complete-guide-hotel-operations-pms-richard-john-bedenham-v9kef/).

@@ -564,3 +564,5 @@ The software is the easy part. The rules are the part that makes any of it work.
 Get the record right, and recognition stops depending on who happens to be on shift.
 
 I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+This guide is also published on LinkedIn, where you can react, comment and share it: [The Complete Guide to Hotel Guest Technology and CRM](https://www.linkedin.com/pulse/complete-guide-hotel-guest-technology-crm-richard-john-bedenham-hoz5e/).

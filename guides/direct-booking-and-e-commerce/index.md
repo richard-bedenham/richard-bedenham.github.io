@@ -477,3 +477,5 @@ Direct booking is not a discount you offer or a badge in your header. It is a sy
 Then be realistic about the prize. A decade of book-direct campaigning barely moved channel share. One 2026 analysis of 50,000 hotels found the OTA share of US major-chain bookings went from 20 per cent in 2019 to 21 per cent in 2025. What moved was margin. That is the honest reward here, and it is a good one. Direct can be your most profitable channel, and on the best evidence published it usually is. Not because it is free. Because you know what it costs.
 
 I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+This guide is also published on LinkedIn, where you can react, comment and share it: [The Complete Guide to Direct Booking and Hotel E-commerce](https://www.linkedin.com/pulse/complete-guide-direct-booking-hotel-e-commerce-richard-john-bedenham-6u7of/).

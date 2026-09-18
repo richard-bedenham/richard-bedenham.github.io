@@ -570,3 +570,5 @@ Seeing the market is a skill, and it is not the same skill as pricing. Choose th
 The hotels that struggle here are not short of data. They are short of definitions, and short of the discipline to close the loop on what the data told them.
 
 I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+This guide is also published on LinkedIn, where you can react, comment and share it: [The Complete Guide to Hotel Market Intelligence and Analytics](https://www.linkedin.com/pulse/complete-guide-hotel-market-intelligence-analytics-bedenham-5p8mf/).

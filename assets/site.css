@@ -167,6 +167,10 @@ letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:
 .pager .next{text-align:right}
 @media(min-width:40rem){.pager{grid-template-columns:1fr 1fr}
 .pager .next:only-child{grid-column:2}}
+.alsoon{margin:2.8rem 0 0;padding:1.05rem 1.25rem;background:var(--surface);
+border:1px solid var(--line);border-radius:12px}
+.alsoon p{margin:0;font-family:var(--sans);font-size:.9rem;line-height:1.6;color:var(--muted)}
+.alsoon a{color:var(--accent);font-weight:600}
 .sitenav{margin:2.6rem 0 0;font-family:var(--sans)}
 .sitenav h2{font-size:.71rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
 border:0;padding:0;margin:0 0 .7rem;font-weight:700}
@@ -178,7 +182,7 @@ border:0;padding:0;margin:0 0 .7rem;font-weight:700}
 @media(min-width:44rem){.sitenav ol{columns:2;column-gap:2rem}}
 
 @media print{
-header.site,.toc,.skip,.pager,.sitenav,.crumbs{display:none}
+header.site,.toc,.skip,.pager,.sitenav,.crumbs,.alsoon{display:none}
 body{background:#fff;color:#000;font-size:11pt}
 .wrap{max-width:none;padding:0}
 figure{width:auto;margin-left:0;break-inside:avoid}

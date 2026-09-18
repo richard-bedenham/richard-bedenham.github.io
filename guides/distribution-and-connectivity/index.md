@@ -439,3 +439,5 @@ This list grows. New Knowledge Articles are added in batches rather than one at 
 Distribution is not a fight between your website and somebody else's. It is a system that either carries your commercial decisions faithfully or corrupts them quietly, and the difference is mostly mapping, monitoring and contracts nobody finds interesting. Build the checklist and the workbook, give every channel a written job, and know where your net rates end up. Then commission becomes a calculation rather than a grievance.
 
 I would rather be corrected than agreed with. If something here does not match what you see in your own hotel, tell me, and tell me what you saw.
+
+This guide is also published on LinkedIn, where you can react, comment and share it: [The Complete Guide to Hotel Distribution and Connectivity](https://www.linkedin.com/pulse/complete-guide-hotel-distribution-connectivity-richard-john-bedenham-jjqvf/).
