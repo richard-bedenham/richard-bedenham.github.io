@@ -553,7 +553,7 @@ Market intelligence establishes what is true enough to act on. Almost every othe
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** supplies search, website and conversion data. Market demand is more useful when read beside what guests actually did on your own channels.
 - **[Revenue Management](../revenue-management/)** is the other half of this. Market intelligence works out what the signal means, and revenue management decides what to do about it. Automation only makes that first step more important.
 - **[Guest Technology and CRM](../guest-technology-and-crm/)** adds repeat behaviour, profile data and lifetime value, turning a market-share number into a customer-value question.
-- **Payments and Financial Technology** owns the cost of taking the money: payment fees, currency conversion and chargebacks. Distribution commission is covered elsewhere, but net contribution needs both.
+- **[Payments and Financial Technology](../payments-and-financial-technology/)** owns the cost of taking the money: payment fees, currency conversion and chargebacks. Distribution commission is covered elsewhere, but net contribution needs both.
 - **Sales, Groups and MICE** contributes forward demand that public market feeds often miss: enquiry volume, block sizes, pickup against blocks, cut-off dates and conversion of enquiries into business.
 - **Data, APIs and Integration** is the dependency underneath almost every joined report in this article. API connections help, but file-based integration still matters where direct connectivity is weak.
 - **AI, Automation and Agents** can spot anomalies and create modelled signals faster, but those outputs should still be distinguished from observed data.

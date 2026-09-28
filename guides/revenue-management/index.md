@@ -519,7 +519,7 @@ Revenue management sits in the middle of the commercial side of the hotel, so th
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** owns the booking engine and website experience. Channel-mix strategy is decided here; the conversion tools live there.
 - **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** supplies competitor pricing, benchmarking and performance analysis. Reading a competitor-rate report is not revenue management; deciding what to do with it is.
 - **[Guest Technology and CRM](../guest-technology-and-crm/)** owns the guest profile, repeat behaviour and relationship data that sharpen segmentation. The profile itself may live across several systems, so the boundary is about accountability rather than storage.
-- **Payments and Financial Technology** governs deposits, prepayment and the strength of non-refundable terms. A rate is only as strong as the payment mechanism behind it.
+- **[Payments and Financial Technology](../payments-and-financial-technology/)** governs deposits, prepayment and the strength of non-refundable terms. A rate is only as strong as the payment mechanism behind it.
 - **Sales, Groups and MICE** owns blocks, options and the rooms groups hand back. Displacement analysis is the shared border, and neither side should quote group business alone.
 - **Data, APIs and Integration** moves forecasts, rates, restrictions and decisions between systems. Most automation ambitions eventually meet this layer.
 - **AI, Automation and Agents** covers model-driven pricing and the capture of decision reasoning. Technically it may live elsewhere, but commercially the consequences belong here.

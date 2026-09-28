@@ -542,7 +542,7 @@ Guest technology touches almost every part of the hotel, so the boundaries matte
 - **[Direct Booking and E-commerce](../direct-booking-and-e-commerce/)** wins the booking and usually enforces eligibility for member rates. This domain owns what happens to the guest relationship after the booking exists.
 - **[Revenue Management](../revenue-management/)** uses segments and repeat behaviour defined here, and prices the member rate that this domain operates.
 - **[Market Intelligence and Analytics](../market-intelligence-and-analytics/)** compares reputation and guest satisfaction against the market. The comparison belongs there; the operational response to what guests actually wrote belongs here.
-- **Payments and Financial Technology** owns card tokens, payment security and the payment relationships that can sometimes help recognise repeat activity. Those identifiers are not a universal guest identity layer.
+- **[Payments and Financial Technology](../payments-and-financial-technology/)** owns card tokens, payment security and the payment relationships that can sometimes help recognise repeat activity. Those identifiers are not a universal guest identity layer.
 - **Sales, Groups and MICE** brings guests who arrive under someone else's contract. The account holder may be the commercial customer while the individual traveller is still the guest.
 - **Data, APIs and Integration** moves guest data between systems and governs whether identity matching is even possible.
 - **AI, Automation and Agents** applies automated messaging, summarisation and personalisation to this data. The same requirements remain: explainability, limits and trustworthy source records.

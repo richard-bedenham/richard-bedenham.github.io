@@ -10,8 +10,8 @@
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "licenseNote": "Free to quote, summarise and cite with attribution.",
   "corpus": {
-    "guides": 6,
-    "words": 55907,
+    "guides": 7,
+    "words": 68188,
     "markdown": "https://richard-bedenham.github.io/llms-full.txt"
   },
   "guides": [
@@ -374,6 +374,65 @@
         "RFM",
         "Member rate",
         "Breakage"
+      ]
+    },
+    {
+      "id": "C07",
+      "title": "Hotel Payments and Financial Technology: A Complete Guide",
+      "description": "A rate plan is a promise; the payment method makes it enforceable. Merchant of record, PCI scope, tokens, chargebacks and where hotels quietly lose money.",
+      "url": "https://richard-bedenham.github.io/guides/payments-and-financial-technology/",
+      "markdown": "https://richard-bedenham.github.io/guides/payments-and-financial-technology/index.md",
+      "words": 12281,
+      "readingMinutes": 55,
+      "reviewed": "2026-08-18",
+      "topics": [
+        "Hotel payments",
+        "Merchant of record",
+        "PCI DSS scope",
+        "Payment tokenisation",
+        "OTA virtual cards",
+        "Payment reconciliation",
+        "Hotel chargebacks",
+        "Hotel accounting"
+      ],
+      "keywords": "hotel payments, merchant of record, PCI DSS, payment tokenisation, OTA virtual cards, payment reconciliation, chargebacks, dynamic currency conversion, hotel accounting",
+      "sections": [
+        "The Short Version",
+        "Payment Fundamentals",
+        "Cards, Tokenisation and PCI",
+        "Automation and Reconciliation",
+        "Chargebacks and Fraud",
+        "Invoicing and Accounting",
+        "Common Questions",
+        "Key Terms",
+        "How This Connects to the Wider Hotel Technology Stack",
+        "Related Reading"
+      ],
+      "questionsAnswered": [
+        "What is a merchant of record in hotel payments?",
+        "Why does an OTA virtual card decline?",
+        "What is the difference between authorisation, capture and settlement?",
+        "How long does a hotel card authorisation last?",
+        "Does tokenisation make a hotel PCI compliant?",
+        "Are network tokens portable between payment providers?",
+        "What evidence wins a hotel chargeback?",
+        "What is the difference between a void and a refund?",
+        "How do you stop chargebacks rather than fight them?",
+        "Should a hotel offer dynamic currency conversion?"
+      ],
+      "definesTerms": [
+        "Merchant of record",
+        "Acquirer",
+        "Issuer",
+        "Interchange",
+        "Payment facilitator",
+        "Tokenisation",
+        "Network token",
+        "Virtual card",
+        "Chargeback",
+        "Clearing account",
+        "Idempotency key",
+        "Charge-code mapping"
       ]
     }
   ]
